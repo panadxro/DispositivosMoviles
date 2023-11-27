@@ -193,6 +193,9 @@ nav .logo-nav h1{
   height: 2rem;
   width: 2rem;
 }
+.lista-fotos {
+  list-style: none;
+}
 .fotito {
   max-height: 250px;
   aspect-ratio: 1 / 1;
