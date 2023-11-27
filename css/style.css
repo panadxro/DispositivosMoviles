@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,100&family=Poppins:wght@200;400;600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+}
+picture {
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+
+body {
+  background-color: #e5e2da;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  border: solid black 1px;
+  overflow: hidden;
+}
+
+.titulo {
+  font-weight: 600;
+  margin-block: 2em;
+}
+
+.prod-modal {
+  overflow:visible;
+}
+/* Nav */
+#navegador {
+  z-index: 1090;
+  background-color: #e5e2da
+}
+.sidebar {
+  background-color: #e5e2da;
+}
+
+/* Home */
+.carousel-item {
+  height: 100vh;
+}
+.carousel-item picture img {
+  background-size: contain;
+}
+.carousel-caption {
+  padding-bottom: 5rem;
+  z-index: 2;
+}
+.carousel-caption h5 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.carousel-inner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Productos */
+#productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#productos h2 {
+  flex-grow: 1;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 95%;
+  margin: auto;
+}
+.product article {
+  cursor: pointer;
+  background-color: #e5e2da;
+  border: none;
+}
+.product article {
+  flex: 1 0 320px;
+}
+
+/* Modal */
+.modal {
+  margin-block: 3em;
+}
+.modal-content {
+  background-color: #e5e2da !important;
+}
+.modal-body {
+  padding-bottom: 4em;
+}
+
+/* Contactos */
+.box-area{
+  width: 930px;
+}
+/* Responsive */
+@media (max-width: 576px) {
+  body {
+    background-color: red;
+  }
+  .carousel-item picture img {
+    height: 100%;
+    width:max-content;
+  }
+  .carousel-caption {
+    padding-bottom: 1em;
+  }
+  .carousel-caption h5 {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing:normal;
+    margin-top: 1.5rem;
+  }
+  .carousel-caption p {
+    font-size: .8em;
+    line-height: 1.9;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 1023px) {
+  body {
+    background-color: greenyellow;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: blueviolet;
+  }
+  .carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+}
