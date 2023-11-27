@@ -23,7 +23,9 @@
         <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Logo Dropdead -->
-        <a class="navbar-brand" href="#">DropDead</a>
+        <div class="logo-nav ">
+          <h1><a class="navbar-brand" href="#">Dropdead</a></h1>
+        </div>
         <!-- Desplegable -->
         <div 
           class="sidebar offcanvas offcanvas-start" 
@@ -33,8 +35,8 @@
         >
           <!-- Header Desplegable -->
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" 
-            id="offcanvasNavbarLabel">DropDead</h5>
+            <h2 class="offcanvas-title" 
+            id="offcanvasNavbarLabel">DropDead</h2>
             <button 
               type="button" 
               class="btn-close shadow-none" 
@@ -49,6 +51,9 @@
                 <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#categorias">Categorias</a>
               </li>
               <li class="nav-item">
@@ -61,7 +66,9 @@
           </div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <a href="#">Carrito</a>
+          <p class="carrito falso-link">
+            <small class="ico-nav">Carrito</small>
+          </p>
         </div>
       </nav>
     </header>
@@ -80,10 +87,10 @@
             <picture class="d-block w-100">
               <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider1.jpg">
               <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider1.jpg">
-              <img src="assets/fondos/lg-slider1.jpg" alt="">
+              <img src="assets/fondos/lg-slider1.jpg" alt="Banner con modelos historia de la marca">
             </picture>
             <div class="carousel-caption d-md-block">
-              <h5 >DropDead</h5>
+              <h1 class="titulo tit-car">DropDead</h1>
               <p>Descubre DropDead, donde cada prenda es una declaración de audacia y autenticidad. Define tu estilo con la fusión única de moda y actitud que solo DropDead puede ofrecer.</p>
             </div>
           </div>
@@ -91,10 +98,10 @@
             <picture class="d-block w-100">
               <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider2.jpg">
               <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider2.jpg">
-              <img src="assets/fondos/lg-slider2.jpg" alt="">
+              <img src="assets/fondos/lg-slider2.jpg" alt="Banner con modelos el comienzo de la marca">
             </picture>
             <div class="carousel-caption d-md-block">
-              <h5>Del Escenario a tu Armario</h5>
+              <h2 class="titulo">Del Escenario a tu Armario</h2>
               <p>Explora la historia de DropDead, nacida en los escenarios musicales y transformada en un fenómeno global de moda alternativa. Cada colección cuenta la evolución de la creatividad a través de prendas únicas.</p>
             </div>
           </div>
@@ -102,10 +109,10 @@
             <picture class="d-block w-100">
               <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider3.jpg">
               <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider3.jpg">
-              <img src="assets/fondos/lg-slider3.jpg" alt="">
+              <img src="assets/fondos/lg-slider3.jpg" alt="Banner con modelos y su filosofia">
             </picture>
             <div class="carousel-caption d-md-block">
-              <h5>Filosofía Sostenible</h5>
+              <h2 class="titulo">Filosofía Sostenible</h2>
               <p>En el corazón de DropDead, la sostenibilidad es clave. Descubre cómo la marca combina estilo con responsabilidad, ofreciendo moda ética y consciente con materiales de calidad y prácticas amigables con el medio ambiente.</p>
             </div>
           </div>
@@ -113,10 +120,10 @@
             <picture class="d-block w-100">
               <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider4.jpg">
               <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider4.jpg">
-              <img src="assets/fondos/lg-slider4.jpg" alt="">
+              <img src="assets/fondos/lg-slider4.jpg" alt="Banner con modelos y su dilema">
             </picture>
             <div class="carousel-caption d-md-block">
-              <h5>Comunidad de Individualistas</h5>
+              <h2 class="titulo">Comunidad de Individualistas</h2>
               <p>DropDead va más allá de la moda, es una comunidad global que celebra la diversidad y la autenticidad. Únete a esta tribu que valora la expresión sin restricciones y forma parte de una revolución de estilo.</p>
             </div>
           </div>
@@ -131,60 +138,225 @@
         </button>
       </div>
     </section>
+    <section id="nosotros">
+      <div class="container">
+        <div class="row align-items-center px-5">
+            <div class="col-sm-12 col-lg-6 mt-1 mb-3">
+                <h2 class="titulo">¿Quienes somos?</h2>
+                <p class="fs-5 mt-3"><strong class="fw-bold">Drop Dead</strong>
+                  Es más que una marca de ropa; es una declaración de estilo y actitud. Fundada en 2005 por un apasionado equipo de diseñadores con una visión audaz, nuestra marca se ha convertido en un emblema de la moda alternativa y la individualidad. Inspirados por la fusión de la cultura streetwear y elementos vanguardistas, cada prenda de Drop Dead cuenta una historia única de rebeldía y autenticidad. Nuestro compromiso es ofrecer productos de alta calidad que no solo reflejen las últimas tendencias, sino que también desafíen los límites convencionales de la moda, invitando a nuestros clientes a expresar su personalidad de manera atrevida y original..</p>
+            </div>
+            <div class="col-sm-12 col-lg-6 text-center mb-3">
+              <picture class="d-block w-100">
+                <source media="(max-width: 576px)" srcset="assets/fondos/nosotros-sm.jpg">
+                <img src="assets/fondos/nosotros-md.jpg" alt="imagen ilustrativa de modelos">
+              </picture>
+            </div>
+        </div>
+    </div>
+    </section>
 
     <section id="categorias">
-      <h2>Categorias</h2>
+      <h2 class="titulo">Categorias
+      </h2>
+      <p class="mt-4 mb-5 text-center fs-7">Sumérgete en nuestras diversas categorías, que abarcan desde Tops vanguardistas y Bottoms innovadores hasta Jackets atemporales entre otros. Ya sea que estés en busca de prendas impactantes para destacar entre la multitud o de piezas versátiles para el día a día, en cada top, bottom o jacket de Drop Dead encontrarás una narrativa de estilo singular respaldada por una calidad excepcional. Sumérgete en el placer de vestir con confianza mientras exploras nuestras distintivas categorías de ropa, donde la moda se fusiona con la rebeldía de una manera auténtica y audaz.
+      </p>
+      <div class="container d-flex">
+
+        <div class="card mb-3">
+          <picture class="card-img-top img-fluid">
+            <source media="(max-width: 576px)" srcset="assets/categoria/hoddie-sm.png">
+            <source media="(max-width: 1024px)" srcset="assets/categoria/hoddie-md.png">
+            <img src="assets/categoria/hoddie-lg.png" alt="categoria buzos">
+          </picture>
+            <div class="card-body text-center">
+                <h3 class="card-title text-center">Hoddies</h3>
+            </div>
+        </div>
+        <div class="card mb-3">
+          <picture class="card-img-top img-fluid">
+            <source media="(max-width: 576px)" srcset="assets/categoria/shirt-sm.png">
+            <source media="(max-width: 1024px)" srcset="assets/categoria/shirt-md.png">
+            <img src="assets/categoria/shirt-lg.png" alt="categoria remeras">
+          </picture>
+            <div class="card-body text-center">
+                <h3 class="card-title text-center">Remeras</h3>
+            </div>
+        </div>
+        <div class="card mb-3">
+          <picture class="card-img-top img-fluid">
+            <source media="(max-width: 576px)" srcset="assets/categoria/pants-sm.png">
+            <source media="(max-width: 1024px)" srcset="assets/categoria/pants-md.png">
+            <img src="assets/categoria/pants-lg.png" alt="categoria pantalones">
+          </picture>
+            <div class="card-body text-center">
+                <h3 class="card-title text-center">Pantalones</h3>
+            </div>
+        </div>
+        <div class="card mb-3">
+          <picture class="card-img-top img-fluid">
+            <source media="(max-width: 576px)" srcset="assets/categoria/socks-sm.png">
+            <source media="(max-width: 1024px)" srcset="assets/categoria/socks-md.png">
+            <img src="assets/categoria/socks-lg.png" alt="categoria accesorios">
+          </picture>
+            <div class="card-body text-center">
+                <h3 class="card-title text-center">Accesorios</h3>
+            </div>
+        </div>
+      </div>
     </section>
+
     <section id="productos">
-      <h2 class="titulo text-center">Productos</h2>
+      <h2 class="titulo text-center" >Productos</h2>
       <div class="product">
-        <article class="card text-center" data-bs-toggle="modal" data-bs-target="#modal5">
+        <article class="card text-center" data-bs-toggle="modal" data-bs-target="#modal1">
           <picture class="card-img-top">
             <source media="(max-width: 576px)" srcset="assets/product/RotNRollBoy-sm.png">
             <source media="(max-width: 1024px)" srcset="assets/product/RotNRollBoy-md.png">
-            <img src="assets/product/RotNRollBoy-lg.png" alt="">
+            <img src="assets/product/RotNRollBoy-lg.png" alt="Remera negra con logo en rojo">
           </picture>
-          <h3>HYMN</h3>
+          <h3>ROT 'N' ROLL</h3>
+          <p class="card-text">Remera negra T-Shirt</p>
           <p class="card-text">$250.00</p>
         </article>
-        <article class="card text-center" data-bs-toggle="modal" data-bs-target="#modal5">
+        <article class="card text-center" data-bs-toggle="modal" data-bs-target="#modal2">
           <picture class="card-img-top">
-            <source media="(max-width: 576px)" srcset="assets/product/RotNRollBoy-sm.png">
-            <source media="(max-width: 1024px)" srcset="assets/product/RotNRollBoy-md.png">
-            <img src="assets/product/RotNRollBoy-lg.png" alt="">
+            <source media="(max-width: 576px)" srcset="assets/product/AroundTheFur-sm.png">
+            <source media="(max-width: 1024px)" srcset="assets/product/AroundTheFur-md.png">
+            <img src="assets/product/AroundTheFur-lg.png" alt="Campera de piel sintetica de colores marron y negro">
           </picture>
-          <h3>HYMN</h3>
+          <h3>Around The Fur</h3>
+          <p class="card-text">Campera de piel sintética</p>
           <p class="card-text">$250.00</p>
         </article>
-        <article class="card text-center" data-bs-toggle="modal" data-bs-target="#modal5">
+        <article class="card text-center" data-bs-toggle="modal" data-bs-target="#modal3">
           <picture class="card-img-top">
-            <source media="(max-width: 576px)" srcset="assets/product/RotNRollBoy-sm.png">
-            <source media="(max-width: 1024px)" srcset="assets/product/RotNRollBoy-md.png">
-            <img src="assets/product/RotNRollBoy-lg.png" alt="">
+            <source media="(max-width: 576px)" srcset="assets/product/HardcoreRomance-sm.png">
+            <source media="(max-width: 1024px)" srcset="assets/product/HardcoreRomance-md.png">
+            <img src="assets/product/HardcoreRomance-lg.png" alt="sweater tejido color negro">
           </picture>
-          <h3>HYMN</h3>
+          <h3>ROMANCE</h3>
+          <p class="card-text">Suéter tejido</p>
           <p class="card-text">$250.00</p>
         </article>
         <article class="card text-center" data-bs-toggle="modal" data-bs-target="#modal4">
           <picture class="card-img-top">
-            <source media="(max-width: 576px)" srcset="assets/product/RotNRollBoy-sm.png">
-            <source media="(max-width: 1024px)" srcset="assets/product/RotNRollBoy-md.png">
-            <img src="assets/product/RotNRollBoy-lg.png" alt="">
+            <source media="(max-width: 576px)" srcset="assets/product/Lure-sm.png">
+            <source media="(max-width: 1024px)" srcset="assets/product/Lure-md.png">
+            <img src="assets/product/Lure-lg.png" alt="Buzo con capucha desgastado color gris">
           </picture>
-          <h3>HYMN</h3>
+          <h3>Lure</h3>
+          <p class="card-text">Buzo con capucha desgastada</p>
           <p class="card-text">$250.00</p>
         </article>
         <article class="card text-center" data-bs-toggle="modal" data-bs-target="#modal5">
           <picture class="card-img-top">
-            <source media="(max-width: 576px)" srcset="assets/product/RotNRollBoy-sm.png">
-            <source media="(max-width: 1024px)" srcset="assets/product/RotNRollBoy-md.png">
-            <img src="assets/product/RotNRollBoy-lg.png" alt="">
+            <source media="(max-width: 576px)" srcset="assets/product/Makeover-sm.png">
+            <source media="(max-width: 1024px)" srcset="assets/product/Makeover-md.png">
+            <img src="assets/product/Makeover-lg.png" alt="Remera negra con un logo gris">
           </picture>
-          <h3>HYMN</h3>
+          <h3 class="">Makeover</h3>
+          <p class="card-text">Remera negra lavada</p>
           <p class="card-text">$250.00</p>
         </article>
       </div>
+
+      <!-- Modales -->
+      <div 
+        class="modal fade" 
+        id="modal1" 
+        tabindex="-1" 
+        aria-labelledby="exampleModalLabel" 
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down">
+          <section class="modal-content d-flex flex-lg-row align-items-center modal-body">
+            <picture class="prod-modal">
+              <source media="(max-width: 834px)" srcset="assets/product/RotNRollBoy-sm.png">
+              <source media="(max-width: 1024px)" srcset="assets/product/RotNRollBoy-md.png">
+              <img src="assets/product/RotNRollBoy-lg.png" alt="Remera negra con logo en rojo">
+            </picture>
+            <article>
+              <h4 class="titulo">ROT 'N' ROLL</h4>
+              <p>Es hora de Rot n Roll. Esta camiseta lavada de gran tamaño ha sido desgastada como ninguna otra, con un estampado horripilante, esta es una pieza de declaración para cualquier armario Drop Dead.</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Agregar al carrito</button>
+            </article>
+          </section>
+        </div>
+      </div>
       
+      <div 
+        class="modal fade" 
+        id="modal2" 
+        tabindex="-1" 
+        aria-labelledby="exampleModalLabel" 
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down">
+          <section class="modal-content d-flex flex-lg-row align-items-center modal-body">
+            <picture class="prod-modal">
+              <source media="(max-width: 834px)" srcset="assets/product/AroundTheFur-sm.png">
+              <source media="(max-width: 1024px)" srcset="assets/product/AroundTheFur-md.png">
+              <img src="assets/product/AroundTheFur-lg.png" alt="Campera de piel sintetica de colores marron y negro">
+            </picture>
+            <article>
+              <h4 class="titulo">Around The Fur</h4>
+              <p>Around The Fur es la chaqueta de Drop Dead con la que no querrás dormir. Fabricada en piel sintética, presenta un estampado de gritos en tonos apagados, cierre de cremallera y bolsillos. Es la prenda perfecta para el invierno.</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Agregar al carrito</button>
+            </article>
+          </section>
+        </div>
+      </div>
+       
+      <div 
+        class="modal fade" 
+        id="modal3" 
+        tabindex="-1" 
+        aria-labelledby="exampleModalLabel" 
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down">
+          <section class="modal-content d-flex flex-lg-row align-items-center modal-body">
+            <picture class="prod-modal">
+              <source media="(max-width: 834px)" srcset="assets/product/HardcoreRomance-sm.png">
+              <source media="(max-width: 1024px)" srcset="assets/product/HardcoreRomance-md.png">
+              <img src="assets/product/HardcoreRomance-lg.png" alt="sweater tejido color negro">
+            </picture>
+            <article>
+              <h4 class="titulo">ROMANCE</h4>
+              <p>Nuestro tejido de punto "Romance" es el complemento grunge perfecto para tu armario. Confeccionado en un tejido de punto abierto negro, su corte holgado, los hombros caídos y las mangas largas proporcionan un ajuste relajado y cómodo.</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Agregar al carrito</button>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <div 
+        class="modal fade" 
+        id="modal4" 
+        tabindex="-1" 
+        aria-labelledby="exampleModalLabel" 
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down">
+          <section class="modal-content d-flex flex-lg-row align-items-center modal-body">
+            <picture class="prod-modal">
+              <source media="(max-width: 834px)" srcset="assets/product/Lure-sm.png">
+              <source media="(max-width: 1024px)" srcset="assets/product/Lure-md.png">
+              <img src="assets/product/Lure-lg.png" alt="Buzo con capucha desgastado color gris">
+            </picture>
+            <article>
+              <h4 class="titulo">Lure</h4>
+              <p>Confeccionada en suave algodón gris marengo, es la combinación perfecta de comodidad y diseño contemporáneo. Lure se presenta en un corte relajado, con una acogedora capucha y un práctico bolsillo canguro.</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Agregar al carrito</button>
+            </article>
+          </section>
+        </div>
+      </div>
 
       <div 
         class="modal fade" 
@@ -194,38 +366,38 @@
         aria-hidden="true"
         >
         <div class="modal-dialog modal-lg modal-fullscreen-sm-down">
-          <div class="modal-content d-flex flex-lg-row align-items-center modal-body">
+          <section class="modal-content d-flex flex-lg-row align-items-center modal-body">
             <picture class="prod-modal">
-              <source media="(max-width: 834px)" srcset="assets/product/RotNRollBoy-sm.png">
-              <source media="(max-width: 1024px)" srcset="assets/product/RotNRollBoy-md.png">
-              <img src="assets/product/RotNRollBoy-lg.png" alt="">
+              <source media="(max-width: 834px)" srcset="assets/product/Makeover-sm.png">
+              <source media="(max-width: 1024px)" srcset="assets/product/Makeover-md.png">
+              <img src="assets/product/Makeover-lg.png" alt="Remera negra con un logo gris">
             </picture>
             <article>
-              <h4>Description</h4>
-              <p>Run into the pit with the Seek & Destroy jeans. Raw with a washed black denim, you can find layers of rips and distressing all over these wide-legged pair of jeans. Beneath the rips is an under-fabric to keep you protected. These are the ultimate addition to your Drop Dead wardrobe.</p>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <h4 class="titulo">Makeover</h4>
+              <p>Makeover es un lienzo atemporal para el arte ponible. Esta camiseta oversize viene en un color negro lavado que le da un toque vintage, gritando de la estética Drop Dead, que ha sido meticulosamente diseñado por @kittysophie.art.</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
               <button type="button" class="btn btn-primary">Agregar al carrito</button>
             </article>
-          </div>
+          </section>
         </div>
-      </div> 
+      </div>
+
     </section>
     <section id="contacto">
-      <h2>Contacto</h2>
-      <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <h2 class="titulo text-center">Contacto</h2>
+      <div class="container d-flex justify-content-center align-items-center
+      mb-5">
         <div class="row border rounder-5 p-3 bg-white shadow box-area">
             <div class="col-md-6 rounder-4 d-flex justify-content-center align-items-center flex-column left-box">
                 <div class="featured-image mb-3">
-                    <img src="img/imagen.jpg" alt="Imagen del formulario"class="img-fluid">
+                    <img src="assets/icon/NEW_SITE_LOGO_BLACK_220x.png" alt="Imagen de contacto"class="img-fluid">
                 </div>
-                <p class="text-Black fs-2">Registrate</p>
-                <small class="text-Black text-wrap text-center" >Registrate para recibir mas informacion.</small>
+                <p class="text-Black fs-5">Registrate</p>
             </div>
             <div class="col-md-6 right-box">
                 <div class="row align-items-center ">
-                    <div class="header-text mb-4">
-                        <p>Hola, de nuevo</p>
-                        <p>Estamos felices de tenerte de regreso.</p>
+                    <div class="header-text mb-2">
+                      <p class="text-Black fs-5">Registrate para recibir mas informacion</p>
                     </div>
                     <div class="input-group mb-2">
                         <input type="text"  class="form-control form-control-lg bg-light fs-6" placeholder="Nombre">
@@ -238,14 +410,14 @@
                     </div>
                     <div class="input-group mb-5 d-flex justify-content-between">
                        <div class="form-check">
-                        <input type="checbox" class="form-check-input" id="formCheck">
+                        <input type="checkbox" class="form-check-input" id="formCheck">
                         <label for="formCheck" class="form-check-label text-secondary"><small>Recordar contraseña</small></label>
                        </div>
                        <div class="forgot">
-                        <small><a href="#">¿Has olvidado tu contraseña?</a></small>
+                        <small><p  class="falso-link">¿Has olvidado tu contraseña?</p></small>
                        </div>
                       <div class="input-group mb-3">
-                        <button class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+                        <button class="btn btn-lg btn-primary w-100 fs-6">Iniciar sesión</button>
                       </div>
                       <div class="input-group mb-3">
                         <button class="btn btn-lg btn-light w-100 fs-6"><img src="assets/icon/Google.png " alt="Imagen de Google" style="width: 20px;" class="me-2"><small>Inicia sesión con Google</small></button>
@@ -258,7 +430,51 @@
   </main>
 
   <footer>
-    
+    <footer>
+      <div class="container text-center ">
+        <div class="rounder-4 d-flex justify-content-center align-items-center flex-column left-box">
+          <div class="featured-image mb-3">
+              <img src="assets/icon/NEW_SITE_LOGO_BLACK_220x.png" alt="Imagen del formulario"class="img-fluid">
+          </div>
+        <div class="row align-items-center p-5">
+          <div class="col-md-4">
+            <div class="row">
+              <p>Panadero Lucas - Benitez Rocio - Sosa Marianela</p>
+              <p>Diseño Web - Escuela Da Vinci</p>
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+              <div class="row">
+                <p>Interacción con dispositivos moviles</p>
+                <p>Turno tarde - DWT2AP - 2023</p>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="row">
+                  <ul class="list-inline">
+                      <li class="list-inline-item">
+                           <a class="bi-facebook" href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" title="Ir a Facebook"><span>Facebook</span></a>
+                       </li>
+                      <li class="list-inline-item">
+                          <a class="bi-instagram" href="https://www.instagram.com/dropdeadofficial" target="_blank" title="Ir a Instagram"><span>Instagram</span>
+                          </a>
+                      </li>
+                      <li class="list-inline-item">
+                          <a class="bi bi-youtube" href="https://www.youtube.com/channel/UCOqUO1RSJwKPoCZbU1UXU7A" target="_blank" title="Ir a Youtube"><span>Youtube</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <ul class="d-flex">
+            <li><img class="fotito" src="assets/fondos/lucas.jpg" alt=""></li>
+            <li><img class="fotito" src="assets/fondos/rocio.jpg" alt=""></li>
+            <li><img class="fotito" src="assets/fondos/maro.jpg" alt=""></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
