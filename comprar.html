@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>DROPDEAD E-COMMERCE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="assets/icon/faviconDrop.png" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navt">
+        <h1><a href="">DROPDEAD</a></h1>
+        <ul class="nav-list">
+          <li><a  href="index.html">INICIO</a></li>
+          <li class="dropdown">
+            <a href="product.html">PRODUCTOS</a>
+            <ul class="dropdown-menu">
+              <li><a href="product.html" data-cat="todo">TODO</a></li>
+              <li><a href="product.html" data-cat="Remera">REMERAS</a></li>
+              <li><a href="product.html" data-cat="Buzo">BUZOS</a></li>
+              <li><a href="product.html" data-cat="Campera">CAMPERAS</a></li>
+              <li><a href="product.html" data-cat="Pantalon">PANTALONES</a></li>
+              <li><a href="product.html" data-cat="Accesorio">ACCESORIOS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="buy.html">COMPRAR</a>
+          </li>
+          <li>
+            <button 
+              class="icon a-cart" 
+              type="button" 
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+              >
+              <small class="d-lg-none">Carrito</small>
+              <span class="badge bg-danger cantidades-carrito">0</span>
+            </button>           
+          </li>
+        </ul>
+      </nav>  
+    </header>
+    <main class="sect-comprar">
+      <div class="modal-body" id="productoModalBody">
+        <img src="assets/product/Lure.png" alt="Lure">
+        <h2 class="modal-titulo">Lure</h2>
+        <p class="badge bg-secondary">Buzo</p>
+        <p>Distressed Hoodie</p>
+        <p class="price">$120</p>
+        <button class="add" data-id="8" data-val="120" data-cat="Buzo">Agregar al carrito</button>
+      </div>
+    </main>
+    <footer>
+      <h4><a href="">Logo</a></h4>
+      <ul>
+        <li><a href="" class="icon a-insta"><small class="d-lg-none">Instagram</small></a></li>
+        <li><a href="" class="icon a-tw"><small class="d-lg-none">Twitter</small></a></li>
+        <li><a href="" class="icon a-fb"><small class="d-lg-none">Facebook</small></a></li>
+      </ul>
+      <p>Creado por <a href="">@panadxro</a></p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/parcial.js"></script>
+  </body>
+</html>

@@ -1,38 +1,273 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DROPDEAD - Ecommerce</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <h1>DROPDEAD</h1>
-      <ul class="nav-list">
-        <li><a href="">Hardcore feelings</a></li>
-        <li><a href="">New in</a></li>
-        <li>
-          <a href="">Categories</a>
-          <ol class="drop-categorias">
-            <li>Todo</li>
-            <li>Remeras</li>
-            <li>Buzos</li>
-            <li>Camperas</li>
-            <li>Pantalones</li>
-            <li>Accesorios</li>
-          </ol>
-        </li>
-        <li><a href="">Explore</a></li>
+<!doctype html>
+<html id="pag-inicio" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>DROPDEAD E-COMMERCE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="assets/icon/faviconDrop.png" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navt">
+        <h1><a href="index.html">DROPDEAD</a></h1>
+        <ul class="nav-list nav-underline">
+          <li><a class="nav-link" href="index.html">INICIO</a></li>
+          <li class="dropdown">
+            <a class="nav-link" href="categorias.html">CATEGORIAS</a>
+            <ul class="dropdown-menu">
+              <li><a href="categorias.html">TODO</a></li>
+              <li><a href="categorias.html?cat=Remeras">REMERAS</a></li>
+              <li><a href="categorias.html?cat=Buzos">BUZOS</a></li>
+              <li><a href="categorias.html?cat=Camperas">CAMPERAS</a></li>
+              <li><a href="categorias.html?cat=Pantalones">PANTALONES</a></li>
+              <li><a href="categorias.html?cat=Accesorios">ACCESORIOS</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="comprar.html">COMPRAR</a></li>
+          <li>
+            <button 
+              class="icon a-cart" 
+              type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+              >
+              <small class="d-lg-none">Carrito</small>
+              <span class="badge bg-danger cantidades-carrito">0</span>
+            </button>           
+          </li>
+        </ul>
+      </nav>  
+    </header>
+    <main>
+      <sidebar class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <section class="carrito-section">
+          <div class="cart-head">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h2>CARRITO</h2>
+            <button id="reset"><small>Vaciar carrito</small>
+              <span class="badge bg-danger cantidades-carrito">0</span>
+            </button>
+          </div>
+          <ul id="lista-carrito">
+          </ul>
+          <article class="info">
+            <p>TOTAL:<span id="total-carrito"></span></p>
+            <button>Checkout</button>
+          </article>
+        </section>
+      </sidebar>
+      
+      <section class="inicio">
+        <article>
+          <h2>Drop Dead <br> Estilo único, Calidad Intransigente</h2>
+          <p>Drop Dead fusiona la moda alternativa y la estética gótica en prendas únicas. Nuestra ropa combina originalidad, calidad y un toque de rebeldía. </p>
+          <a href="" class="boton">Explorar</a>
+        </article>
+        <figure>
+          <img src="assets/product/MaxPain.png" alt="">
+        </figure>
+      </section>
+      <section class="nosotros">
+        <article>
+          <p>Descubre DropDead, donde cada prenda es una declaración de audacia y autenticidad. Define tu estilo con la fusión única de moda y actitud que solo DropDead puede ofrecer.</p>
+          <figure>
+            <img src="assets/product/Violence.png" alt="">
+          </figure>
+        </article>
+        <article>
+          <figure>
+            <img src="assets/product/Violence.png" alt="">
+          </figure>
+          <p>Drop Dead es más que una marca de ropa; es una declaración de estilo. Fundada en la intersección de la moda alternativa y la estética gótica, Drop Dead ofrece prendas únicas y atrevidas para aquellos que buscan destacar en la multitud.</p>
+        </article>
+      </section>
+      <section class="detalles">
+        <h2 class="titulo-2">Caracteristicas</h2>
+        <div class="detalle-box">
+          <article>
+            <h3>Diseños Únicos</h3>
+            <p>Camisetas, sudaderas y chaquetas que desafían las convenciones.</p>          
+          </article>
+          <article>
+            <h3>Calidad Superior</h3>
+            <p>Materiales premium y atención meticulosa a los detalles.</p>          
+          </article>
+          <article>
+            <h3>Compromiso</h3>
+            <p>Apoyamos eventos y artistas en la comunidad gótica.</p>          
+          </article>
+        </div>
+        <div class="novedades">
+          <figure id="carouselExampleCaptions" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item" data-bs-interval="5000">
+                  <picture class="d-block w-100">
+                    <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider1.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider1.jpg">
+                    <img src="assets/fondos/lg-slider1.jpg" alt="Banner con modelos historia de la marca">
+                  </picture>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <picture class="d-block w-100">
+                    <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider2.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider2.jpg">
+                    <img src="assets/fondos/lg-slider2.jpg" alt="Banner con modelos el comienzo de la marca">
+                  </picture>
+                </div>
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <picture class="d-block w-100">
+                    <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider3.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider3.jpg">
+                    <img src="assets/fondos/lg-slider3.jpg" alt="Banner con modelos y su filosofia">
+                  </picture>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <picture class="d-block w-100">
+                    <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider4.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider4.jpg">
+                    <img src="assets/fondos/lg-slider4.jpg" alt="Banner con modelos y su dilema">
+                  </picture>
+                </div>
+              </div>
+          </figure>
+          <figure>
+          </figure>
+        </div>
+      </section>
+      <section class="sec-productos">
+        <h2 class="titulo-2" id="tit-categoria">Productos</h2>
+        <div id="productos">
+          <article class="card">
+            <a href="comprar.html?id=14">
+              <figure>
+                <img src="assets/product/Sigil.png" alt="Sigil">
+              </figure>
+              <h3>Sigil</h3>
+              <p>Earrings</p>
+              <p class="price">$<span>20</span></p>
+            </a>
+            <button class="add" data-id="14" data-val="20" data-cat="Accesorio">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="comprar.html?id=6">
+              <figure>
+                <img src="assets/product/HollowedSoul.png" alt="Hollowed Soul">
+              </figure>
+              <h3>Hollowed Soul</h3>
+              <p>Washed Black Hoodie</p>
+              <p class="price">$<span>120</span></p>
+            </a>
+            <button class="add" data-id="6" data-val="120" data-cat="Buzo">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="comprar.html?id=7">
+              <figure>
+                <img src="assets/product/J_AdoreHardcore.png" alt="J'adore Hardcore">
+              </figure>
+              <h3>J'adore Hardcore</h3>
+              <p>2 in 1 Jacket</p>
+              <p class="price">$<span>200</span></p>
+            </a>
+            <button class="add" data-id="7" data-val="200" data-cat="Campera">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="comprar.html?id=15">
+              <figure>
+                <img src="assets/product/Spiritual.png" alt="Spiritual">
+              </figure>
+              <h3>Spiritual</h3>
+              <p>Socks (Pack of 2)</p>
+              <p class="price">$<span>20</span></p>
+            </a>
+            <button class="add" data-id="15" data-val="20" data-cat="Accesorio">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="comprar.html?id=17">
+              <figure>
+                <img src="assets/product/Violence.png" alt="Violence">
+              </figure>
+              <h3>Violence</h3>
+              <p>Elasticated Shorts</p>
+              <p class="price">$<span>60</span></p>
+            </a>
+            <button class="add" data-id="17" data-val="60" data-cat="Pantalon">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="comprar.html?id=8">
+              <figure>
+                <img src="assets/product/Lure.png" alt="Lure">
+              </figure>
+              <h3>Lure</h3>
+              <p>Distressed Hoodie</p>
+              <p class="price">$<span>120</span></p>
+            </a>
+            <button class="add" data-id="8" data-val="120" data-cat="Buzo">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="comprar.html?id=14">
+              <figure>
+                <img src="assets/product/Makeover.png" alt="Makeover">
+              </figure>
+              <h3>Makeover</h3>
+              <p>Washed Black T-Shirt</p>
+              <p class="price">$<span>50</span></p>
+            </a>
+            <button class="add" data-id="9" data-val="50" data-cat="Remera">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="comprar.html?id=10">
+              <figure>
+                <img src="assets/product/Mala.png" alt="Mala">
+              </figure>
+              <h3>Mala</h3>
+              <p>Wooden bead necklace</p>
+              <p class="price">$<span>20</span></p>
+            </a>
+            <button class="add" data-id="10" data-val="20" data-cat="Accesorio">Agregar al carrito</button>
+          </article>
+        </div>
+        <a href="categorias.html" class="boton">Ver más</a>
+      </section>
+      <section class="newsletter">
+        <h2 class="titulo-2">Newsletter</h2>
+        <p>Sign up to our newsletter for exclusive news about our next collection</p>
+          <form action="" class="form-newsletter">
+            <fieldset>
+              <legend>Nombre formulario</legend>
+              <div>
+                <label for="nombre">Nombre y Apellido</label>
+                <input placeholder="Nombre y Apellido" id="nombre" type="text">
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input placeholder="Email" id="email" type="email">
+              </div>
+              <div>
+                <label for="tel">Teléfono</label>
+                <input placeholder="Teléfono" id="tel" type="tel">
+              </div>
+              <div>
+                <label for="comentario">Comentario</label>
+                <textarea placeholder="Comentario" id="comentario"></textarea>
+              </div>
+            </fieldset>
+            <div class="boton">
+              <input value="Subscribe" type="submit">
+            </div>
+          </form>
+      </section>
+    </main>
+    <footer>
+      <h4><a href="">Logo</a></h4>
+      <ul>
+        <li><a href="" class="icon a-insta"><small class="d-lg-none">Instagram</small></a></li>
+        <li><a href="" class="icon a-tw"><small class="d-lg-none">Twitter</small></a></li>
+        <li><a href="" class="icon a-fb"><small class="d-lg-none">Facebook</small></a></li>
       </ul>
-    </nav>
-  </header>
-  <section>
-
-  </section>
-</body>
-
-
+      <p>Creado por <a href="">@panadxro</a></p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/parcial.js"></script>
+  </body>
 </html>

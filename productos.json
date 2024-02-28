@@ -1,0 +1,138 @@
+[
+  { 
+   "id": 1,
+   "nombre": "28 Days",
+   "descripcion": "Ring",
+   "precio": 20,
+   "imagen": "assets/product/28Days.png",
+   "categoria": "Accesorios" 
+  },
+  {
+   "id": 2,
+   "nombre": "Angel Soup",
+   "descripcion": "Blue Longsleeve",
+   "precio": 70,
+   "imagen": "assets/product/AngelSoup.png",
+   "categoria": "Remeras" 
+  },
+  {
+   "id": 3,
+   "nombre": "Around The Fur",
+   "descripcion": "Faux fur jacket",
+   "precio": 200,
+   "imagen": "assets/product/AroundTheFur.png",
+   "categoria": "Camperas" 
+  },
+  {
+   "id": 4,
+   "nombre": "Blessings",
+   "descripcion": "Longsleeve",
+   "precio": 70,
+   "imagen": "assets/product/Blessing.png",
+   "categoria": "Remeras" 
+  },
+  {
+   "id": 5,
+   "nombre": "Glow Bottoms",
+   "descripcion": "Black Sweatpants",
+   "precio": 120,
+   "imagen": "assets/product/GlowBottoms.png",
+   "categoria": "Pantalones" 
+  },
+  {
+   "id": 6,
+   "nombre": "Hollowed Soul",
+   "descripcion": "Washed Black Hoodie",
+   "precio": 120,
+   "imagen": "assets/product/HollowedSoul.png",
+   "categoria": "Buzos" 
+  },
+  {
+   "id": 7,
+   "nombre": "J'adore Hardcore",
+   "descripcion": "2 in 1 Jacket",
+   "precio": 200,
+   "imagen": "assets/product/J_AdoreHardcore.png",
+   "categoria": "Camperas" 
+  },
+  {
+   "id": 8,
+   "nombre": "Lure",
+   "descripcion": "Distressed Hoodie",
+   "precio": 120,
+   "imagen": "assets/product/Lure.png",
+   "categoria": "Buzos" 
+  },
+  {
+   "id": 9,
+   "nombre": "Makeover",
+   "descripcion": "Washed Black T-Shirt",
+   "precio": 50,
+   "imagen": "assets/product/Makeover.png",
+   "categoria": "Remeras" 
+  },
+  {
+   "id": 10,
+   "nombre": "Runes",
+   "descripcion": "Belt",
+   "precio": 40,
+   "imagen": "assets/product/Mala.png",
+   "categoria": "Accesorios" 
+  },
+  {
+   "id": 11,
+   "nombre": "Max Pain",
+   "descripcion": "Racer Jacket",
+   "precio": 250,
+   "imagen": "assets/product/MaxPain.png",
+   "categoria": "Camperas" 
+  },
+  {
+   "id": 12,
+   "nombre": "Rot 'N' Roll",
+   "descripcion": "Washed Black T-Shirt",
+   "precio": 60,
+   "imagen": "assets/product/RotNRoll.png",
+   "categoria": "Remeras" 
+  },
+  {
+   "id": 13,
+   "nombre": "Seek & Destroy",
+   "descripcion": "Denim Jeans",
+   "precio": 120,
+   "imagen": "assets/product/Seek_Destroy.png",
+   "categoria": "Pantalones" 
+  },
+  {
+   "id": 14,
+   "nombre": "Razor's Edge",
+   "descripcion": "Earrings",
+   "precio": 20,
+   "imagen": "assets/product/Razors_Edge.png",
+   "categoria": "Accesorios" 
+  },
+  {
+   "id": 15,
+   "nombre": "Spiritual",
+   "descripcion": "Socks (Pack of 2)",
+   "precio": 20,
+   "imagen": "assets/product/Spiritual.png",
+   "categoria": "Accesorios" 
+  },
+  {
+   "id": 16,
+   "nombre": "Squeaky Clean",
+   "descripcion": "White T-Shirt",
+   "precio": 15,
+   "imagen": "assets/product/SqueakyClean.png",
+   "categoria": "Remeras" 
+  },
+  {
+   "id": 17,
+   "nombre": "Violence",
+   "descripcion": "Elasticated Shorts",
+   "precio": 60,
+   "imagen": "assets/product/Violence.png",
+   "categoria": "Pantalones" 
+  }
+]
