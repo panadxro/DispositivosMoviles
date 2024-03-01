@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html id="pag-producto" lang="es">
   <head>
     <meta charset="utf-8" />
     <title>DROPDEAD E-COMMERCE</title>
@@ -59,62 +59,23 @@
     </sidebar>
     
     <section class="detalle-producto">
-      <figure id="carouselExampleIndicators" class="carousel slide">
-        <figure class="carousel-inner">
-          <picture class="carousel-item active">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </picture>
-          <picture class="carousel-item">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </picture>
-          <picture class="carousel-item">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </picture>
-          <picture class="carousel-item">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </picture>
-          <picture class="carousel-item">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </picture>
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <figure id="galeria-productos" class="carousel-inner">
+          <picture class="carousel-item active"><img src="assets/product/AroundTheFur/AroundTheFur1.png" alt="AroundTheFur"></picture>
+          <picture class="carousel-item"><img src="assets/product/AroundTheFur/AroundTheFur2.png" alt="AroundTheFur"></picture>
+          <picture class="carousel-item"><img src="assets/product/AroundTheFur/AroundTheFur3.png" alt="AroundTheFur"></picture>
+          <picture class="carousel-item"><img src="assets/product/AroundTheFur/AroundTheFur4.png" alt="AroundTheFur"></picture>
+          <picture class="carousel-item"><img src="assets/product/AroundTheFur/AroundTheFur5.png" alt="AroundTheFur"></picture>
         </figure>
-        <ul class="carousel-indicators">
-          <li 
-            data-bs-target="#carouselExampleIndicators" 
-            data-bs-slide-to="0" 
-            class="active" 
-            aria-current="true" 
-            aria-label="Slide 1">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </li>
-          <li
-            data-bs-target="#carouselExampleIndicators" 
-            data-bs-slide-to="1" 
-            aria-label="Slide 2">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </li>
-          <li 
-            data-bs-target="#carouselExampleIndicators" 
-            data-bs-slide-to="2" 
-            aria-label="Slide 3">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </li>
-          <li 
-            data-bs-target="#carouselExampleIndicators" 
-            data-bs-slide-to="3" 
-            aria-label="Slide 4">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </li>
-          <li 
-            data-bs-target="#carouselExampleIndicators" 
-            data-bs-slide-to="4" 
-            aria-label="Slide 5">
-            <img src="assets/icon/faviconDrop.png" alt="">
-          </li>
-        </ul>
-      </figure>
-      <article>
-        <h1 class="titulo-2">Around The Fur</h1>
-        <p>Around The Fur es la chaqueta de Drop Dead con la que no querrás dormir. Fabricada en piel sintética, presenta un estampado de gritos en tonos apagados, cierre de cremallera y bolsillos. Es la prenda perfecta para el invierno.</p>
+        <ul id="indicador-productos" class="carousel-indicators"><li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 2" class="active" aria-current="true"><img src="assets/product/AroundTheFur/AroundTheFur1.png" alt="AroundTheFur"></li><li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 3"><img src="assets/product/AroundTheFur/AroundTheFur2.png" alt="AroundTheFur"></li><li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"><img src="assets/product/AroundTheFur/AroundTheFur3.png" alt="AroundTheFur"></li><li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 5"><img src="assets/product/AroundTheFur/AroundTheFur4.png" alt="AroundTheFur"></li><li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 6"><img src="assets/product/AroundTheFur/AroundTheFur5.png" alt="AroundTheFur"></li></ul>
+      </div>
+      <article id="infoProducto">
+        <h1 id="nombre-producto" class="titulo-2">Around The Fur</h1>
+        <span id="cat-producto">Camperas</span>
+        <p id="subtitulo-producto">Faux fur Jacket</p>
+        <p id="descripcion-producto">Around The Fur es la chaqueta de Drop Dead con la que no querrás dormir. Fabricada en piel sintética, presenta un estampado de gritos en tonos apagados, cierre de cremallera y bolsillos. Es la prenda perfecta para el invierno.</p>
+        <p id="precio-producto">$200</p>
+        <button id="boton-agregar" class="boton add">Agregar al carrito</button>
       </article>
     </section>
   </main>

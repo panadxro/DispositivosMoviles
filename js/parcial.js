@@ -1,25 +1,36 @@
 'use strict';
 /* PANADERO LUCAS DWT2AP TP2 - Ecommerce */
-const d = document;
-// Obtener la cadena JSON del localStorage
-const productosJSON = localStorage.getItem('productos');
-
-// Convertir la cadena JSON a un array de objetos
-const productos = JSON.parse(productosJSON);
-
-// Cargar los datos del archivo JSON utilizando fetch
-fetch('productos.json')
-  .then(response => response.json())
-  .then(data => {
-    // Guardar los datos en localStorage
-    localStorage.setItem('productos', JSON.stringify(data));
-  })
-  .catch(error => console.error('Error al cargar los datos:', error));
-
-/* DOM */
 document.addEventListener('DOMContentLoaded', function() {
+  const d = document;
+  // Obtener la cadena JSON del localStorage
+  const productosJSON = localStorage.getItem('productos');
+
+  // Convertir la cadena JSON a un array de objetos
+  const productos = JSON.parse(productosJSON);
+
+  // Cargar los datos del archivo JSON utilizando fetch
+  fetch('productos.json')
+    .then(response => response.json())
+    .then(data => {
+      // Guardar los datos en localStorage
+      localStorage.setItem('productos', JSON.stringify(data));
+      // Buscar el producto con el id correspondiente
+      const producto = data.find(item => item.id === parseInt(productId));
+      if(pagProducto) {
+        if (producto) {
+          vaciarProductoId()
+          mostrarProductoId(producto);
+        } else {
+          console.error('Producto no encontrado');
+        }
+      }
+    })
+    .catch(error => console.error('Error al cargar los datos:', error));
+    
+  /* DOM */
   const pagCategoria = d.querySelector('#pag-categorias');
   const pagInicio = d.querySelector('#pag-inicio');
+  const pagProducto = d.querySelector('#pag-producto');
   const products = d.querySelector('#productos');
   const listaCarrito = d.getElementById('lista-carrito');
   const categoriaTitulo = d.getElementById('tit-categoria');
@@ -28,7 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const reset = d.querySelector('#reset');
   const urlParams = new URLSearchParams(window.location.search);
   const categoriaSelect = urlParams.get('cat');
-  const productId = urlParams.get('id')
+  // Producto detalle
+  const productId = urlParams.get('id');
+  const figureProducto = document.getElementById('galeria-productos');
+  const ulProducto = document.getElementById('indicador-productos');
+  const infoProducto = document.getElementById('infoProducto')
+  const nombreProducto = document.getElementById('nombre-producto');
+  const categoriaProducto = document.getElementById('cat-producto');
+  const subtituloProducto = document.getElementById('subtitulo-producto');
+  const descripcionProducto = document.getElementById('descripcion-producto');
+  const precioProducto = document.getElementById('precio-producto');
+  const botonAgregar = document.getElementById('boton-agregar');
 
   let carrito = JSON.parse(localStorage.getItem('carrito')) || { productosIds: [], cantidades: [], total: 0 };
 
@@ -46,18 +67,18 @@ document.addEventListener('DOMContentLoaded', function() {
     anchor.href = `producto.html?id=${producto.id}`;
 
     const figura = document.createElement('figure');
-    const imagen = d.createElement('img');
+    const imagen = document.createElement('img');
     imagen.src = producto.imagen;
-    imagen.alt = producto.nombre;
+    imagen.alt = producto.titulo;
     figura.appendChild(imagen);
     anchor.appendChild(figura);
 
     const titulo = document.createElement('h3');
-    titulo.textContent = producto.nombre;
+    titulo.textContent = producto.titulo;
     anchor.appendChild(titulo);
 
     const descripcion = document.createElement('p');
-    descripcion.textContent = producto.descripcion;
+    descripcion.textContent = producto.subtitulo;
     anchor.appendChild(descripcion);
 
     const precio = document.createElement('p');
@@ -68,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     card.appendChild(anchor);
 
     const addBtn = d.createElement('button');
-    addBtn.classList.add('add');
+    addBtn.classList.add('add', 'boton');
     addBtn.dataset.id = producto.id;
     addBtn.dataset.val = producto.precio;
     addBtn.dataset.cat = producto.categoria;
@@ -166,7 +187,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     carrito.productosIds.forEach((productosId) => {
       const producto = productos.find(p => p.id === productosId);
-
+      let productoCarpeta = producto.titulo.replace(/\s/g, '');
+      productoCarpeta = productoCarpeta.replace(/[^\w\s]/gi, '');
       const listItem = d.createElement('li');
       listItem.classList.add('item-producto');
       listaCarrito.appendChild(listItem);
@@ -175,15 +197,17 @@ document.addEventListener('DOMContentLoaded', function() {
       descripCar.classList.add('descrip-car');
       listItem.appendChild(descripCar);
 
-      const miniportada = d.createElement('img');
-      miniportada.classList.add('miniportada');
-      miniportada.src = producto.imagen;
-      miniportada.alt = producto.nombre;
-      descripCar.appendChild(miniportada);
+      const imagen = document.createElement('img');
+      imagen.classList.add('miniportada');
+      imagen.src = `assets/product/${productoCarpeta}/sm${productoCarpeta}3.png`;
+      imagen.alt = producto.titulo;
+      // descripCar.appendChild(miniportada);
+      descripCar.appendChild(imagen);
+
 
       const tituloCar = d.createElement('h3');
       tituloCar.classList.add('titulo-car');
-      const nombreProducto = d.createTextNode(producto.nombre);
+      const nombreProducto = d.createTextNode(producto.titulo);
       const precioProcucto = d.createTextNode(` $${producto.precio}`);
       const spanPrecio = d.createElement('span');
       spanPrecio.appendChild(precioProcucto);
@@ -201,17 +225,86 @@ document.addEventListener('DOMContentLoaded', function() {
       delBtn.dataset.id = producto.id;
       delBtn.dataset.val = producto.precio;
       delBtn.dataset.cat = producto.categoria;
-      delBtn.innerHTML = 'x';
+      delBtn.innerHTML = 'Eliminar';
       listItem.appendChild(delBtn);
 
       delBtn.addEventListener('click', () => eliminarDelCarrito(listItem));
     })
   };
-
-  /* Mostrar producto al detalle */
-  function mostrarProducto(productosId) {
-    
+  /* Vaciar producto */
+  function vaciarProductoId() {
+    // Limpiar galeria
+    while (figureProducto.firstChild) {
+      figureProducto.removeChild(figureProducto.firstChild);
+    }
+    while (ulProducto.firstChild) {
+      ulProducto.removeChild(ulProducto.firstChild);
+    }
+    // Limpiar informacion
+    const child = infoProducto.children;
+    console.log(child.length)
+    for (let i = 0; i < child.length-1; i++) {
+      if (child[i].nodeType === 1) {
+        child[i].textContent = '';
+      }
+    }
   }
+  /* Mostrar producto al detalle */
+  function mostrarProductoId(producto) {
+    // Nombre de carpeta de producto
+    let productoCarpeta = producto.titulo.replace(/\s/g, '');
+    productoCarpeta = productoCarpeta.replace(/[^\w\s]/gi, '');
+    // Mostrar galeria de productos
+    for (let i = 1; i <= 5; i++) {
+      // Galeria indicadores
+      const liIndicador = document.createElement('li');
+      liIndicador.dataset.bsTarget = '#carouselExampleIndicators';
+      liIndicador.dataset.bsSlideTo = `${i - 1}`;
+      liIndicador.setAttribute('aria-label', `Slide ${i + 1}`);
+      
+      // Imagen seleccionada
+      const galeriaProducto = document.createElement('picture');
+      galeriaProducto.classList.add('carousel-item');
+      
+      // Primer elemento active
+      if(i === 1) {
+        liIndicador.classList.add('active');
+        liIndicador.setAttribute('aria-current', 'true');
+        galeriaProducto.classList.add('active');
+      }
+      
+      const imagensm = document.createElement('img');
+      imagensm.src = `assets/product/${productoCarpeta}/sm${productoCarpeta}${i}.png`;
+      imagensm.alt = `${productoCarpeta}`;
+      
+      const imagen = document.createElement('img');
+      imagen.src = `assets/product/${productoCarpeta}/${productoCarpeta}${i}.png`;
+      imagen.alt = `${productoCarpeta}`;
+
+      const source = document.createElement('source');
+      source.media = '(max-width: 1024px)';
+      source.srcset = `assets/product/${productoCarpeta}/md${productoCarpeta}${i}.png`;
+
+      galeriaProducto.appendChild(source);
+      galeriaProducto.appendChild(imagen);
+      liIndicador.appendChild(imagensm);
+
+      ulProducto.appendChild(liIndicador);
+      figureProducto.appendChild(galeriaProducto)
+    }
+    
+    // Mostrar los datos del producto
+    nombreProducto.textContent = producto.titulo;
+    categoriaProducto.textContent = producto.categoria;
+    subtituloProducto.textContent = producto.subtitulo;
+    descripcionProducto.textContent = producto.descripcion;
+    precioProducto.textContent = `$${producto.precio}`;
+    botonAgregar.classList.add('add');
+    botonAgregar.dataset.id = producto.id;
+    botonAgregar.dataset.val = producto.precio;
+    botonAgregar.dataset.cat = producto.categoria;
+    botonAgregar.addEventListener('click', () => agregarAlCarrito(producto));
+  } 
   
   /* Filtrar productos por categoría */
   function filtrarCat(categoriaSelect) {
@@ -233,6 +326,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   /* Inicializar: Mostrar productos */
   filtrarCat(categoriaSelect);
-  console.log(categoriaSelect);
   mostrarCarrito();
 });

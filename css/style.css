@@ -37,6 +37,11 @@ button {
   color: white;
   padding: 1em;
   font-weight: bold;
+  border-radius: .2em;
+}
+.boton:hover {
+  background-color: red;
+  transition: background-color 0.2s ease-in-out;
 }
 .icon {
   background-repeat: no-repeat;
@@ -266,7 +271,7 @@ footer ul li a {
   gap: 1em;
 }
 .inicio h2 {
-  font-size: calc(1.375rem + 1.5vw);;
+  font-size: calc(1.375rem + 1.5vw);
   text-wrap: pretty;
 }
 .inicio figure {
@@ -325,7 +330,6 @@ footer ul li a {
 }
 .carousel-caption {
   background-color: rgba(0, 0, 0, .4);
-  
 }
 /* Newsletter */
 .newsletter {
@@ -410,11 +414,13 @@ footer ul li a {
   margin: auto;
 }
 .card {
+  display: flex;
+  align-items: center;
   max-width: 20rem;
   background: none;
   border: none;
   position: relative;
-  flex: 1 0 230px;
+  /* flex: 1 0 230px; */
 }
 .card a {
   display: flex;
@@ -441,9 +447,9 @@ footer ul li a {
 .card > .add {
   display: none;
   padding: 1em;
+  font-size: .8em;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: red;
   color: #f3efeb;
   border: none;
   position: absolute;
@@ -463,10 +469,15 @@ footer ul li a {
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
+  gap: 2em;
 }
 .detalle-producto .carousel {
-  width: 100%;
-  max-width: 120em;
+  width: 65vh;
+  max-width: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 .detalle-producto .carousel-inner {
   width: 500%;
@@ -483,19 +494,53 @@ footer ul li a {
   width: calc(100% / 5 - 2em);
   aspect-ratio: 1;
 }
+.detalle-producto img {
+  object-fit: contain;
+}
 .detalle-producto .carousel-indicators {
   width: 100%;
-  padding: 1.2em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
+.detalle-producto .carousel-indicators li {
+  height: 4em;
+  border-radius: .2em;
+}
 .detalle-producto .carousel-indicators img {
-  width: 3em;
+  width: 4em;
   aspect-ratio: 1;
   cursor: pointer;
 }
-.detalle-producto .carousel-indicators img:hover {
-  background-color: #bfbfbf;
+.detalle-producto .carousel-indicators li:hover {
+  background-color: black;
+  transition: background-color 0.2s ease-in-out;
+}
+.detalle-producto .carousel-indicators .active {
+  background-color: black;
+}
+#infoProducto {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  padding-block: 4em;
+  width: 100vh;
+  max-width: 100vh;
+}
+#cat-producto {
+  color: white;
+  font-weight: bold;
+  font-size: .8em;
+  background-color: black;
+  padding: .2em .4em;
+  border-radius: .3em;
+  width: min-content;
+}
+#subtitulo-producto {
+  font-weight: 600;
+}
+#precio-producto {
+  font-weight: bold;
+  font-size: calc(1rem + 0.6vw);
 }
