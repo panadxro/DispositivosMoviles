@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html id="pag-comprar" lang="es">
   <head>
     <meta charset="utf-8" />
     <title>DROPDEAD E-COMMERCE</title>
@@ -11,27 +11,25 @@
   <body>
     <header>
       <nav class="navt">
-        <h1><a href="">DROPDEAD</a></h1>
-        <ul class="nav-list">
-          <li><a  href="index.html">INICIO</a></li>
+        <h1><a href="index.html">DROPDEAD</a></h1>
+        <ul class="nav-list nav-underline">
+          <li><a class="nav-link" href="index.html">INICIO</a></li>
           <li class="dropdown">
-            <a href="product.html">PRODUCTOS</a>
+            <a class="nav-link" href="categorias.html">CATEGORIAS</a>
             <ul class="dropdown-menu">
-              <li><a href="product.html" data-cat="todo">TODO</a></li>
-              <li><a href="product.html" data-cat="Remera">REMERAS</a></li>
-              <li><a href="product.html" data-cat="Buzo">BUZOS</a></li>
-              <li><a href="product.html" data-cat="Campera">CAMPERAS</a></li>
-              <li><a href="product.html" data-cat="Pantalon">PANTALONES</a></li>
-              <li><a href="product.html" data-cat="Accesorio">ACCESORIOS</a></li>
+              <li><a href="categorias.html">TODO</a></li>
+              <li><a href="categorias.html?cat=Remeras">REMERAS</a></li>
+              <li><a href="categorias.html?cat=Buzos">BUZOS</a></li>
+              <li><a href="categorias.html?cat=Camperas">CAMPERAS</a></li>
+              <li><a href="categorias.html?cat=Pantalones">PANTALONES</a></li>
+              <li><a href="categorias.html?cat=Accesorios">ACCESORIOS</a></li>
             </ul>
           </li>
-          <li>
-            <a href="buy.html">COMPRAR</a>
-          </li>
+          <li><a class="nav-link active" href="comprar.html">COMPRAR</a></li>
           <li>
             <button 
               class="icon a-cart" 
-              type="button" 
+              type="button"
               data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
               >
               <small class="d-lg-none">Carrito</small>
@@ -42,14 +40,28 @@
       </nav>  
     </header>
     <main class="sect-comprar">
-      <div class="modal-body" id="productoModalBody">
-        <img src="assets/product/Lure.png" alt="Lure">
-        <h2 class="modal-titulo">Lure</h2>
-        <p class="badge bg-secondary">Buzo</p>
-        <p>Distressed Hoodie</p>
-        <p class="price">$120</p>
-        <button class="add" data-id="8" data-val="120" data-cat="Buzo">Agregar al carrito</button>
-      </div>
+      <section>
+        <article>
+          
+        </article>
+        <sidebar>
+          <section class="carrito-section">
+            <div class="cart-head">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h2>CARRITO</h2>
+              <button id="reset"><small>Vaciar carrito</small>
+                <span class="badge bg-danger cantidades-carrito">0</span>
+              </button>
+            </div>
+            <ul id="lista-carrito">
+            </ul>
+            <p>TOTAL:<span id="total-carrito"></span></p>
+            <article class="info">
+              <button>Checkout</button>
+            </article>
+          </section>
+        </sidebar>
+      </section>
     </main>
     <footer>
       <h4><a href="">Logo</a></h4>

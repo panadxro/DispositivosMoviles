@@ -461,6 +461,12 @@ footer ul li a {
 .sect-comprar {
   min-height: 100vh;
 }
+#pag-comprar .cart-head {
+  display: none;
+}
+#pag-comprar .info {
+  display: none;
+}
 /* Detalle producto */
 .detalle-producto {
   margin: auto;
