@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const pagCategoria = d.querySelector('#pag-categorias');
   const pagInicio = d.querySelector('#pag-inicio');
   const pagProducto = d.querySelector('#pag-producto');
-  const pagComprar = d.querySelector('#pag-comprar');
+  // const pagComprar = d.querySelector('#pag-comprar');
   const products = d.querySelector('#productos');
   const listaCarrito = d.getElementById('lista-carrito');
-  const listaCompra = d.getElementById('lista-compra');
+  // const listaCompra = d.getElementById('lista-compra');
   const categoriaTitulo = d.getElementById('tit-categoria');
   const cantidadesElement = d.querySelectorAll('.cantidades-carrito');
   const totalElement = d.getElementById('total-carrito');
@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     guardarCarritoLocalStorage();
     console.log(carrito)
-    mostrarCarrito();
   }
 
   for (let btn of d.querySelectorAll('.del')) {
@@ -135,42 +134,56 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  function handleClickCompra(event) {
+    event.preventDefault();
+  }
+
   /* Mostrar carrito en interfaz */
   const mostrarCarrito = () => {
     const total = carrito.cantidades.reduce((acum, cantidad, indice) => {
       const producto = productos.find(p => p.id === carrito.productosIds[indice]);
       return acum + (producto ? cantidad * producto.precio : 0);
     }, 0);
+    console.log(total)
 
-    if (total > 0) {
-      // Si hay elemento mostrar span cantidad 
-      cantidadesElement.forEach(element => {
-        element.textContent = carrito.cantidades.reduce((acum, n) => acum + n, 0);
-        element.style.display = 'inline-block'
-      });
-    } else {
+    if (carrito.productosIds.length === 0) {
+      const botonCompra = d.getElementById('botonCompra');
+      botonCompra.classList.add('desabilitado')
+      botonCompra.addEventListener('click', handleClickCompra)
+      const mensajeCarritoVacio = d.createElement('li');
+      mensajeCarritoVacio.classList.add('no-productos')
+      mensajeCarritoVacio.textContent = 'No hay elementos en el carrito';
+      listaCarrito.appendChild(mensajeCarritoVacio);
       // Si no hay elementos ocultar span cantidad
       cantidadesElement.forEach(element => {
         element.textContent = ''
         element.style.display = 'none'
       });
-    }
+      totalElement.textContent = `$${total}`;
+    } else {
+      botonCompra.classList.remove('desabilitado');
+      botonCompra.removeEventListener('click', handleClickCompra)
+      while (listaCarrito.hasChildNodes()) {
+        listaCarrito.removeChild(listaCarrito.firstChild);
+      }
+      totalElement.textContent = `$${carrito.total}`;
 
-    totalElement.textContent = `$${total}`;
-
-    while (listaCarrito.hasChildNodes()) {
-      listaCarrito.removeChild(listaCarrito.firstChild);
+      cantidadesElement.forEach(element => {
+        element.textContent = carrito.cantidades.reduce((acum, n) => acum + n, 0);
+        element.style.display = 'inline-block'
+      });
     }
 
     carrito.productosIds.forEach((productosId) => {
       const producto = productos.find(p => p.id === productosId);
       let productoCarpeta = producto.titulo.replace(/\s/g, '');
       productoCarpeta = productoCarpeta.replace(/[^\w\s]/gi, '');
+
       const listItem = d.createElement('li');
       listItem.classList.add('item-producto');
       listaCarrito.appendChild(listItem);
 
-      const descripCar = d.createElement('div');
+      const descripCar = d.createElement('figure');
       descripCar.classList.add('descrip-car');
       listItem.appendChild(descripCar);
 
@@ -181,19 +194,18 @@ document.addEventListener('DOMContentLoaded', function() {
       descripCar.appendChild(imagen);
 
 
-      const tituloCar = d.createElement('h3');
+      const tituloCar = d.createElement('figcaption');
       tituloCar.classList.add('titulo-car');
       const nombreProducto = d.createTextNode(producto.titulo);
       const precioProcucto = d.createTextNode(` $${producto.precio}`);
-      const spanPrecio = d.createElement('span');
+      const spanPrecio = d.createElement('p');
       spanPrecio.appendChild(precioProcucto);
       const cantidadProducto = d.createElement('span');
       cantidadProducto.classList.add('cantidad-prod');
       cantidadProducto.textContent = `x${carrito.cantidades[carrito.productosIds.indexOf(producto.id)] || 0}`;
       tituloCar.appendChild(nombreProducto);
-      tituloCar.appendChild(d.createElement('br'));
       tituloCar.appendChild(spanPrecio);
-      tituloCar.appendChild(cantidadProducto);
+      spanPrecio.appendChild(cantidadProducto);
       descripCar.appendChild(tituloCar);
 
       const delBtn = d.createElement('button');
@@ -299,21 +311,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }
-  
-  /*  */
-/*   function cargarCarritoComprar() {
-    if (pagComprar) {
-      const clonedElement = listaCompra.cloneNode(true)
-      clonedElement.childNodes.forEach(item => {
-
-      console.log(item)
-      const nuevoElemento = document.createElement('p');
-      
-      nuevoElemento.textContent = nombreProducto;
-      listaCompra.appendChild(nuevoElemento)
-      })
-    }
-  } */
 
   /* Mostrar producto seleccionado */
   function abrirProducto() {
