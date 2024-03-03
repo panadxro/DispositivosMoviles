@@ -32,7 +32,7 @@ button {
 }
 /* Componentes */
 .boton {
-  background-color: black;
+  background-color: #202020;
   max-width: max-content;
   color: white;
   padding: 1em;
@@ -40,7 +40,7 @@ button {
   border-radius: .2em;
 }
 .boton:hover {
-  background-color: red;
+  background-color: #393939;
   transition: background-color 0.2s ease-in-out;
 }
 .icon {
@@ -241,15 +241,14 @@ header {
   border: none;
   padding: 1em 3em;
   text-align: center;
-  background-color: black;
+  background-color: #202020;
   color: white;
 }
 #botonCompra:hover {
-  background-color: red;
+  background-color: #393939;
 } 
 .desabilitado {
-  background-color: lightgray !important;
-  color: gray !important;
+  background-color: #c2bfbc !important;
   cursor: not-allowed;
 }
 .cantidades-carrito {
@@ -492,12 +491,102 @@ footer ul li a {
 /* Comprar */
 .sect-comprar {
   min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+.sect-comprar .carrito-section {
+  height: fit-content;
+}
+.sect-comprar #lista-carrito {
+  height: fit-content;
+  padding: 0;
+}
+.sect-comprar form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 35vw;
+}
+.sect-comprar legend {
+  font-weight: bold;
+}
+.sect-comprar form fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  margin-block: 1em;
+}
+.sect-comprar form div {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+}
+#ofertas, #credito, #debito {
+  width: fit-content;
+  height: fit-content;
+}
+
+.entrada label {
+  display: none;
+  position: absolute;
+  margin: .6em;
+  font-size: .8em;
+  top: 0;
+}
+
+.sect-comprar form fieldset div input {
+  height: 4rem;
+  /* padding: 2em 2em 1em .5em; */
+  /* font-size: .8em; */
+  padding: 1em;
+  width: 100%;
+  position: relative;
+}
+select {
+  height: 4rem;
+/*   padding: 2em 2em 1em .5em;
+  font-size: .8em; */
+  padding: 1em;
+  width: 100%;
+  position: relative;
+}
+.form-submit {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  padding: 0;
+}
+.sect-comprar form .boton input {
+  padding: 1.5em;
+  background:none;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.volver {
+  background: none;
+  border: none;
+  font-weight: 600;
+}
+#pag-comprar .info {
+  background: none;
+  border: none;
 }
 #pag-comprar .cart-head {
   display: none;
 }
-#pag-comprar .info {
+#pag-comprar .desabilitado {
   display: none;
+}
+#pag-comprar .a-cart {
+  cursor:default;
 }
 /* Detalle producto */
 .detalle-producto {

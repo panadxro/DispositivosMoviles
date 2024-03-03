@@ -39,11 +39,104 @@
         </ul>
       </nav>  
     </header>
-    <main class="sect-comprar">
-      <section>
-        <article>
-          
-        </article>
+    <main id="main">
+      <section class="sect-comprar">
+      <div id="formularioDatosPersonales">
+        <form action="comprar.html?id=Hola" id="datosPersonalesForm">
+          <fieldset>
+            <legend>Contacto</legend>
+            <div class="entrada">
+              <input placeholder="Email" id="email" type="email" required>
+              <label for="email">Email</label>
+            </div>
+            <div>
+              <input id="ofertas" type="checkbox">
+              <label for="ofertas">Deseo recibir noticias y ofertas.</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Dirección de envío</legend>
+            <div class="entrada">
+              <select id="pais" required>
+                <option value="">Elije un país</option>
+                <option value="">Alemania</option>
+                <option value="">Argentina</option>
+                <option value="">Australia</option>
+                <option value="">Brasil</option>
+                <option value="">Estados Unidos</option>
+                <option value="">Francia</option>
+                <option value="">Reino Unido</option>
+                <option value="">Rusia</option>
+              </select>
+              <label for="pais">País</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Nombre" id="nombre" type="text" required>
+              <label for="nombre">Nombre</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Apellido" id="apellido" type="text" required>
+              <label for="apellido">Apellido</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Dirección" id="direccion" type="text" required>
+              <label for="direccion">Dirección</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Ciudad" id="ciudad" type="text" required>
+              <label for="ciudad">Ciudad</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Codigo postal (opcional)" id="postal" type="text">
+              <label for="postal">Codigo postal (opcional)</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Teléfono" id="telefono" type="number" required>
+              <label for="telefono">Teléfono</label>
+            </div>
+          </fieldset>
+          <div class="form-submit">
+            <a href="index.html" class="volver" >< Volver al inicio</a>
+            <input class="boton" value="Continuar" type="submit">
+          </div>
+        </form>
+      </div>
+
+      <div id="formularioDatosPago" style="display: none;">
+        <form id="datosPagoForm">
+          <fieldset>
+            <legend>Metodo de pago</legend>
+            <div>
+              <input name="metodopago" id="credito" type="radio" required>
+              <label for="credito">Tarjeta de crédito</label>
+              
+              <input name="metodopago" id="debito" type="radio" required>
+              <label for="debito">Tarjeta de débito</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Número de tarjeta" id="tarjeta" type="number" required>
+              <label for="tarjeta">Número de tarjeta</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Nombre del titular" id="titular" type="text" required>
+              <label for="titular">Nombre del titular</label>
+            </div>
+            <div class="entrada">
+              <input placeholder="Fecha de vencimiento" id="vencimiento" type="date" required>
+              <label for="vencimiento">Fecha de vencimiento</label>
+            </div>
+            <div class="entrada">    
+              <input placeholder="CVV/CVC(123)" id="cvv" type="number" required>
+              <label for="cvv">CVV/CVC(123)</label>
+            </div>
+          </fieldset>
+          <div class="form-submit">
+            <button id="volver" class="volver" type="button">< Volver a información</button>
+            <input class="boton" value="Comprar" type="submit">
+          </div>
+        </form>
+      </div>
+
         <sidebar>
           <section class="carrito-section">
             <div class="cart-head">
@@ -54,13 +147,14 @@
               </button>
             </div>
             <ul id="lista-carrito">
+
             </ul>
-            <p>TOTAL:<span id="total-carrito"></span></p>
-            <article class="info">
-              <a href="comprar.html" id="botonCompra" class="boton">Comprar</a>
+            <article id="articleInfo" class="info">
+              <p id="info">TOTAL:<span id="total-carrito"></span></p>
+              <a href="index.html" id="botonCompra" class="boton">Volver al inicio</a>
             </article>
           </section>
-        </sidebar>
+        </sidebar>        
       </section>
     </main>
     <footer>

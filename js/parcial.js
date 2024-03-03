@@ -1,32 +1,33 @@
 'use strict';
 /* PANADERO LUCAS DWT2AP TP2 - Ecommerce */
-document.addEventListener('DOMContentLoaded', function() {  
+const d = document;
+d.addEventListener('DOMContentLoaded', function() {  
   /* DOM */
-  const d = document;
   const pagCategoria = d.querySelector('#pag-categorias');
   const pagInicio = d.querySelector('#pag-inicio');
   const pagProducto = d.querySelector('#pag-producto');
-  // const pagComprar = d.querySelector('#pag-comprar');
+  const pagComprar = d.querySelector('#pag-comprar');
   const products = d.querySelector('#productos');
   const listaCarrito = d.getElementById('lista-carrito');
   // const listaCompra = d.getElementById('lista-compra');
   const categoriaTitulo = d.getElementById('tit-categoria');
   const cantidadesElement = d.querySelectorAll('.cantidades-carrito');
   const totalElement = d.getElementById('total-carrito');
+  const botonCompra = d.getElementById('botonCompra');
   const reset = d.querySelector('#reset');
   const urlParams = new URLSearchParams(window.location.search);
   const categoriaSelect = urlParams.get('cat');
   // Producto detalle
   const productId = urlParams.get('id');
-  const figureProducto = document.getElementById('galeria-productos');
-  const ulProducto = document.getElementById('indicador-productos');
-  const infoProducto = document.getElementById('infoProducto')
-  const nombreProducto = document.getElementById('nombre-producto');
-  const categoriaProducto = document.getElementById('cat-producto');
-  const subtituloProducto = document.getElementById('subtitulo-producto');
-  const descripcionProducto = document.getElementById('descripcion-producto');
-  const precioProducto = document.getElementById('precio-producto');
-  const botonAgregar = document.getElementById('boton-agregar');
+  const figureProducto = d.getElementById('galeria-productos');
+  const ulProducto = d.getElementById('indicador-productos');
+  const infoProducto = d.getElementById('infoProducto')
+  const nombreProducto = d.getElementById('nombre-producto');
+  const categoriaProducto = d.getElementById('cat-producto');
+  const subtituloProducto = d.getElementById('subtitulo-producto');
+  const descripcionProducto = d.getElementById('descripcion-producto');
+  const precioProducto = d.getElementById('precio-producto');
+  const botonAgregar = d.getElementById('boton-agregar');
 
   let carrito = JSON.parse(localStorage.getItem('carrito')) || { productosIds: [], cantidades: [], total: 0 };
 
@@ -43,22 +44,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const anchor = d.createElement('a');
     anchor.href = `producto.html?id=${producto.id}`;
 
-    const figura = document.createElement('figure');
-    const imagen = document.createElement('img');
+    const figura = d.createElement('figure');
+    const imagen = d.createElement('img');
     imagen.src = producto.imagen;
     imagen.alt = producto.titulo;
     figura.appendChild(imagen);
     anchor.appendChild(figura);
 
-    const titulo = document.createElement('h3');
+    const titulo = d.createElement('h3');
     titulo.textContent = producto.titulo;
     anchor.appendChild(titulo);
 
-    const descripcion = document.createElement('p');
+    const descripcion = d.createElement('p');
     descripcion.textContent = producto.subtitulo;
     anchor.appendChild(descripcion);
 
-    const precio = document.createElement('p');
+    const precio = d.createElement('p');
     precio.classList.add('price');
     precio.textContent = `$${producto.precio}`
     anchor.appendChild(precio)
@@ -147,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(total)
 
     if (carrito.productosIds.length === 0) {
-      const botonCompra = d.getElementById('botonCompra');
       botonCompra.classList.add('desabilitado')
       botonCompra.addEventListener('click', handleClickCompra)
       const mensajeCarritoVacio = d.createElement('li');
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
       descripCar.classList.add('descrip-car');
       listItem.appendChild(descripCar);
 
-      const imagen = document.createElement('img');
+      const imagen = d.createElement('img');
       imagen.classList.add('miniportada');
       imagen.src = `assets/product/${productoCarpeta}/sm${productoCarpeta}3.png`;
       imagen.alt = producto.titulo;
@@ -244,13 +244,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar galeria de productos
     for (let i = 1; i <= 5; i++) {
       // Galeria indicadores
-      const liIndicador = document.createElement('li');
+      const liIndicador = d.createElement('li');
       liIndicador.dataset.bsTarget = '#carouselExampleIndicators';
       liIndicador.dataset.bsSlideTo = `${i - 1}`;
       liIndicador.setAttribute('aria-label', `Slide ${i + 1}`);
       
       // Imagen seleccionada
-      const galeriaProducto = document.createElement('picture');
+      const galeriaProducto = d.createElement('picture');
       galeriaProducto.classList.add('carousel-item');
       
       // Primer elemento active
@@ -260,15 +260,15 @@ document.addEventListener('DOMContentLoaded', function() {
         galeriaProducto.classList.add('active');
       }
       
-      const imagensm = document.createElement('img');
+      const imagensm = d.createElement('img');
       imagensm.src = `assets/product/${productoCarpeta}/sm${productoCarpeta}${i}.png`;
       imagensm.alt = `${productoCarpeta}`;
       
-      const imagen = document.createElement('img');
+      const imagen = d.createElement('img');
       imagen.src = `assets/product/${productoCarpeta}/${productoCarpeta}${i}.png`;
       imagen.alt = `${productoCarpeta}`;
 
-      const source = document.createElement('source');
+      const source = d.createElement('source');
       source.media = '(max-width: 1024px)';
       source.srcset = `assets/product/${productoCarpeta}/md${productoCarpeta}${i}.png`;
 
@@ -320,6 +320,127 @@ document.addEventListener('DOMContentLoaded', function() {
       vaciarProductoId();
       mostrarProductoId(producto);
     }
+  }
+
+  if (pagComprar) {
+    const formularioDatosPersonales = d.getElementById('formularioDatosPersonales')
+    const datosPersonalesForm = d.getElementById('datosPersonalesForm');
+    const formularioDatosPago = d.getElementById('formularioDatosPago');
+    const volverBoton = document.getElementById('volver');
+
+    volverBoton.addEventListener('click', function() {
+      formularioDatosPago.style.display = 'none';
+      formularioDatosPersonales.style.display = 'block';
+
+      localStorage.setItem('formularioActual', 'datosPersonales');
+    })
+
+    // Obtener el indicador del formulario actual del localStorage
+    const formularioActual = localStorage.getItem('formularioActual');
+
+    // Mostrar el formulario adecuado según el indicador guardado
+    if (formularioActual === 'datosPago') {
+        formularioDatosPersonales.style.display = 'none';
+        formularioDatosPago.style.display = 'block';
+    } else {
+        formularioDatosPersonales.style.display = 'block';
+        formularioDatosPago.style.display = 'none';
+    }
+    // Manejar el envío del formulario de datos personales
+    datosPersonalesForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Campos del formulario de datos personales
+      const email = d.getElementById('email').value;
+      const ofertas = d.getElementById('ofertas').checked;
+      const pais = d.getElementById('pais').value;
+      const nombre = d.getElementById('nombre').value;
+      const apellido = d.getElementById('apellido').value;
+      const direccion = d.getElementById('direccion').value;
+      const ciudad = d.getElementById('ciudad').value;
+      const postal = d.getElementById('postal').value;
+      const telefono = d.getElementById('telefono').value;
+
+      // Almacenar los datos en el localStorage
+      const datosPersonales = {
+        email: email,
+        ofertas: ofertas,
+        pais: pais,
+        nombre: nombre,
+        apellido: apellido,
+        direccion: direccion,
+        ciudad: ciudad,
+        postal: postal,
+        telefono: telefono
+      };
+      localStorage.setItem('datosPersonales', JSON.stringify(datosPersonales));
+
+      // Ocultar formulario de datos personales y mostrar el formulario de datos de pago
+      d.getElementById('formularioDatosPersonales').style.display = 'none';
+      d.getElementById('formularioDatosPago').style.display = 'block';
+
+      // Actualizar el indicador del formulario actual en el localStorage
+      localStorage.setItem('formularioActual', 'datosPago');
+    });
+
+    // Cargar datos formulario informacio personal a localStorage
+    const datosGuardados = localStorage.getItem('datosPersonales');
+    if (datosGuardados) {
+      const datosPersonales = JSON.parse(datosGuardados);
+      // Asignar valores a campos
+      d.getElementById('email').value = datosPersonales.email;
+      d.getElementById('ofertas').checked = datosPersonales.ofertas;
+      d.getElementById('pais').value = datosPersonales.pais;
+      d.getElementById('nombre').value = datosPersonales.nombre;
+      d.getElementById('apellido').value = datosPersonales.apellido;
+      d.getElementById('direccion').value = datosPersonales.direccion;
+      d.getElementById('ciudad').value = datosPersonales.ciudad;
+      d.getElementById('postal').value = datosPersonales.postal;
+      d.getElementById('telefono').value = datosPersonales.telefono;
+      
+    }
+
+    // Manejar el envío del formulario de datos de pago
+    const datosPagoForm = d.getElementById('datosPagoForm');
+    let datosPagoGuardados = false;
+
+    datosPagoForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const metodoPago = d.querySelector('input[name="metodopago"]:checked').value;
+      const numeroTarjeta = d.getElementById('tarjeta').value;
+      const nombreTitular = d.getElementById('titular').value;
+      const fechaVencimiento = d.getElementById('vencimiento').value;
+      const cvv = d.getElementById('cvv').value;
+      
+      // Guardar los datos en el localStorage
+      localStorage.setItem('metodoPago', metodoPago);
+      localStorage.setItem('numeroTarjeta', numeroTarjeta);
+      localStorage.setItem('nombreTitular', nombreTitular);
+      localStorage.setItem('fechaVencimiento', fechaVencimiento);
+      localStorage.setItem('cvv', cvv);
+      console.log(`Datos guardados ${metodoPago}`)
+
+      datosPagoGuardados = true;
+      
+      window.location.href = 'comprobante.html'; // Redirigir a la página de comprobante
+
+    });
+
+    if (carrito.cantidades.length === 0) {
+      formularioDatosPersonales.style.display = 'none';
+      formularioDatosPago.style.display = 'none';
+      const totalCarrito = d.getElementById('info')
+      totalCarrito.style.display = 'none';
+      botonCompra.classlist.remove('desabilitado');
+    }
+
+    // Antes de abandonar la página, verificar si los datos del formulario de pago se han guardado
+/*     window.addEventListener('beforeunload', function(event) {
+      if (!datosPagoGuardados) {
+        // Si los datos del formulario de pago no se han guardado, mostrar un mensaje de advertencia
+        event.preventDefault();
+        event.returnValue = '';
+      }
+    }); */
   }
   
   /* Inicializar: Mostrar productos */
