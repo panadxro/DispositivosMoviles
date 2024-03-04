@@ -25,7 +25,7 @@
               <li><a href="categorias.html?cat=Accesorios">ACCESORIOS</a></li>
             </ul>
           </li>
-          <li><a class="nav-link active" href="comprar.html">COMPRAR</a></li>
+          <li><a class="nav-link" href="comprar.html">COMPRAR</a></li>
           <li>
             <button 
               class="icon a-cart" 
@@ -40,6 +40,36 @@
       </nav>  
     </header>
     <main>
+      <div id="datosPersonales">
+        <h1>¡Gracias por tu compra!</h1>
+        <table>
+          <tr>
+            <th>Contacto</th>
+            <th><span id="tabla-contacto"></span></th>
+            <th><button class="volver" type="button">Modificar</button></th>
+          </tr>
+          <tr>
+            <td>Dirección</td>
+            <td id="tabla-direccion"></td>
+            <td><button class="volver" type="button">Modificar</button></td>
+          </tr>
+        </table>
+      </div>
+      <sidebar>
+        <section class="carrito-section">
+          <div class="cart-head">
+            <button id="reset"><small>Vaciar carrito</small>
+              <span class="badge bg-danger cantidades-carrito">0</span>
+            </button>
+          </div>
+          <ul id="lista-carrito">
+          </ul>
+          <article id="articleInfo" class="info">
+            <p id="info">TOTAL:<span id="total-carrito"></span></p>
+            <a href="index.html" id="botonCompra" class="boton">Volver al inicio</a>
+          </article>
+        </section>
+      </sidebar>  
       
     </main>
     <footer>

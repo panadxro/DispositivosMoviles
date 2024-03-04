@@ -2,14 +2,14 @@
 /* PANADERO LUCAS DWT2AP TP2 - Ecommerce */
 const d = document;
 d.addEventListener('DOMContentLoaded', function() {  
-  /* DOM */
-  const pagCategoria = d.querySelector('#pag-categorias');
+  // HTML
   const pagInicio = d.querySelector('#pag-inicio');
+  const pagCategoria = d.querySelector('#pag-categorias');
   const pagProducto = d.querySelector('#pag-producto');
   const pagComprar = d.querySelector('#pag-comprar');
+  const pagComprobante = d.querySelector('#pag-comprobante')
   const products = d.querySelector('#productos');
   const listaCarrito = d.getElementById('lista-carrito');
-  // const listaCompra = d.getElementById('lista-compra');
   const categoriaTitulo = d.getElementById('tit-categoria');
   const cantidadesElement = d.querySelectorAll('.cantidades-carrito');
   const totalElement = d.getElementById('total-carrito');
@@ -29,6 +29,9 @@ d.addEventListener('DOMContentLoaded', function() {
   const precioProducto = d.getElementById('precio-producto');
   const botonAgregar = d.getElementById('boton-agregar');
 
+  // Tabla formulario
+  const tablaContacto = d.getElementById('tabla-contacto');
+  const tablaDireccion = d.getElementById('tabla-direccion');
   let carrito = JSON.parse(localStorage.getItem('carrito')) || { productosIds: [], cantidades: [], total: 0 };
 
   /* Guardar carrito en localStorage */
@@ -88,9 +91,43 @@ d.addEventListener('DOMContentLoaded', function() {
       listaCarrito.removeChild(listaCarrito.firstChild);
     }
     mostrarCarrito();
+    
     console.log(carrito)
   });
 
+  function carritoVacio() {
+    if (carrito.productosIds.length === 0) {
+      const total = carrito.cantidades.reduce((acum, cantidad, indice) => {
+        const producto = productos.find(p => p.id === carrito.productosIds[indice]);
+        return acum + (producto ? cantidad * producto.precio : 0);
+      }, 0);
+
+      botonCompra.classList.add('desabilitado')
+      botonCompra.addEventListener('click', handleClickCompra)
+      const mensajeCarritoVacio = d.createElement('li');
+      mensajeCarritoVacio.classList.add('no-productos')
+      mensajeCarritoVacio.textContent = 'No hay elementos en el carrito';
+      listaCarrito.appendChild(mensajeCarritoVacio);
+      // Si no hay elementos ocultar span cantidad
+      cantidadesElement.forEach(element => {
+        element.textContent = ''
+        element.style.display = 'none'
+      });
+      totalElement.textContent = `$${total}`;
+    } else {
+      botonCompra.classList.remove('desabilitado');
+      botonCompra.removeEventListener('click', handleClickCompra)
+      while (listaCarrito.hasChildNodes()) {
+        listaCarrito.removeChild(listaCarrito.firstChild);
+      }
+      totalElement.textContent = `$${carrito.total}`;
+
+      cantidadesElement.forEach(element => {
+        element.textContent = carrito.cantidades.reduce((acum, n) => acum + n, 0);
+        element.style.display = 'inline-block'
+      });
+    }
+  }
   /* Agregar producto al carrito */
   function agregarAlCarrito(producto) {
     const id = producto.id;
@@ -106,9 +143,9 @@ d.addEventListener('DOMContentLoaded', function() {
     carrito.total += val;
 
     guardarCarritoLocalStorage();
-    console.log(carrito)
     mostrarCarrito();
   }
+
 
   /* Eliminar producto del carrito */
   function eliminarDelCarrito(item) {
@@ -141,39 +178,7 @@ d.addEventListener('DOMContentLoaded', function() {
 
   /* Mostrar carrito en interfaz */
   const mostrarCarrito = () => {
-    const total = carrito.cantidades.reduce((acum, cantidad, indice) => {
-      const producto = productos.find(p => p.id === carrito.productosIds[indice]);
-      return acum + (producto ? cantidad * producto.precio : 0);
-    }, 0);
-    console.log(total)
-
-    if (carrito.productosIds.length === 0) {
-      botonCompra.classList.add('desabilitado')
-      botonCompra.addEventListener('click', handleClickCompra)
-      const mensajeCarritoVacio = d.createElement('li');
-      mensajeCarritoVacio.classList.add('no-productos')
-      mensajeCarritoVacio.textContent = 'No hay elementos en el carrito';
-      listaCarrito.appendChild(mensajeCarritoVacio);
-      // Si no hay elementos ocultar span cantidad
-      cantidadesElement.forEach(element => {
-        element.textContent = ''
-        element.style.display = 'none'
-      });
-      totalElement.textContent = `$${total}`;
-    } else {
-      botonCompra.classList.remove('desabilitado');
-      botonCompra.removeEventListener('click', handleClickCompra)
-      while (listaCarrito.hasChildNodes()) {
-        listaCarrito.removeChild(listaCarrito.firstChild);
-      }
-      totalElement.textContent = `$${carrito.total}`;
-
-      cantidadesElement.forEach(element => {
-        element.textContent = carrito.cantidades.reduce((acum, n) => acum + n, 0);
-        element.style.display = 'inline-block'
-      });
-    }
-
+    carritoVacio()
     carrito.productosIds.forEach((productosId) => {
       const producto = productos.find(p => p.id === productosId);
       let productoCarpeta = producto.titulo.replace(/\s/g, '');
@@ -321,18 +326,19 @@ d.addEventListener('DOMContentLoaded', function() {
       mostrarProductoId(producto);
     }
   }
-
-  if (pagComprar) {
+  function completarFormulario() {
     const formularioDatosPersonales = d.getElementById('formularioDatosPersonales')
     const datosPersonalesForm = d.getElementById('datosPersonalesForm');
     const formularioDatosPago = d.getElementById('formularioDatosPago');
-    const volverBoton = document.getElementById('volver');
+    const volverBoton = document.querySelectorAll('.volver');
 
-    volverBoton.addEventListener('click', function() {
-      formularioDatosPago.style.display = 'none';
-      formularioDatosPersonales.style.display = 'block';
-
-      localStorage.setItem('formularioActual', 'datosPersonales');
+    volverBoton.forEach((boton) => {
+      boton.addEventListener('click', function() {
+        formularioDatosPago.style.display = 'none';
+        formularioDatosPersonales.style.display = 'block';
+        
+        localStorage.setItem('formularioActual', 'datosPersonales');
+      })
     })
 
     // Obtener el indicador del formulario actual del localStorage
@@ -346,6 +352,7 @@ d.addEventListener('DOMContentLoaded', function() {
         formularioDatosPersonales.style.display = 'block';
         formularioDatosPago.style.display = 'none';
     }
+    
     // Manejar el envío del formulario de datos personales
     datosPersonalesForm.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -375,54 +382,25 @@ d.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('datosPersonales', JSON.stringify(datosPersonales));
 
       // Ocultar formulario de datos personales y mostrar el formulario de datos de pago
-      d.getElementById('formularioDatosPersonales').style.display = 'none';
-      d.getElementById('formularioDatosPago').style.display = 'block';
-
-      // Actualizar el indicador del formulario actual en el localStorage
+      formularioDatosPersonales.style.display = 'none';
+      formularioDatosPago.style.display = 'block';
       localStorage.setItem('formularioActual', 'datosPago');
+      window.scrollTo(0, 0);
     });
 
-    // Cargar datos formulario informacio personal a localStorage
-    const datosGuardados = localStorage.getItem('datosPersonales');
-    if (datosGuardados) {
-      const datosPersonales = JSON.parse(datosGuardados);
-      // Asignar valores a campos
-      d.getElementById('email').value = datosPersonales.email;
-      d.getElementById('ofertas').checked = datosPersonales.ofertas;
-      d.getElementById('pais').value = datosPersonales.pais;
-      d.getElementById('nombre').value = datosPersonales.nombre;
-      d.getElementById('apellido').value = datosPersonales.apellido;
-      d.getElementById('direccion').value = datosPersonales.direccion;
-      d.getElementById('ciudad').value = datosPersonales.ciudad;
-      d.getElementById('postal').value = datosPersonales.postal;
-      d.getElementById('telefono').value = datosPersonales.telefono;
-      
-    }
+    mostrarTabla()
 
     // Manejar el envío del formulario de datos de pago
     const datosPagoForm = d.getElementById('datosPagoForm');
-    let datosPagoGuardados = false;
 
     datosPagoForm.addEventListener('submit', function(event) {
       event.preventDefault();
-      const metodoPago = d.querySelector('input[name="metodopago"]:checked').value;
-      const numeroTarjeta = d.getElementById('tarjeta').value;
-      const nombreTitular = d.getElementById('titular').value;
-      const fechaVencimiento = d.getElementById('vencimiento').value;
-      const cvv = d.getElementById('cvv').value;
-      
-      // Guardar los datos en el localStorage
-      localStorage.setItem('metodoPago', metodoPago);
-      localStorage.setItem('numeroTarjeta', numeroTarjeta);
-      localStorage.setItem('nombreTitular', nombreTitular);
-      localStorage.setItem('fechaVencimiento', fechaVencimiento);
-      localStorage.setItem('cvv', cvv);
-      console.log(`Datos guardados ${metodoPago}`)
 
-      datosPagoGuardados = true;
-      
-      window.location.href = 'comprobante.html'; // Redirigir a la página de comprobante
-
+      d.getElementById('formularioDatosPersonales').style.display = 'block';
+      d.getElementById('formularioDatosPago').style.display = 'none';
+      localStorage.setItem('formularioActual', 'datosPersonales');
+      // Redirigir a la página de comprobante
+      window.location.href = 'comprobante.html'; 
     });
 
     if (carrito.cantidades.length === 0) {
@@ -430,23 +408,40 @@ d.addEventListener('DOMContentLoaded', function() {
       formularioDatosPago.style.display = 'none';
       const totalCarrito = d.getElementById('info')
       totalCarrito.style.display = 'none';
-      botonCompra.classlist.remove('desabilitado');
+      d.querySelector('.sect-comprar').style.alignItems = 'center'
+      
+      botonCompra.classList.remove('desabilitado');
+      botonCompra.removeEventListener('click', handleClickCompra)
+    } else {
+      botonCompra.classList.add('desabilitado');
+      botonCompra.addEventListener('click', handleClickCompra)
     }
-
-    // Antes de abandonar la página, verificar si los datos del formulario de pago se han guardado
-/*     window.addEventListener('beforeunload', function(event) {
-      if (!datosPagoGuardados) {
-        // Si los datos del formulario de pago no se han guardado, mostrar un mensaje de advertencia
-        event.preventDefault();
-        event.returnValue = '';
-      }
-    }); */
   }
   
+  function mostrarTabla() {
+    const datosGuardados = localStorage.getItem('datosPersonales')
+
+    if (datosGuardados) {
+      const datosPersonales = JSON.parse(datosGuardados);
+
+      tablaContacto.textContent = datosPersonales.email
+      tablaDireccion.textContent = `${datosPersonales.direccion}, ${datosPersonales.postal}`
+    }
+  }
+  if (pagComprobante) {
+    mostrarTabla()
+    window.addEventListener('beforeunload', function() {
+      carrito = { productosIds: [], cantidades: [], total: 0 };
+      // Limpiar en localStorage
+      localStorage.removeItem('carrito');
+    });
+  }
   /* Inicializar: Mostrar productos */
   mostrarCarrito();
   // cargarCarritoComprar();
-
+  if (pagComprar) {
+    completarFormulario()
+  }
   abrirProducto()
   filtrarCat(categoriaSelect);
 });

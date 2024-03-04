@@ -103,6 +103,18 @@
       </div>
 
       <div id="formularioDatosPago" style="display: none;">
+        <table>
+          <tr>
+            <th>Contacto</th>
+            <th><span id="tabla-contacto"></span></th>
+            <th><button class="volver" type="button">Modificar</button></th>
+          </tr>
+          <tr>
+            <td>Dirección</td>
+            <td id="tabla-direccion"></td>
+            <td><button class="volver" type="button">Modificar</button></td>
+          </tr>
+        </table>
         <form id="datosPagoForm">
           <fieldset>
             <legend>Metodo de pago</legend>
@@ -131,7 +143,7 @@
             </div>
           </fieldset>
           <div class="form-submit">
-            <button id="volver" class="volver" type="button">< Volver a información</button>
+            <button class="volver" type="button">< Volver a información</button>
             <input class="boton" value="Comprar" type="submit">
           </div>
         </form>
@@ -147,7 +159,6 @@
               </button>
             </div>
             <ul id="lista-carrito">
-
             </ul>
             <article id="articleInfo" class="info">
               <p id="info">TOTAL:<span id="total-carrito"></span></p>
