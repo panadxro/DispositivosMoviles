@@ -47,6 +47,13 @@ table tr:first-child {
 th {
   font-weight: normal;
 }
+iframe {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  overflow: hidden;
+}
 /* Componentes */
 .boton {
   background-color: #202020;
@@ -76,7 +83,6 @@ header {
   top: 0;
   z-index: 2;
   backdrop-filter: blur(.1rem);
-  background-color:rgb(57, 57, 57, 0.1)
 }
 .navt {
   display: flex;
@@ -84,6 +90,7 @@ header {
   align-items: center;
   height: 5rem;
   position: sticky;
+  transition: background-color .3s ease, filter .3s ease-in-out;
 }
 .navt h1 a {
   background: url(../assets/icon/NEW_SITE_LOGO_BLACK_220x.png) no-repeat center center;
@@ -107,9 +114,10 @@ header {
 .nav-list a {
   padding: .5em;
 }
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu { 
   display: block !important;
-  background-color: #f3efeb;
+  backdrop-filter: blur(.1rem);
+  background-color: #dfdfdf;
   border: none;
 }
 .dropdown-menu {
@@ -119,6 +127,7 @@ header {
 .dropdown-menu li a{
   display: block;
   padding: 1em;
+  color: black;
 }
 .dropdown-menu li a:hover{
   background-color: #bfbfbf;
@@ -327,6 +336,9 @@ footer ul li a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
+  min-height: 100dvh;
+  margin: 0;
 }
 .inicio article {
   display: flex;
@@ -339,8 +351,7 @@ footer ul li a {
   text-wrap: pretty;
 }
 .inicio figure {
-  background-color: #bfbfbf;
-  max-width: 15rem;
+  max-width: 20rem;
 }
 /* Nosotros */
 .nosotros {
@@ -449,6 +460,22 @@ footer ul li a {
   border: none;
   cursor: pointer;
 }
+/* Categorias */
+#modal-publicidad {
+  z-index: 3;
+}
+#modal-publicidad .modal-content {
+  aspect-ratio: 16 / 9;
+
+}
+/* #publicidad-lg {
+}
+#publicidad-md {
+  aspect-ratio: 4 / 3;
+}
+#publicidad-sm {
+  aspect-ratio: 9 / 16;
+} */
 
 /* PRODUCTOS */
 .sec-productos {

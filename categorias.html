@@ -60,6 +60,19 @@
               </section>
             </sidebar>
             <section class="seccion-productos">
+              <div class="modal fade" id="modal-publicidad" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <picture class="modal-content">
+                    <source id="banner-squeaky-clean" media="(max-width: 576px)" srcset="./assets/fondos/banner-squeaky-clean.png">
+                    <source id="banner-hollowfication" media="(max-width: 1024px)" srcset="./assets/fondos/banner-hollowfication.png">
+                    <img id="banner-dead-cell" src="./assets/fondos/banner-dead-cell.png" alt="">
+                  </picture>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-publicidad">
+                Vertically centered modal
+              </button>
+
               <h2 class="titulo-2" id="tit-categoria">PRODUCTOS</h2>
               <div id="productos"> 
               </div>

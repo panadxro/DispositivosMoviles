@@ -301,14 +301,39 @@ d.addEventListener('DOMContentLoaded', function() {
   /* Filtrar productos por categoría */
   function filtrarCat(categoriaSelect) {
     const productosFiltrados = categoriaSelect ? productos.filter(producto => producto.categoria === categoriaSelect) : productos;
+    const myModal = new bootstrap.Modal(d.getElementById('modal-publicidad'));
     
     if (pagCategoria || pagInicio) {
       while (products.hasChildNodes()) {
         products.removeChild(products.firstChild);
-      }    
+      }
+      setTimeout(function() {
+        myModal.show();
+      }, 2000);
+      
+      // Cerrar el modal después de 5 segundos
+      setTimeout(function() {
+        myModal.hide();
+      }, 10000);
       if (categoriaSelect) {
         categoriaTitulo.textContent = categoriaSelect;
       } 
+
+      const bannerlg = d.getElementById('banner-dead-cell')
+      const bannermd = d.getElementById('banner-hollowfication')
+      const bannersm = d.getElementById('banner-squeaky-clean')
+
+      bannersm.addEventListener('click', function() {
+          window.location.href = 'producto.html?id=2';
+      });
+      bannermd.addEventListener('click', function() {
+          window.location.href = 'producto.html?id=13';
+      });
+      bannerlg.addEventListener('click', function() {
+        window.location.href = 'producto.html?id=21';
+      });
+      
+      
   
       productosFiltrados.forEach(producto => {
         const card = crearProductosCards(producto);
@@ -436,6 +461,32 @@ d.addEventListener('DOMContentLoaded', function() {
       localStorage.removeItem('carrito');
     });
   }
+
+  /* Estetica */
+  window.addEventListener('scroll', function() {    
+    const navbar = document.querySelector('.navt');
+    const dropdown = document.querySelector('.dropdown-menu');
+
+    // Obtener la posición actual de desplazamiento
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    // Altura del navbar
+    const navbarHeight = navbar.offsetHeight;
+
+    // Condición para cambiar el color del navbar
+    if (scrollTop > navbarHeight) {
+      navbar.style.backgroundColor = '#dfdfdf';
+      navbar.style.filter = 'invert(100%)';
+      dropdown.style.background = '#none';
+      dropdown.style.filter = 'invert(0%)';
+    } else {
+      navbar.style.filter = 'invert(0%)';
+      navbar.style.background = 'none';
+      dropdown.style.background = '#dfdfdf';
+      dropdown.style.filter = 'invert(100%)';
+
+    }
+  });
   /* Inicializar: Mostrar productos */
   mostrarCarrito();
   // cargarCarritoComprar();
