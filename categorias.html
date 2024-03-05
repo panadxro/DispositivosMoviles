@@ -57,6 +57,7 @@
                 </button>
               </div>
               <ul id="lista-carrito">
+                
               </ul>
               <article class="info">
                 <p>TOTAL:<span id="total-carrito"></span></p>
@@ -64,30 +65,57 @@
               </article>
             </section>
           </sidebar>
-
             <div class="modal fade" id="modal-publicidad" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
+              <section class="modal-dialog modal-lg modal-dialog-centered">
                 <picture class="modal-content">
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   <source media="(max-width: 576px)" srcset="./assets/fondos/banner-squeaky-clean.png">
                   <source media="(max-width: 1024px)" srcset="./assets/fondos/banner-hollowfication.png">
                   <img id="banner" src="./assets/fondos/banner-dead-cell.png" alt="">
                 </picture>
-              </div>
+              </section>
             </div>
-        </main>
-        <footer>
-          <h4><a href="index.html">DROPDEAD</a></h4>
-          <ul>
-            <li><a href="https://www.instagram.com/dropdeadofficial" target="_blank" class="icon a-insta"><small class="d-lg-none">Instagram</small></a></li>
-            <li><a href="https://twitter.com/DropDeadUK" target="_blank" class="icon a-tw"><small class="d-lg-none">Twitter</small></a></li>
-            <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small class="d-lg-none">Facebook</small></a></li>
-          </ul>
-          <p>Creado por</p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            @panadxro
-          </button>
-        </footer>
+            
+            <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+              <section class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <section class="modal-body">
+                    <article class="datosAutor">
+                      <h3>PANADERO LUCAS</h3>
+                      <a class="link-correo" href="mailto:lucasn.panadero@gmail.com">Contactame por correo</a>
+                      <p>Final de Programación I e Interacción con Dispositivos Móviles</p>
+                      <p>Programación y Diseño Web DWT2AP 2024</p>
+                      <ul>
+                        <li><a href="https://www.linkedin.com/in/panadxro" target="_blank" class="icon a-linkedin"><small class="d-none">Linkedin</small></a></li>
+                        <li><a href="https://github.com/panadxro" target="_blank" class="icon a-github"><small class="d-none">Github</small></a></li>
+                        <li><a href="https://www.behance.net/panadxro" target="_blank" class="icon a-behance"><small class="d-none">Behance</small></a></li>
+                      </ul>
+                    </article>
+                    <figure>
+                      <img title="Lucas Panadero" src="assets/fondos/profile.jpg" alt="Foto de perfil de Lucas Panadero">
+                    </figure>
+                  </section>
+                  <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </main>
+          <footer>
+            <h4><a href="">Logo</a></h4>
+            <ul>
+              <li><a href="https://www.instagram.com/dropdeadofficial" target="_blank" class="icon a-insta"><small class="d-none">Instagram</small></a></li>
+              <li><a href="https://twitter.com/DropDeadUK" target="_blank" class="icon a-tw"><small class="d-none">Twitter</small></a></li>
+              <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small class="d-none">Facebook</small></a></li>
+            </ul>
+            <article>
+              <p>Creado por</p>
+              <button type="button" data-bs-toggle="modal" data-bs-target="#modalAutor">
+                @panadxro
+              </button>
+            </article>
+          </footer>
         <script src="js/parcial.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>

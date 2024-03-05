@@ -310,7 +310,7 @@ d.addEventListener('DOMContentLoaded', function() {
 
       productosFiltrados.forEach(producto => {
         const card = crearProductosCards(producto);
-        products.append(card);
+        products.appendChild(card);
       });
 
       if (categoriaSelect) {
@@ -505,13 +505,14 @@ d.addEventListener('DOMContentLoaded', function() {
   });
   /* Inicializar: Mostrar productos */
   mostrarCarrito();
-  // cargarCarritoComprar();
+  abrirProducto()
   if (pagComprar) {
     completarFormulario()
   }
-  abrirProducto()
-  if (pagCategoria) {
+  if (pagCategoria || pagInicio) {
     filtrarCat(categoriaSelect);
+  }
+  if (pagCategoria) {
     banner.addEventListener('click', bannerClickHandler)
   }
 });
