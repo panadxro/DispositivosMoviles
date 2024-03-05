@@ -297,6 +297,14 @@ d.addEventListener('DOMContentLoaded', function() {
     botonAgregar.dataset.val = producto.precio;
     botonAgregar.dataset.cat = producto.categoria;
     botonAgregar.addEventListener('click', () => agregarAlCarrito(producto));
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'ArrowLeft') {
+        document.querySelector('.carousel-control-prev').click();
+      } else if (event.key === 'ArrowRight') {
+        document.querySelector('.carousel-control-next').click();
+      }
+    });
   } 
   
   /* Filtrar productos por categoría */
@@ -478,7 +486,7 @@ d.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* Estetica */
+  /* Scroll Nav */
   window.addEventListener('scroll', function() {    
     const navbar = document.querySelector('.navt');
     const dropdown = document.querySelector('.dropdown-menu');
@@ -500,9 +508,9 @@ d.addEventListener('DOMContentLoaded', function() {
       navbar.style.background = 'none';
       dropdown.style.background = '#dfdfdf';
       dropdown.style.filter = 'invert(100%)';
-
     }
   });
+
   /* Inicializar: Mostrar productos */
   mostrarCarrito();
   abrirProducto()

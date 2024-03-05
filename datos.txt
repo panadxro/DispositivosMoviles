@@ -1,10 +1,13 @@
 Escuela de Arte Multimedial Da Vinci
 CARRERA: Diseño y Programación Web
-MATERIA: Interacción con Dispositivos Móviles
-TRABAJO PRÁCTICO: Examen Parcial 2
-PROFESOR: D'Addezio Alejandro
-ALUMNO/S: Panadero Lucas - Benitez Rocio - Sosa Marianela
+MATERIAS: Programación I e Interacción con Dispositivos Móviles
+TRABAJO: Examen Final Ecommerce
+PROFESOR PROGRAMACION I: Carlos Ferrer
+PROFESOR IDM: D'Addezio Alejandro
+ALUMNO: Panadero Lucas
 CUATRIMESTRE: 2do Cuatrimestre
 COMISIÓN: DWT2AP
 TURNO: Tarde
-FECHA DE ENTREGA: 27/11/2023
+FECHA DE ENTREGA: 
+  (Programacion I: 05/02/2024)
+  (Interacción con Dispositivos Móviles: 08/02/2024)
