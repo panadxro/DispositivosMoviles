@@ -42,50 +42,51 @@
         </nav>  
       </header>
         <main>
-            <sidebar class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-              <section class="carrito-section">
-                <div class="cart-head">
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  <h2>CARRITO</h2>
-                  <button id="reset"><small>Vaciar carrito</small>
-                    <span class="badge bg-danger cantidades-carrito">0</span>
-                  </button>
-                </div>
-                <ul id="lista-carrito">
-                </ul>
-                <article class="info">
-                  <p>TOTAL:<span id="total-carrito"></span></p>
-                  <a href="comprar.html" id="botonCompra" class="boton">Comprar</a>
-                </article>
-              </section>
-            </sidebar>
-            <section class="seccion-productos">
-              <div class="modal fade" id="modal-publicidad" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                  <picture class="modal-content">
-                    <source id="banner-squeaky-clean" media="(max-width: 576px)" srcset="./assets/fondos/banner-squeaky-clean.png">
-                    <source id="banner-hollowfication" media="(max-width: 1024px)" srcset="./assets/fondos/banner-hollowfication.png">
-                    <img id="banner-dead-cell" src="./assets/fondos/banner-dead-cell.png" alt="">
-                  </picture>
-                </div>
+          <section class="seccion-productos">
+            <h1 class="titulo-2" id="tit-categoria">PRODUCTOS</h1>
+            <div id="productos"> 
+            </div>
+          </section>   
+          <sidebar class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <section class="carrito-section">
+              <div class="cart-head">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <h2>CARRITO</h2>
+                <button id="reset"><small>Vaciar carrito</small>
+                  <span class="badge bg-danger cantidades-carrito">0</span>
+                </button>
               </div>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-publicidad">
-                Vertically centered modal
-              </button>
-
-              <h2 class="titulo-2" id="tit-categoria">PRODUCTOS</h2>
-              <div id="productos"> 
-              </div>
+              <ul id="lista-carrito">
+              </ul>
+              <article class="info">
+                <p>TOTAL:<span id="total-carrito"></span></p>
+                <a href="comprar.html" id="botonCompra" class="boton">Comprar</a>
+              </article>
             </section>
+          </sidebar>
+
+            <div class="modal fade" id="modal-publicidad" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <picture class="modal-content">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <source media="(max-width: 576px)" srcset="./assets/fondos/banner-squeaky-clean.png">
+                  <source media="(max-width: 1024px)" srcset="./assets/fondos/banner-hollowfication.png">
+                  <img id="banner" src="./assets/fondos/banner-dead-cell.png" alt="">
+                </picture>
+              </div>
+            </div>
         </main>
         <footer>
-          <h4><a href="">Logo</a></h4>
+          <h4><a href="index.html">DROPDEAD</a></h4>
           <ul>
-            <li><a href="" class="icon a-insta"><small class="d-lg-none">Instagram</small></a></li>
-            <li><a href="" class="icon a-tw"><small class="d-lg-none">Twitter</small></a></li>
-            <li><a href="" class="icon a-fb"><small class="d-lg-none">Facebook</small></a></li>
+            <li><a href="https://www.instagram.com/dropdeadofficial" target="_blank" class="icon a-insta"><small class="d-lg-none">Instagram</small></a></li>
+            <li><a href="https://twitter.com/DropDeadUK" target="_blank" class="icon a-tw"><small class="d-lg-none">Twitter</small></a></li>
+            <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small class="d-lg-none">Facebook</small></a></li>
           </ul>
-          <p>Creado por <a href="">@panadxro</a></p>
+          <p>Creado por</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            @panadxro
+          </button>
         </footer>
         <script src="js/parcial.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>

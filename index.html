@@ -64,7 +64,7 @@
         <article>
           <h2>Drop Dead <br> Estilo único, Calidad Intransigente</h2>
           <p>Drop Dead fusiona la moda alternativa y la estética gótica en prendas únicas. Nuestra ropa combina originalidad, calidad y un toque de rebeldía. </p>
-          <a href="" class="boton">Explorar</a>
+          <a href="categorias.html" class="boton">Explorar</a>
         </article>
         <figure>
           <img src="assets/icon/faviconDrop.png" alt="">
@@ -73,31 +73,35 @@
       <section class="nosotros">
         <article>
           <p>Descubre DropDead, donde cada prenda es una declaración de audacia y autenticidad. Define tu estilo con la fusión única de moda y actitud que solo DropDead puede ofrecer.</p>
-          <figure>
-            <!-- <img src="assets/product/Violence.png" alt=""> -->
-          </figure>
+          <picture>
+            <source media="(max-width: 576px)" srcset="./assets/fondos/deadcell-md.png">
+            <img src="assets/fondos/deadcell-lg.png" alt="">
+          </picture>
         </article>
         <article>
-          <figure>
-            <!-- <img src="assets/product/Violence.png" alt=""> -->
-          </figure>
+          <picture>
+            <source media="(max-width: 576px)" srcset="./assets/fondos/tnsh-md.png">
+            <img src="assets/fondos/tnsh-lg.png" alt="">
+          </picture>
           <p>Drop Dead es más que una marca de ropa; es una declaración de estilo. Fundada en la intersección de la moda alternativa y la estética gótica, Drop Dead ofrece prendas únicas y atrevidas para aquellos que buscan destacar en la multitud.</p>
         </article>
       </section>
       <section class="detalles">
-        <h2 class="titulo-2">Caracteristicas</h2>
+        <h2 class="titulo-2">Nuestro impacto</h2>
+        <p>Nos hemos unido a <a href="https://public.getgreenspark.com/1639580031124/drop-dead-clothing" target="_blank">Greenspark</a> para garantizar que <b>Drop Dead Clothing</b> tenga un impacto positivo en nuestro planeta y en su gente. ¡Echa un vistazo a nuestro impacto hasta ahora y únete a nuestro viaje!
+        Nuestro impacto generado hasta ahora</p>
         <div class="detalle-box">
           <article>
-            <h3>Diseños Únicos</h3>
-            <p>Camisetas, sudaderas y chaquetas que desafían las convenciones.</p>          
+            <h3 id="botellas">87.690</h3>
+            <p>botellas de plástico rescatadas</p>          
           </article>
           <article>
-            <h3>Calidad Superior</h3>
-            <p>Materiales premium y atención meticulosa a los detalles.</p>          
+            <h3 id="co2">8.797</h3>
+            <p>toneladas de CO2 compensadas</p>          
           </article>
           <article>
-            <h3>Compromiso</h3>
-            <p>Apoyamos eventos y artistas en la comunidad gótica.</p>          
+            <h3 id="arboles">40.663</h3>
+            <p>arboles plantados</p>          
           </article>
         </div>
         <div class="novedades">
@@ -260,15 +264,45 @@
             </div>
           </form>
       </section>
+      <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title fs-5" id="exampleModalCenterTitle">PANADERO LUCAS</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <a href="mailto:lucasn.panadero@gmail.com">Contactame por correo</a>
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/panadxro" target="_blank" class="icon a-linkedin"><small class="d-lg-none">Linkedin</small></a></li>
+                  <li><a href="https://github.com/panadxro" target="_blank" class="icon a-github"><small class="d-lg-none">Github</small></a></li>
+                  <li><a href="https://www.behance.net/panadxro" target="_blank" class="icon a-behance"><small class="d-none">Behance</small></a></li>
+                </ul>
+                <p>Final de Programación I e Interacción con Dispositivos Móviles</p>
+                <p></p>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <h4><a href="">Logo</a></h4>
       <ul>
-        <li><a href="" class="icon a-insta"><small class="d-lg-none">Instagram</small></a></li>
-        <li><a href="" class="icon a-tw"><small class="d-lg-none">Twitter</small></a></li>
-        <li><a href="" class="icon a-fb"><small class="d-lg-none">Facebook</small></a></li>
+        <li><a href="https://www.instagram.com/dropdeadofficial" target="_blank" class="icon a-insta"><small class="d-none">Instagram</small></a></li>
+        <li><a href="https://twitter.com/DropDeadUK" target="_blank" class="icon a-tw"><small class="d-none">Twitter</small></a></li>
+        <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small class="d-none">Facebook</small></a></li>
       </ul>
-      <p>Creado por <a href="">@panadxro</a></p>
+      <article>
+        <p>Creado por</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAutor">
+          @panadxro
+        </button>
+      </article>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/parcial.js"></script>

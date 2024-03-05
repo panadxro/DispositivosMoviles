@@ -15,6 +15,7 @@ d.addEventListener('DOMContentLoaded', function() {
   const totalElement = d.getElementById('total-carrito');
   const botonCompra = d.getElementById('botonCompra');
   const reset = d.querySelector('#reset');
+  const banner = d.getElementById('banner');
   const urlParams = new URLSearchParams(window.location.search);
   const categoriaSelect = urlParams.get('cat');
   // Producto detalle
@@ -301,52 +302,68 @@ d.addEventListener('DOMContentLoaded', function() {
   /* Filtrar productos por categoría */
   function filtrarCat(categoriaSelect) {
     const productosFiltrados = categoriaSelect ? productos.filter(producto => producto.categoria === categoriaSelect) : productos;
-    const myModal = new bootstrap.Modal(d.getElementById('modal-publicidad'));
-    
+
     if (pagCategoria || pagInicio) {
       while (products.hasChildNodes()) {
         products.removeChild(products.firstChild);
       }
-      setTimeout(function() {
-        myModal.show();
-      }, 2000);
-      
-      // Cerrar el modal después de 5 segundos
-      setTimeout(function() {
-        myModal.hide();
-      }, 10000);
-      if (categoriaSelect) {
-        categoriaTitulo.textContent = categoriaSelect;
-      } 
 
-      const bannerlg = d.getElementById('banner-dead-cell')
-      const bannermd = d.getElementById('banner-hollowfication')
-      const bannersm = d.getElementById('banner-squeaky-clean')
-
-      bannersm.addEventListener('click', function() {
-          window.location.href = 'producto.html?id=2';
-      });
-      bannermd.addEventListener('click', function() {
-          window.location.href = 'producto.html?id=13';
-      });
-      bannerlg.addEventListener('click', function() {
-        window.location.href = 'producto.html?id=21';
-      });
-      
-      
-  
       productosFiltrados.forEach(producto => {
         const card = crearProductosCards(producto);
         products.append(card);
       });
+
+      if (categoriaSelect) {
+        categoriaTitulo.textContent = categoriaSelect;
+        mostrarBanner()
+      }
     }
+  }
+
+  /* Mostrar banner publicitario */
+  function bannerClickHandler() {
+    const id = bannerVisible()
+    let fotoId;
+    switch (id) {
+      case 'banner-squeaky-clean':
+        fotoId = 2;
+        break;
+      case 'banner-hollowfication':
+        fotoId = 13;
+        break;
+      default:
+        fotoId = 21;
+        break;
+    }
+    window.location.href = 'producto.html?id=' + fotoId;
+  }
+
+  function bannerVisible() {
+    if (window.matchMedia('(max-width: 576px)').matches) {
+      return 'banner-squeaky-clean'
+    } else if (window.matchMedia('(max-width: 1024px)').matches) {
+      return 'banner-hollowfication'
+    } else {
+      return 'banner-dead-cell'
+    }
+  }
+
+  function mostrarBanner() {
+    const myModal = new bootstrap.Modal(d.getElementById('modal-publicidad'));
+    setTimeout(function() {
+      myModal.show();
+    }, 2000);
+
+    setTimeout(function() {
+      myModal.hide();
+    }, 10000);
   }
 
   /* Mostrar producto seleccionado */
   function abrirProducto() {
     if (pagProducto) {
       const producto = productos.find(item => item.id === parseInt(productId));
-      // Encontrar producto, vaciar y mostrar producto
+
       vaciarProductoId();
       mostrarProductoId(producto);
     }
@@ -366,7 +383,6 @@ d.addEventListener('DOMContentLoaded', function() {
       })
     })
 
-    // Obtener el indicador del formulario actual del localStorage
     const formularioActual = localStorage.getItem('formularioActual');
 
     // Mostrar el formulario adecuado según el indicador guardado
@@ -494,7 +510,10 @@ d.addEventListener('DOMContentLoaded', function() {
     completarFormulario()
   }
   abrirProducto()
-  filtrarCat(categoriaSelect);
+  if (pagCategoria) {
+    filtrarCat(categoriaSelect);
+    banner.addEventListener('click', bannerClickHandler)
+  }
 });
 
 const productos = [
