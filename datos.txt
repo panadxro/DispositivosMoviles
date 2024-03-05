@@ -8,6 +8,6 @@ ALUMNO: Panadero Lucas
 CUATRIMESTRE: 2do Cuatrimestre
 COMISIÓN: DWT2AP
 TURNO: Tarde
-FECHA DE ENTREGA: 
+FECHAS DE ENTREGA: 
   (Programacion I: 05/02/2024)
   (Interacción con Dispositivos Móviles: 08/02/2024)
