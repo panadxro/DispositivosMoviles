@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: Onest;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   position: relative;
   background-color: #f3efeb;
@@ -803,7 +806,7 @@ select {
 }
 
 /* Comprobante */
-#pag-comprobante main {
+#pag-comprobante {
   display: flex;
   flex-direction: column;
   justify-content: center;

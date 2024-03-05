@@ -1,5 +1,5 @@
 <!doctype html>
-<html id="pag-categorias" lang="es">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <title>DROPDEAD E-COMMERCE</title>
@@ -9,114 +9,107 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-      <header>
-        <nav class="navt">
-          <h1><a href="index.html">DROPDEAD</a></h1>
-          <ul class="nav-list nav-underline">
-            <li><a class="nav-link" href="index.html">INICIO</a></li>
-            <li class="dropdown">
-              <a class="nav-link active" href="categorias.html">CATEGORIAS</a>
-              <ul class="dropdown-menu">
-                <li><a href="categorias.html">TODO</a></li>
-                <li><a href="?cat=Remeras">REMERAS</a></li>
-                <li><a href="?cat=Buzos">BUZOS</a></li>
-                <li><a href="?cat=Camperas">CAMPERAS</a></li>
-                <li><a href="?cat=Pantalones">PANTALONES</a></li>
-                <li><a href="?cat=Accesorios">ACCESORIOS</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link" href="comprar.html">COMPRAR</a></li>
-            <li>
-              <button 
-                class="icon a-cart" 
-                type="button" 
-                data-bs-toggle="offcanvas" 
-                data-bs-target="#offcanvasRight" 
-                aria-controls="offcanvasRight"
-                >
-                <small class="d-lg-none">Carrito</small>
-                <span class="badge bg-danger cantidades-carrito">0</span>
-              </button>           
-            </li>
-          </ul>
-        </nav>  
-      </header>
-        <main>
-          <section class="seccion-productos">
-            <h1 class="titulo-2" id="tit-categoria">PRODUCTOS</h1>
-            <div id="productos"> 
-            </div>
-          </section>   
-          <sidebar class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <section class="carrito-section">
-              <div class="cart-head">
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                <h2>CARRITO</h2>
-                <button id="reset"><small>Vaciar carrito</small>
-                  <span class="badge bg-danger cantidades-carrito">0</span>
-                </button>
-              </div>
-              <ul id="lista-carrito">
-                
-              </ul>
-              <article class="info">
-                <p>TOTAL:<span id="total-carrito"></span></p>
-                <a href="comprar.html" id="botonCompra" class="boton">Comprar</a>
-              </article>
-            </section>
-          </sidebar>
-            <div class="modal fade" id="modal-publicidad" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-              <section class="modal-dialog modal-lg modal-dialog-centered">
-                <picture class="modal-content">
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  <source media="(max-width: 576px)" srcset="./assets/fondos/banner-squeaky-clean.png">
-                  <source media="(max-width: 1024px)" srcset="./assets/fondos/banner-hollowfication.png">
-                  <img id="banner" src="./assets/fondos/banner-dead-cell.png" alt="">
-                </picture>
-              </section>
-            </div>
-            
-            <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-              <section class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <section class="modal-body">
-                    <article class="datosAutor">
-                      <h3>PANADERO LUCAS</h3>
-                      <a class="link-correo" href="mailto:lucasn.panadero@gmail.com">Contactame por correo</a>
-                      <p>Final de Programación I e Interacción con Dispositivos Móviles</p>
-                      <p>Programación y Diseño Web DWT2AP 2024</p>
-                      <ul>
-                        <li><a href="https://www.linkedin.com/in/panadxro" target="_blank" class="icon a-linkedin"><small class="d-none">Linkedin</small></a></li>
-                        <li><a href="https://github.com/panadxro" target="_blank" class="icon a-github"><small class="d-none">Github</small></a></li>
-                        <li><a href="https://www.behance.net/panadxro" target="_blank" class="icon a-behance"><small class="d-none">Behance</small></a></li>
-                      </ul>
-                    </article>
-                    <figure>
-                      <img title="Lucas Panadero" src="assets/fondos/profile.jpg" alt="Foto de perfil de Lucas Panadero">
-                    </figure>
-                  </section>
-                  <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </main>
-          <footer>
-            <h4><a href="">Logo</a></h4>
-            <ul>
-              <li><a href="https://www.instagram.com/dropdeadofficial" target="_blank" class="icon a-insta"><small class="d-none">Instagram</small></a></li>
-              <li><a href="https://twitter.com/DropDeadUK" target="_blank" class="icon a-tw"><small class="d-none">Twitter</small></a></li>
-              <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small class="d-none">Facebook</small></a></li>
+    <header>
+      <nav class="navt">
+        <h1><a href="index.html">DROPDEAD</a></h1>
+        <ul class="nav-list nav-underline">
+          <li><a class="nav-link active" href="index.html">INICIO</a></li>
+          <li class="dropdown">
+            <a class="nav-link" href="#pag-categorias">CATEGORIAS</a>
+            <ul class="dropdown-menu">
+              <li><a href="#pag-categorias">TODO</a></li>
+              <li><a href="?cat=Remeras">REMERAS</a></li>
+              <li><a href="?cat=Buzos">BUZOS</a></li>
+              <li><a href="?cat=Camperas">CAMPERAS</a></li>
+              <li><a href="?cat=Pantalones">PANTALONES</a></li>
+              <li><a href="?cat=Accesorios">ACCESORIOS</a></li>
             </ul>
-            <article>
-              <p>Creado por</p>
-              <button type="button" data-bs-toggle="modal" data-bs-target="#modalAutor">
-                @panadxro
+          </li>
+          <li><a class="nav-link" href="comprar.html">COMPRAR</a></li>
+          <li>
+            <button class="icon a-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <small class="d-lg-none">Carrito</small>
+              <span class="badge bg-danger cantidades-carrito">0</span>
+            </button>           
+          </li>
+        </ul>
+      </nav>  
+    </header>
+      <main id="pag-categorias">
+        <section class="seccion-productos">
+          <h1 class="titulo-2" id="tit-categoria">PRODUCTOS</h1>
+          <div id="productos"> 
+          </div>
+        </section>   
+        <sidebar class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <section class="carrito-section">
+            <div class="cart-head">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h2>CARRITO</h2>
+              <button id="reset"><small>Vaciar carrito</small>
+                <span class="badge bg-danger cantidades-carrito">0</span>
               </button>
+            </div>
+            <ul id="lista-carrito">
+              
+            </ul>
+            <article class="info">
+              <p>TOTAL:<span id="total-carrito"></span></p>
+              <a href="comprar.html" id="botonCompra" class="boton">Comprar</a>
             </article>
-          </footer>
-        <script src="js/parcial.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-    </body>
+          </section>
+        </sidebar>
+          <div class="modal fade" id="modal-publicidad" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+            <section class="modal-dialog modal-lg modal-dialog-centered">
+              <picture class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <source media="(max-width: 576px)" srcset="./assets/fondos/banner-squeaky-clean.png">
+                <source media="(max-width: 1024px)" srcset="./assets/fondos/banner-hollowfication.png">
+                <img id="banner" src="./assets/fondos/banner-dead-cell.png" alt="">
+              </picture>
+            </section>
+          </div>
+          
+          <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+            <section class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <section class="modal-body">
+                  <article class="datosAutor">
+                    <h3>PANADERO LUCAS</h3>
+                    <a class="link-correo" href="mailto:lucasn.panadero@gmail.com">Contactame por correo</a>
+                    <p>Final de Programación I e Interacción con Dispositivos Móviles</p>
+                    <p>Programación y Diseño Web DWT2AP 2024</p>
+                    <ul>
+                      <li><a href="https://www.linkedin.com/in/panadxro" target="_blank" class="icon a-linkedin"><small class="d-none">Linkedin</small></a></li>
+                      <li><a href="https://github.com/panadxro" target="_blank" class="icon a-github"><small class="d-none">Github</small></a></li>
+                      <li><a href="https://www.behance.net/panadxro" target="_blank" class="icon a-behance"><small class="d-none">Behance</small></a></li>
+                    </ul>
+                  </article>
+                  <figure>
+                    <img title="Lucas Panadero" src="assets/fondos/profile.jpg" alt="Foto de perfil de Lucas Panadero">
+                  </figure>
+                </section>
+                <div class="modal-footer">
+                  <button type="button" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+
+    <footer>
+      <h4><a href="index.html">DROPDEAD</a></h4>
+      <ul>
+        <li><a href="https://www.instagram.com/dropdeadofficial" target="_blank" class="icon a-insta"><small class="d-none">Instagram</small></a></li>
+        <li><a href="https://twitter.com/DropDeadUK" target="_blank" class="icon a-tw"><small class="d-none">Twitter</small></a></li>
+        <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small class="d-none">Facebook</small></a></li>
+      </ul>
+      <article>
+        <p>Creado por</p>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modalAutor">@panadxro</button>
+      </article>
+    </footer>  
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/parcial.js"></script>
+  </body>
 </html>
