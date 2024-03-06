@@ -489,7 +489,8 @@ d.addEventListener('DOMContentLoaded', function() {
   /* Scroll Nav */
   window.addEventListener('scroll', function() {    
     const navbar = document.querySelector('.navt');
-    const dropdown = document.querySelector('.dropdown-menu');
+    const dropdown = document.querySelector('#dropdown-menu');
+    const carritoDesplegable = document.querySelector('.carrito-section')
 
     // Obtener la posición actual de desplazamiento
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -503,11 +504,13 @@ d.addEventListener('DOMContentLoaded', function() {
       navbar.style.filter = 'invert(100%)';
       dropdown.style.background = '#none';
       dropdown.style.filter = 'invert(0%)';
+      carritoDesplegable.style.filter = 'invert(100%)'
     } else {
       navbar.style.filter = 'invert(0%)';
       navbar.style.background = 'none';
       dropdown.style.background = '#dfdfdf';
       dropdown.style.filter = 'invert(100%)';
+      carritoDesplegable.style.filter = 'invert(0%)'
     }
   });
 
