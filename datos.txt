@@ -2,12 +2,10 @@ Escuela de Arte Multimedial Da Vinci
 CARRERA: Diseño y Programación Web
 MATERIAS: Programación I e Interacción con Dispositivos Móviles
 TRABAJO: Examen Final Ecommerce
-PROFESOR PROGRAMACION I: Carlos Ferrer
 PROFESOR IDM: D'Addezio Alejandro
 ALUMNO: Panadero Lucas
 CUATRIMESTRE: 2do Cuatrimestre
 COMISIÓN: DWT2AP
 TURNO: Tarde
-FECHAS DE ENTREGA: 
-  (Programacion I: 05/02/2024)
-  (Interacción con Dispositivos Móviles: 08/02/2024)
+FECHAS DE ENTREGA: 08/02/2024
+LINK: https://panadxro.github.io/dropdeadv2/
