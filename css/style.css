@@ -394,7 +394,7 @@ footer {
   align-items: center;
   justify-content: space-around;
 }
-footer h4 a {
+footer h2 a {
   background: url(../assets/icon/NEW_SITE_LOGO_BLACK_220x.png) no-repeat center center;
   filter: invert(100%);
   height: 2rem;
@@ -416,7 +416,7 @@ footer ul li a {
   height: 2rem;
   width: 2rem;
 }
-footer h5 {
+footer p {
   display: inline;
 }
 footer button {

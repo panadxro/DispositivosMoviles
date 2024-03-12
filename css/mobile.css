@@ -16,6 +16,13 @@ input, textarea {
 .navt {
   justify-content: space-around;
 }
+/* Footer */
+footer p {
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: 400;
+}
 /* index.html */
 #pag-inicio {
   display: flex;
