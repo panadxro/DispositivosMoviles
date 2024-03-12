@@ -100,7 +100,6 @@ a small {
   z-index: 2;
   backdrop-filter: blur(.1rem);
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   height: 5rem;
   transition: background-color .3s ease, filter .3s ease-in-out;
@@ -244,6 +243,9 @@ aside {
   background-color: #f3efeb !important;
   position: relative;
   padding: 1em;
+}
+#pag-comprar aside {
+  height: auto;
 }
 .cart-head {
   display: flex;
@@ -414,7 +416,7 @@ footer ul li a {
   height: 2rem;
   width: 2rem;
 }
-footer p {
+footer h5 {
   display: inline;
 }
 footer button {
@@ -906,10 +908,8 @@ select {
 #infoProducto {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: .5em;
-  padding-block: 4em;
-  width: 100vh;
-  max-width: 100vh;
 }
 #cat-producto {
   color: white;
@@ -925,5 +925,4 @@ select {
 }
 #precio-producto {
   font-weight: bold;
-  font-size: calc(1rem + 0.6vw);
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>DROPDEAD E-COMMERCE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
-    <link rel="shortcut icon" href="assets/icon/faviconDrop.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icon/faviconDrop.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -42,13 +42,7 @@
       <ul class="ul-list nav-underline" >
         <li><a class="nav-link active" href="index.html">INICIO</a></li>
         <li class="dropdown">
-          <a 
-          class="nav-link" 
-          data-bs-toggle="collapse" 
-          href="#dropdown-menu" 
-          role="button" 
-          aria-expanded="false" 
-          aria-controls="collapseExample">CATEGORIAS</a>
+          <a class="nav-link" data-bs-toggle="collapse" href="#dropdown-menu" role="button" aria-expanded="false" aria-controls="dropdown-menu">CATEGORIAS</a>
           <ul class="collapse" id="dropdown-menu">
             <li><a href="categorias.html">TODO</a></li>
             <li><a href="categorias.html?cat=Remeras">REMERAS</a></li>
@@ -71,13 +65,7 @@
       <small>Carrito</small>
       <span class="badge bg-danger cantidades-carrito">0</span>
     </button>
-    <aside 
-      class="offcanvas offcanvas-end 
-      carrito-section" 
-      tabindex="-1" 
-      id="carritoDesplegable" 
-      aria-labelledby="offcanvasRightLabel"
-      >
+    <aside class="offcanvas offcanvas-end carrito-section" tabindex="-1" id="carritoDesplegable" aria-labelledby="carritoDesplegable">
       <div class="cart-head">
         <button
          type="button"
@@ -92,14 +80,14 @@
       <ul id="lista-carrito">
       </ul>
       <article class="info">
-        <p>TOTAL:<span id="total-carrito"></span></p>
+        <h3>TOTAL:<span id="total-carrito"></span></h3>
         <a class="boton" id="botonCompra" href="comprar.html">Comprar</a>
       </article>
     </aside>
   </header>
   
   <main id="pag-producto"> 
-    <section class="detalle-producto">
+    <div class="detalle-producto">
       <div id="carouselExampleIndicators" class="carousel slide">
         <figure id="galeria-productos" class="carousel-inner">
           <picture class="carousel-item active"><img src="assets/product/AroundTheFur/AroundTheFur1.png" alt="AroundTheFur"></picture>
@@ -109,11 +97,11 @@
           <picture class="carousel-item"><img src="assets/product/AroundTheFur/AroundTheFur5.png" alt="AroundTheFur"></picture>
         </figure>
         <ul id="indicador-productos" class="carousel-indicators">
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 2" class="active" aria-current="true"><img src="assets/product/AroundTheFur/AroundTheFur1.png" alt="AroundTheFur"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 3"><img src="assets/product/AroundTheFur/AroundTheFur2.png" alt="AroundTheFur"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"><img src="assets/product/AroundTheFur/AroundTheFur3.png" alt="AroundTheFur"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 5"><img src="assets/product/AroundTheFur/AroundTheFur4.png" alt="AroundTheFur"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 6"><img src="assets/product/AroundTheFur/AroundTheFur5.png" alt="AroundTheFur"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"><img src="assets/product/AroundTheFur/AroundTheFur1.png" alt="AroundTheFur"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"><img src="assets/product/AroundTheFur/AroundTheFur2.png" alt="AroundTheFur"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"><img src="assets/product/AroundTheFur/AroundTheFur3.png" alt="AroundTheFur"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"><img src="assets/product/AroundTheFur/AroundTheFur4.png" alt="AroundTheFur"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"><img src="assets/product/AroundTheFur/AroundTheFur5.png" alt="AroundTheFur"></li>
         </ul>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -125,39 +113,39 @@
         </button>
       </div>
       <article id="infoProducto">
-        <h1 id="nombre-producto" class="titulo-2">Around The Fur</h1>
+        <h2 id="nombre-producto" class="titulo-2">Around The Fur</h2>
         <span id="cat-producto">Camperas</span>
         <p id="subtitulo-producto">Faux fur Jacket</p>
         <p id="descripcion-producto">Around The Fur es la chaqueta de Drop Dead con la que no querrás dormir. Fabricada en piel sintética, presenta un estampado de gritos en tonos apagados, cierre de cremallera y bolsillos. Es la prenda perfecta para el invierno.</p>
         <p id="precio-producto">$200</p>
         <button id="boton-agregar" class="boton add">Agregar al carrito</button>
       </article>
-    </section>
+    </div>
 
-    <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-      <section class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="modalAutor" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
-          <section class="modal-body">
+          <div class="modal-body">
             <article class="datosAutor">
               <h3>PANADERO LUCAS</h3>
               <a class="link-correo" href="mailto:lucasn.panadero@gmail.com">Contactame por correo</a>
               <p>Final de Programación I e Interacción con Dispositivos Móviles</p>
               <p>Programación y Diseño Web DWT2AP 2024</p>
               <ul>
-                <li><a href="https://www.linkedin.com/in/panadxro" target="_blank" class="icon a-linkedin"><small class="d-none">Linkedin</small></a></li>
-                <li><a href="https://github.com/panadxro" target="_blank" class="icon a-github"><small class="d-none">Github</small></a></li>
-                <li><a href="https://www.behance.net/panadxro" target="_blank" class="icon a-behance"><small class="d-none">Behance</small></a></li>
+                <li><a href="https://www.linkedin.com/in/panadxro" target="_blank" class="icon a-linkedin"><small>Linkedin</small></a></li>
+                <li><a href="https://github.com/panadxro" target="_blank" class="icon a-github"><small>Github</small></a></li>
+                <li><a href="https://www.behance.net/panadxro" target="_blank" class="icon a-behance"><small>Behance</small></a></li>
               </ul>
             </article>
             <figure>
               <img title="Lucas Panadero" src="assets/fondos/profile.jpg" alt="Foto de perfil de Lucas Panadero">
             </figure>
-          </section>
+          </div>
           <div class="modal-footer">
             <button type="button" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   </main>
 
@@ -169,7 +157,7 @@
       <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small class="d-none">Facebook</small></a></li>
     </ul>
     <article>
-      <p>Creado por</p>
+      <h5>Creado por</h5>
       <button type="button" data-bs-toggle="modal" data-bs-target="#modalAutor">@panadxro</button>
     </article>
   </footer>  

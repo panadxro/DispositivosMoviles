@@ -12,6 +12,10 @@ p {
 input, textarea {
   font-size: 1.2em;
 }
+/* Navbar */
+.navt {
+  justify-content: space-around;
+}
 /* index.html */
 #pag-inicio {
   display: flex;
@@ -106,14 +110,12 @@ input, textarea {
   margin-block: 5em;
 }
 /* comprar.html */
-#pag-comprar {
-  margin-block: 5em;
-}
 .sect-comprar {
   display: flex;
   flex-direction: column-reverse;
   margin: 0;
   padding: 0;
+  padding-block: 5em;
   min-height: 100vh;
   justify-content: space-around;
   margin-inline: var(--margin-cel);
@@ -129,9 +131,14 @@ input, textarea {
   height: fit-content;
   padding: 0;
 }
+
+.a-cart {
+  cursor: default !important;
+}
 /* producto.html */
 #pag-producto {
-  margin-block: 3em;
+  margin: 3em auto;
+  width: calc(100% - 1em);
 }
 .detalle-producto {
   flex-direction: column;
@@ -143,4 +150,17 @@ input, textarea {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+#info-producto {
+  padding: 0;
+}
+#nombre-producto {
+  font-size: 3em;
+}
+#descripcion-producto {
+  letter-spacing: 0;
+  font-weight: normal;
+}
+#precio-producto {
+  font-size: 2em;
 }

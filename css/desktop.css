@@ -3,6 +3,10 @@
   text-transform: uppercase;
   font-size: calc(1.3rem + 2vw);
 }
+/* Navbar */
+.navt {
+  justify-content: space-evenly;
+}
 /* index.html */
 #pag-inicio {
   display: flex;
@@ -42,19 +46,21 @@
   flex-direction: column;
   align-items: center;
   gap: 2em;
+  width: 70%;
+  margin: auto;
 }
 .nosotros article {
   display: flex;
   gap: 2em;
   align-items: center;
 }
-.nosotros article > p {
+.nosotros article > h4 {
   line-height: 2em;
   font-size: 1.1em;
   font-weight: 600;
 }
 .nosotros picture {
-  width: 20vw;
+  width: 50vw;
   overflow: hidden;
 }
 .nosotros picture img {
@@ -94,6 +100,9 @@
   display: block;
 }
 /* categorias.html */
+#pag-categorias {
+  margin-block: 5em;
+}
 /* comprar.html */
 .sect-comprar {
   display: flex;
@@ -125,5 +134,14 @@
 .detalle-producto .carousel {
   width: 65vh;
   max-width: 65vh;
+}
+
+#infoProducto {
+  width: 100vh;
+  max-width: 100vh;
+}
+#precio-producto {
+  font-weight: bold;
+  font-size: calc(1rem + 0.6vw);
 }
   /* comprobante.html */

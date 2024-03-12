@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>DROPDEAD E-COMMERCE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
-    <link rel="shortcut icon" href="assets/icon/faviconDrop.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icon/faviconDrop.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -42,13 +42,7 @@
         <ul class="ul-list nav-underline" >
           <li><a class="nav-link active" href="#pag-inicio">INICIO</a></li>
           <li class="dropdown">
-            <a 
-            class="nav-link" 
-            data-bs-toggle="collapse" 
-            href="#dropdown-menu" 
-            role="button" 
-            aria-expanded="false" 
-            aria-controls="collapseExample">CATEGORIAS</a>
+            <a class="nav-link" data-bs-toggle="collapse" href="#dropdown-menu" role="button" aria-expanded="false" aria-controls="dropdown-menu">CATEGORIAS</a>
             <ul class="collapse" id="dropdown-menu">
               <li><a href="categorias.html">TODO</a></li>
               <li><a href="categorias.html?cat=Remeras">REMERAS</a></li>
@@ -71,13 +65,7 @@
         <small>Carrito</small>
         <span class="badge bg-danger cantidades-carrito">0</span>
       </button>
-      <aside 
-        class="offcanvas offcanvas-end 
-        carrito-section" 
-        tabindex="-1" 
-        id="carritoDesplegable" 
-        aria-labelledby="offcanvasRightLabel"
-        >
+      <aside class="offcanvas offcanvas-end carrito-section" tabindex="-1" id="carritoDesplegable" aria-labelledby="carritoDesplegable">
         <div class="cart-head">
           <button
            type="button"
@@ -92,15 +80,14 @@
         <ul id="lista-carrito">
         </ul>
         <article class="info">
-          <p>TOTAL:<span id="total-carrito"></span></p>
+          <h3>TOTAL:<span id="total-carrito"></span></h3>
           <a class="boton" id="botonCompra" href="comprar.html">Comprar</a>
         </article>
       </aside>
     </header>
 
     <main id="pag-inicio">
-    
-      <section class="inicio">
+      <div class="inicio">
         <article>
           <h2>Drop Dead <br> Estilo único, Calidad Intransigente</h2>
           <p>Combina originalidad, calidad y un toque de rebeldía. </p>
@@ -109,12 +96,12 @@
         <figure>
           <img src="assets/icon/faviconDrop.png" title="Logo Dropdead Clothing" alt="Logo Dropdead Clothing">
         </figure>
-      </section>
+      </div>
 
       <section class="nosotros">
         <h2 class="titulo-2">Descubre Dropdead</h2>
         <article>
-          <p>Donde cada prenda es una declaración de audacia y autenticidad. Define tu estilo con la fusión única de moda y actitud que solo DropDead puede ofrecer.</p>
+          <h4>Donde cada prenda es una declaración de audacia y autenticidad. Define tu estilo con la fusión única de moda y actitud que solo DropDead puede ofrecer.</h4>
           <picture>
             <source media="(max-width: 576px)" srcset="./assets/fondos/deadcell-md.png">
             <img src="assets/fondos/deadcell-lg.png" title="Modelo Dead Cell de espaldas" alt="Modelo Dead Cell de espaldas">
@@ -125,7 +112,7 @@
             <source media="(max-width: 576px)" srcset="./assets/fondos/tnsh-md.png">
             <img src="assets/fondos/tnsh-lg.png" title="Modelo TNSH de costado" alt="Modelo TNSH de costado">
           </picture>
-          <p>Drop Dead es más que una marca de ropa; es una declaración de estilo. Fundada en la intersección de la moda alternativa y la estética gótica, Drop Dead ofrece prendas únicas y atrevidas para aquellos que buscan destacar en la multitud.</p>
+          <h4>Drop Dead es más que una marca de ropa; es una declaración de estilo. Fundada en la intersección de la moda alternativa y la estética gótica, Drop Dead ofrece prendas únicas y atrevidas para aquellos que buscan destacar en la multitud.</h4>
         </article>
       </section>
 
@@ -178,7 +165,7 @@
               </div>
           </figure>
           <figure>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/W_03t-ddhAE?si=SMMggjVMrTgTi_4X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/W_03t-ddhAE?si=SMMggjVMrTgTi_4X" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </figure>
         </div>
       </section>
@@ -307,10 +294,10 @@
         </form>
       </section>
 
-      <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-        <section class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="modalAutor" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
           <div class="modal-content">
-            <section class="modal-body">
+            <div class="modal-body">
               <article class="datosAutor">
                 <h3>PANADERO LUCAS</h3>
                 <a class="link-correo" href="mailto:lucasn.panadero@gmail.com">Contactame por correo</a>
@@ -325,12 +312,12 @@
               <figure>
                 <img title="Lucas Panadero" src="assets/fondos/profile.jpg" alt="Foto de perfil de Lucas Panadero">
               </figure>
-            </section>
+            </div>
             <div class="modal-footer">
               <button type="button" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </main>
 
@@ -342,7 +329,7 @@
         <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small>Facebook</small></a></li>
       </ul>
       <article>
-        <p>Creado por</p>
+        <h5>Creado por</h5>
         <button type="button" data-bs-toggle="modal" data-bs-target="#modalAutor">@panadxro</button>
       </article>
     </footer>  
