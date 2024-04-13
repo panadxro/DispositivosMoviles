@@ -1,0 +1,151 @@
+/* Componentes */
+.titulo-2 {
+  text-transform: uppercase;
+  font-size: calc(1.3rem + 2vw);
+}
+/* Navbar */
+.navt {
+  justify-content: space-evenly;
+}
+/* index.html */
+#pag-inicio {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  margin-block: 4em;
+}
+.inicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100dvh;
+  margin: 0;
+}
+.inicio article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30rem;
+  gap: 2em;
+}
+.inicio article p {
+  font-size: 1.2em;
+  line-height: 2em;
+  font-weight: 600;
+}
+.inicio h2 {
+  font-size: calc(1.375rem + 1.5vw);
+  text-wrap: pretty;
+}
+.inicio figure {
+  max-width: 20rem;
+}
+/* Nosotros */
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 70%;
+  margin: auto;
+}
+.nosotros article {
+  display: flex;
+  gap: 5em;
+  align-items: center;
+}
+.nosotros article > h4 {
+  line-height: 2em;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.nosotros picture {
+  max-width: 20rem;
+  overflow: hidden;
+}
+.nosotros picture img {
+  width: 100%;
+}
+.nosotros p {
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 2em;
+  max-width: 20rem;
+}
+/* Impacto */
+.detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  margin-inline: var(--margin-pc);
+}
+/* Newsletter */
+.newsletter {
+  gap: 2rem;
+  margin-inline: var(--margin-pc);
+}
+.form-newsletter fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+}
+/* Productos */
+#productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 4em;
+  margin-inline: var(--margin-pc);
+}
+.card:hover .add {
+  display: block;
+}
+/* categorias.html */
+#pag-categorias {
+  margin-block: 5em;
+}
+/* comprar.html */
+.sect-comprar {
+  display: flex;
+  margin: 0;
+  padding: 5em;
+  min-height: 100vh;
+  justify-content: space-around;
+}
+.sect-comprar form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 35rem;
+}
+.sect-comprar #lista-carrito {
+  width: 35vw;
+  height: fit-content;
+  padding: 0;
+}
+/* producto.html */
+.detalle-producto {
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+  padding: 5em;
+}
+.detalle-producto .carousel {
+  width: 65vh;
+  max-width: 65vh;
+}
+
+#infoProducto {
+  width: 100vh;
+  max-width: 100vh;
+}
+#precio-producto {
+  font-weight: bold;
+  font-size: calc(1rem + 0.6vw);
+}
+  /* comprobante.html */

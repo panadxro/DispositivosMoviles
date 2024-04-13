@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>DROPDEAD - Ecommerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icon/faviconDrop.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="navt">
+      <button 
+        class="icon a-burger" 
+        type="button" 
+        data-bs-toggle="offcanvas" 
+        data-bs-target="#navDesplegable" 
+        aria-controls="navDesplegable"
+        >
+        <small>Abrir navegador</small>
+      </button>
+      <h1><a class="a-logo" href="index.html">DROPDEAD</a></h1>
+      <nav 
+        class="nav-list offcanvas-start" 
+        id="navDesplegable" 
+        tabindex="-1" 
+        aria-labelledby="navDesplegable"
+        >
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title a-logo" 
+          id="offcanvasNavbarLabel">DropDead</h2>
+          <button 
+            class="btn-close shadow-none" 
+            data-bs-dismiss="offcanvas" 
+            data-bs-target="#navDesplegable"
+            type="button" 
+            aria-label="Close"
+            >
+            <small>Cerrar navegador</small>
+          </button>
+        </div>
+        <ul class="ul-list nav-underline" >
+          <li><a class="nav-link active" href="#pag-inicio">INICIO</a></li>
+          <li class="dropdown">
+            <a class="nav-link" data-bs-toggle="collapse" href="#dropdown-menu" role="button" aria-expanded="false" aria-controls="dropdown-menu">CATEGORIAS</a>
+            <ul class="collapse" id="dropdown-menu">
+              <li><a href="categorias.html">TODO</a></li>
+              <li><a href="categorias.html?cat=Remeras">REMERAS</a></li>
+              <li><a href="categorias.html?cat=Buzos">BUZOS</a></li>
+              <li><a href="categorias.html?cat=Camperas">CAMPERAS</a></li>
+              <li><a href="categorias.html?cat=Pantalones">PANTALONES</a></li>
+              <li><a href="categorias.html?cat=Accesorios">ACCESORIOS</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="comprar.html">COMPRAR</a></li>
+        </ul>
+      </nav>
+      <button 
+        class="icon a-cart" 
+        type="button" 
+        data-bs-toggle="offcanvas" 
+        data-bs-target="#carritoDesplegable" 
+        aria-controls="carritoDesplegable"
+        >
+        <small>Carrito</small>
+        <span class="badge bg-danger cantidades-carrito">0</span>
+      </button>
+      <aside class="offcanvas offcanvas-end carrito-section" tabindex="-1" id="carritoDesplegable" aria-labelledby="carritoDesplegable">
+        <div class="cart-head">
+          <button
+           type="button"
+           class="btn-close"
+           data-bs-dismiss="offcanvas"
+           aria-label="Close"><small>Cerrar carrito</small></button>
+          <h2>CARRITO</h2>
+          <button id="reset"><small class="d-lg-none">Vaciar carrito</small>
+            <span class="badge bg-danger cantidades-carrito">0</span>
+          </button>
+        </div>
+        <ul id="lista-carrito">
+        </ul>
+        <article class="info">
+          <p>TOTAL:<span class="icon" id="total-carrito">Total</span></p>
+          <a class="boton" id="botonCompra" href="comprar.html">Comprar</a>
+        </article>
+      </aside>
+    </header>
+
+    <main id="pag-inicio">
+      <div class="inicio">
+        <article>
+          <h2>Drop Dead <br> Estilo único, Calidad Intransigente</h2>
+          <p>Combina originalidad, calidad y un toque de rebeldía. </p>
+          <a href="categorias.html" class="boton">Explorar</a>
+        </article>
+        <figure>
+          <img src="assets/icon/faviconDrop.png" title="Logo Dropdead Clothing" alt="Logo Dropdead Clothing">
+        </figure>
+      </div>
+
+      <section class="nosotros">
+        <h2 class="titulo-2">Descubre Dropdead</h2>
+        <article>
+          <p>Donde cada prenda es una declaración de audacia y autenticidad. Define tu estilo con la fusión única de moda y actitud que solo DropDead puede ofrecer.</p>
+          <picture>
+            <source media="(max-width: 576px)" srcset="./assets/fondos/deadcell-md.png">
+            <img src="assets/fondos/deadcell-lg.png" title="Modelo Dead Cell de espaldas" alt="Modelo Dead Cell de espaldas">
+          </picture>
+        </article>
+        <article>
+          <picture>
+            <source media="(max-width: 576px)" srcset="./assets/fondos/tnsh-md.png">
+            <img src="assets/fondos/tnsh-lg.png" title="Modelo TNSH de costado" alt="Modelo TNSH de costado">
+          </picture>
+          <p>Drop Dead es más que una marca de ropa; es una declaración de estilo. Fundada en la intersección de la moda alternativa y la estética gótica, Drop Dead ofrece prendas únicas y atrevidas para aquellos que buscan destacar en la multitud.</p>
+        </article>
+      </section>
+
+      <section class="detalles">
+        <h2 class="titulo-2">Nuestro impacto</h2>
+        <p>Nos hemos unido a <a href="https://public.getgreenspark.com/1639580031124/drop-dead-clothing" target="_blank">Greenspark</a> para garantizar que <b>Drop Dead Clothing</b> tenga un impacto positivo en nuestro planeta y en su gente. ¡Echa un vistazo a nuestro impacto hasta ahora y únete a nuestro viaje!
+        Nuestro impacto generado hasta ahora</p>
+        <ul class="detalle-box">
+          <li>
+            <p id="botellas">87.690 <small>botellas de plástico rescatadas</small></p>          
+          </li>
+          <li>
+            <p id="co2">8.797 <small>toneladas de CO2 compensadas</small></p>          
+          </li>
+          <li>
+            <p id="arboles">40.663 <small>arboles plantados</small></p>
+          </li>
+        </ul>
+        <div class="novedades">
+          <figure id="carouselExampleCaptions" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item" data-bs-interval="5000">
+                  <picture class="d-block w-100">
+                    <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider1.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider1.jpg">
+                    <img src="assets/fondos/lg-slider1.jpg" alt="Banner con modelos historia de la marca">
+                  </picture>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <picture class="d-block w-100">
+                    <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider2.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider2.jpg">
+                    <img src="assets/fondos/lg-slider2.jpg" alt="Banner con modelos el comienzo de la marca">
+                  </picture>
+                </div>
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <picture class="d-block w-100">
+                    <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider3.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider3.jpg">
+                    <img src="assets/fondos/lg-slider3.jpg" alt="Banner con modelos y su filosofia">
+                  </picture>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <picture class="d-block w-100">
+                    <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider4.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider4.jpg">
+                    <img src="assets/fondos/lg-slider4.jpg" alt="Banner con modelos y su dilema">
+                  </picture>
+                </div>
+              </div>
+          </figure>
+          <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/W_03t-ddhAE?si=SMMggjVMrTgTi_4X" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </figure>
+        </div>
+      </section>
+
+      <section class="sec-productos">
+        <h2 class="titulo-2" id="tit-categoria">Productos</h2>
+        <div id="productos">
+          <article class="card">
+            <a href="producto.html?id=8">
+              <figure>
+                <img src="assets/product/Blade/Blade1.png" alt="Blade">
+              </figure>
+              <h3>Blade</h3>
+              <p>Necklace</p>
+              <p class="price">$<span>35</span></p>
+            </a>
+            <button class="add boton" data-id="8" data-val="35" data-cat="Accesorio">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="producto.html?id=13">
+              <figure>
+                <img src="assets/product/Hollowfication/Hollowfication1.png" alt="Hollowfication">
+              </figure>
+              <h3>Hollowfication</h3>
+              <p>Washed Black Hoodie</p>
+              <p class="price">$<span>120</span></p>
+            </a>
+            <button class="add boton" data-id="13" data-val="120" data-cat="Buzo">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="producto.html?id=18">
+              <figure>
+                <img src="assets/product/JadoreHardcore/JadoreHardcore1.png" alt="J'adore Hardcore">
+              </figure>
+              <h3>J'adore Hardcore</h3>
+              <p>2 in 1 Jacket</p>
+              <p class="price">$<span>200</span></p>
+            </a>
+            <button class="add boton" data-id="18" data-val="200" data-cat="Campera">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="producto.html?id=19">
+              <figure>
+                <img src="assets/product/Spiritual/Spiritual1.png" alt="Spiritual">
+              </figure>
+              <h3>Spiritual</h3>
+              <p>Socks (Pack of 2)</p>
+              <p class="price">$<span>20</span></p>
+            </a>
+            <button class="add boton" data-id="19" data-val="20" data-cat="Accesorio">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="producto.html?id=17">
+              <figure>
+                <img src="assets/product/Violence/Violence1.png" alt="Violence">
+              </figure>
+              <h3>Violence</h3>
+              <p>Elasticated Shorts</p>
+              <p class="price">$<span>60</span></p>
+            </a>
+            <button class="add boton" data-id="20" data-val="60" data-cat="Pantalon">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="producto.html?id=10">
+              <figure>
+                <img src="assets/product/Lure/Lure1.png" alt="Lure">
+              </figure>
+              <h3>Lure</h3>
+              <p>Distressed Hoodie</p>
+              <p class="price">$<span>120</span></p>
+            </a>
+            <button class="add boton" data-id="10" data-val="120" data-cat="Buzo">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="producto.html?id=11">
+              <figure>
+                <img src="assets/product/Makeover/Makeover1.png" alt="Makeover">
+              </figure>
+              <h3>Makeover</h3>
+              <p>Washed Black T-Shirt</p>
+              <p class="price">$<span>50</span></p>
+            </a>
+            <button class="add boton" data-id="11" data-val="50" data-cat="Remera">Agregar al carrito</button>
+          </article>
+          <article class="card">
+            <a href="producto.html?id=9">
+              <figure>
+                <img src="assets/product/Blessings/Blessings1.png" alt="Blessings">
+              </figure>
+              <h3>Blessings</h3>
+              <p>Longsleeve</p>
+              <p class="price">$<span>70</span></p>
+            </a>
+            <button class="add boton" data-id="9" data-val="70" data-cat="Accesorio">Agregar al carrito</button>
+          </article>
+        </div>
+        <a href="categorias.html" class="boton">Ver más</a>
+      </section>
+
+      <section class="newsletter">
+        <h2 class="titulo-2">Newsletter</h2>
+        <p>Suscríbase a nuestra newsletter para recibir noticias exclusivas sobre nuestra próxima colección</p>
+        <form class="form-newsletter" action="index.html" >
+          <fieldset>
+            <legend>Nombre formulario</legend>
+            <div>
+              <label for="nombre">Nombre y Apellido</label>
+              <input placeholder="Nombre y Apellido" id="nombre" type="text">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input placeholder="Email" id="email" type="email">
+            </div>
+            <div>
+              <label for="tel">Teléfono</label>
+              <input placeholder="Teléfono" id="tel" type="tel">
+            </div>
+            <div>
+              <label for="comentario">Comentario</label>
+              <textarea placeholder="Comentario" id="comentario"></textarea>
+            </div>
+          </fieldset>
+          <div class="boton">
+            <input value="Subscribirse" type="submit">
+          </div>
+        </form>
+      </section>
+
+      <div class="modal fade" id="modalAutor" tabindex="-1" aria-labelledby="modalAutor" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <article class="datosAutor">
+                <h3>PANADERO LUCAS</h3>
+                <a class="link-correo" href="mailto:lucasn.panadero@gmail.com">Contactame por correo</a>
+                <p>Final de Programación I e Interacción con Dispositivos Móviles</p>
+                <p>Programación y Diseño Web DWT2AP 2024</p>
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/panadxro" target="_blank" class="icon a-linkedin"><small>Linkedin</small></a></li>
+                  <li><a href="https://github.com/panadxro" target="_blank" class="icon a-github"><small>Github</small></a></li>
+                  <li><a href="https://www.behance.net/panadxro" target="_blank" class="icon a-behance"><small>Behance</small></a></li>
+                </ul>
+              </article>
+              <figure>
+                <img title="Lucas Panadero" src="assets/fondos/profile.jpg" alt="Foto de perfil de Lucas Panadero">
+              </figure>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h2><a href="index.html">DROPDEAD</a></h2>
+      <ul>
+        <li><a href="https://www.instagram.com/dropdeadofficial" target="_blank" class="icon a-insta"><small>Instagram</small></a></li>
+        <li><a href="https://twitter.com/DropDeadUK" target="_blank" class="icon a-tw"><small>Twitter</small></a></li>
+        <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small>Facebook</small></a></li>
+      </ul>
+      <article>
+        <p>Creado por</p>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modalAutor">@panadxro</button>
+      </article>
+    </footer>  
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/parcial.js"></script>
+  </body>
+</html>

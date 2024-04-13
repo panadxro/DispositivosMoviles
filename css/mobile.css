@@ -1,0 +1,173 @@
+/* Componentes */
+.titulo-2 {
+  text-transform: uppercase;
+  font-size: var(--titulo);
+}
+p {
+  line-height: 1.6em;
+  letter-spacing: .06em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+input, textarea {
+  font-size: 1.2em;
+}
+/* Navbar */
+.navt {
+  justify-content: space-around;
+}
+/* Footer */
+footer p {
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: 400;
+}
+/* index.html */
+#pag-inicio {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  margin-block: 5em;
+}
+.inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100dvh;
+  margin-inline: var(--margin-cel);
+  position: relative;
+}
+.inicio article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: var(--gap-cel);
+}
+.inicio article p {
+  line-height: 1.5em;
+  font-weight: 600;
+  text-wrap: pretty;
+  width: 75%;
+}
+.inicio h2 {
+  font-size: calc(2rem + 3.5vw);
+  text-wrap: pretty;
+}
+.inicio figure {
+  /* left: 100%; */
+  max-width: 60rem;
+  /* position: absolute; */
+}
+/* Nosotros */
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin-inline: var(--margin-cel);
+
+}
+.nosotros article {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+.nosotros picture {
+  overflow: hidden;
+}
+.nosotros picture img {
+  width: 100%;
+}
+.nosotros p {
+  max-width: 30rem;
+}
+/* Impacto */
+.detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  margin-inline: var(--margin-cel);
+}
+.detalle-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-cel);
+}
+.novedades {
+  flex-direction: column;
+  gap: var(--gap-cel);
+}
+/* Newsletter */
+.newsletter {
+  margin: var(--margin-cel);
+  gap: var(--gap-cel);
+}
+/* Productos */
+#productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4em;
+}
+/* categorias.html */
+#pag-categorias {
+  margin-block: 5em;
+}
+/* comprar.html */
+.sect-comprar {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0;
+  padding: 0;
+  padding-block: 5em;
+  min-height: 100vh;
+  justify-content: space-around;
+  margin-inline: var(--margin-cel);
+}
+.sect-comprar form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.sect-comprar #lista-carrito {
+  height: fit-content;
+  padding: 0;
+}
+
+.a-cart {
+  cursor: default !important;
+}
+/* producto.html */
+#pag-producto {
+  margin: 3em auto;
+  width: calc(100% - 1em);
+}
+.detalle-producto {
+  flex-direction: column;
+}
+.detalle-producto .carousel {
+  width: 100%;
+}
+#modalAutor .modal-body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#info-producto {
+  padding: 0;
+}
+#nombre-producto {
+  font-size: 3em;
+}
+#descripcion-producto {
+  letter-spacing: 0;
+  font-weight: normal;
+}
+#precio-producto {
+  font-size: 2em;
+}
