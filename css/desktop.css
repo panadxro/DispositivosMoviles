@@ -30,6 +30,7 @@
   gap: 2em;
 }
 .inicio article p {
+  font-size: 1.2em;
   line-height: 2em;
   font-weight: 600;
 }
@@ -51,7 +52,7 @@
 }
 .nosotros article {
   display: flex;
-  gap: 2em;
+  gap: 5em;
   align-items: center;
 }
 .nosotros article > h4 {
@@ -60,14 +61,17 @@
   font-weight: 600;
 }
 .nosotros picture {
-  width: 50vw;
+  max-width: 20rem;
   overflow: hidden;
 }
 .nosotros picture img {
   width: 100%;
 }
 .nosotros p {
-  max-width: 30rem;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 2em;
+  max-width: 20rem;
 }
 /* Impacto */
 .detalles {
