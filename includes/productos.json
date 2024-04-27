@@ -1,199 +1,227 @@
 [
-    {
-      "id": 1,
-      "personaje": "iron-man",
-      "serie": "Iron Man",
-      "volumen": 6,
-      "numero": 1,
-      "titulo": "El Regreso de Tony Stark",
-      "publicacion": "Septiembre 2021",
-      "guion": "Christopher Cantwell",
-      "arte": "Cafu",
-      "bajada": "Despu\u00e9s de su aparente muerte, Tony Stark regresa al Universo Marvel con una nueva armadura y una nueva misi\u00f3n. \u00bfEst\u00e1 preparado para enfrentar a sus enemigos y proteger a los inocentes?",
-      "portada": "iron-man.jpg",
-      "precio": 2000
-    },
-    {
-      "id": 2,
-      "personaje": "iron-man",
-      "serie": "Iron Man",
-      "volumen": 4,
-      "numero": 1,
-      "titulo": "La Guerra de los Robots",
-      "publicacion": "Octubre 2014",
-      "guion": "Kieron Gillen",
-      "arte": "Greg Land",
-      "bajada": "Tony Stark se enfrenta a una amenaza inesperada cuando un ej\u00e9rcito de robots ataca su ciudad natal. \u00bfPodr\u00e1 Iron Man detenerlos antes de que causen m\u00e1s destrucci\u00f3n?",
-      "portada": "iron-man1.jpg",
-      "precio": 1800
-    },
-    {
-      "id": 3,
-      "personaje": "iron-man",
-      "serie": "Iron Man",
-      "volumen": 3,
-      "numero": 10,
-      "titulo": "El Hombre de Titanio",
-      "publicacion": "Agosto 2013",
-      "guion": "Kieron Gillen",
-      "arte": "Dale Eaglesham",
-      "bajada": "Tony Stark se une a los Guardianes de la Galaxia en una misi\u00f3n para salvar al universo de una amenaza c\u00f3smica. \u00bfSer\u00e1 capaz de enfrentar a sus enemigos y salvar el d\u00eda?",
-      "portada": "iron-man2.jpg",
-      "precio": 1700
-    },
-    {
-      "id": 4,
-      "personaje": "iron-man",
-      "serie": "Iron Man",
-      "volumen": 2,
-      "numero": 1,
-      "titulo": "La Ascensi\u00f3n de Tony Stark",
-      "publicacion": "Noviembre 2012",
-      "guion": "Matt Fraction",
-      "arte": "Salvador Larroca",
-      "bajada": "Tony Stark se enfrenta a un nuevo enemigo que amenaza con destruir todo lo que ha construido. \u00bfPodr\u00e1 Iron Man salvar el d\u00eda y salir victorioso?",
-      "portada": "iron-man3.jpg",
-      "precio": 1900
-    },
-    {
-      "id": 5,
-      "personaje": "iron-man",
-      "serie": "Iron Man",
-      "volumen": 1,
-      "numero": 128,
-      "titulo": "El Fantasma en la Armadura",
-      "publicacion": "Marzo 1980",
-      "guion": "David Michelinie",
-      "arte": "John Romita Jr.",
-      "bajada": "Iron Man se enfrenta a un nuevo enemigo llamado El Fantasma en la Armadura, quien ha robado una de sus armaduras y la est\u00e1 utilizando para cometer cr\u00edmenes. \u00bfPodr\u00e1 Tony Stark recuperar su tecnolog\u00eda y detener al villano?",
-      "portada": "iron-man4.jpg",
-      "precio": 900
-    },
-    {
-      "id": 6,
-      "personaje": "batman",
-      "serie": "Batman",
-      "volumen": 1,
-      "numero": 404,
-      "titulo": "A\u00f1o Uno, Parte 1",
-      "publicacion": "Febrero 1987",
-      "guion": "Frank Miller",
-      "arte": "David Mazzucchelli",
-      "bajada": "Este es el comienzo de la historia de origen de Batman, donde se narra c\u00f3mo Bruce Wayne regresa a Gotham City despu\u00e9s de a\u00f1os de ausencia y se convierte en el defensor de la ciudad. Con un nuevo enfoque realista, esta historia es un cl\u00e1sico del personaje.",
-      "portada": "batman.jpg",
-      "precio": 1500
-    },
-    {
-      "id": 7,
-      "personaje": "batman",
-      "serie": "Batman",
-      "volumen": 1,
-      "numero": 251,
-      "titulo": "La Venganza del Hombre-Calendario",
-      "publicacion": "Septiembre 1973",
-      "guion": "Denny O'Neil",
-      "arte": "Neal Adams",
-      "bajada": "En este c\u00f3mic cl\u00e1sico de la Edad de Bronce, Batman se enfrenta a uno de sus villanos m\u00e1s singulares: el Hombre-Calendario, quien planea sus cr\u00edmenes seg\u00fan las fechas del calendario. \u00bfPodr\u00e1 el Caballero de la Noche detenerlo antes de que cometa su pr\u00f3ximo delito?",
-      "portada": "batman2.jpg",
-      "precio": 2000
-    },
-    {
-      "id": 8,
-      "personaje": "batman",
-      "serie": "Batman",
-      "volumen": 1,
-      "numero": 655,
-      "titulo": "El Hombre que R\u00ede, Parte 1",
-      "publicacion": "Marzo 2006",
-      "guion": "Ed Brubaker",
-      "arte": "Doug Mahnke",
-      "bajada": "Este c\u00f3mic es una reinterpretaci\u00f3n de la primera aparici\u00f3n del Joker en Batman #1 de 1940, donde se narra c\u00f3mo el Pr\u00edncipe Payaso del Crimen llega a Gotham City y comienza a sembrar el caos en la ciudad. Una historia imperdible para los fans del Joker.",
-      "portada": "batman3.jpg",
-      "precio": 1800
-    },
-    {
-      "id": 9,
-      "personaje": "batman",
-      "serie": "Hawkeye",
-      "volumen": 4,
-      "numero": 4,
-      "titulo": "La Cinta: Parte 1 de 2",
-      "publicacion": "Noviembre, 2012",
-      "guion": "Matt Fraction",
-      "arte": "Javier Pulido",
-      "bajada": " \u00a1No vas a creer lo que hay en La Cinta! S.H.I.E.L.D. recluta a Clint para interceptar pruebas incriminatorias, antes de que se convierta en el hombre m\u00e1s buscado del mundo.",
-      "portada": "batman4.jpg",
-      "precio": 1800
-    },
-    {
-      "id": 10,
-      "personaje": "batman",
-      "serie": "Batman",
-      "volumen": 3,
-      "numero": 100,
-      "titulo": "El Regreso del Murci\u00e9lago",
-      "publicacion": "Octubre 2020",
-      "guion": "James Tynion IV",
-      "arte": "Jorge Jim\u00e9nez",
-      "bajada": "\u00a1La batalla final por el alma de Gotham ha llegado! \u00a1El Joker ha vuelto, pero para qu\u00e9 prop\u00f3sito? Batman tendr\u00e1 que ir al l\u00edmite para proteger a la ciudad que ama, todo mientras sabe que eventualmente tendr\u00e1 que enfrentarse a un viejo amigo.",
-      "portada": "batman5.jpg",
-      "precio": 3000
-    },
-    {
-      "id": 11,
-      "personaje": "wonder-woman",
-      "serie": "Wonder Woman",
-      "volumen": 5,
-      "numero": 750,
-      "titulo": "La Historia Secreta de Wonder Woman",
-      "publicacion": "Enero 2020",
-      "guion": "Steve Orlando",
-      "arte": "Jesus Merino",
-      "bajada": "Celebra el 750\u00ba n\u00famero de Wonder Woman con una historia especial que destapa los secretos del pasado y futuro de la Princesa Amazona. Descubre c\u00f3mo Diana de Themyscira ha inspirado a las mujeres a trav\u00e9s de las \u00e9pocas, y c\u00f3mo su legado sigue vivo hoy en d\u00eda.",
-      "portada": "Wonder-Woman1.jpg",
-      "precio": 2800
-    },
-    {
-      "id": 12,
-      "personaje": "wonder-woman",
-      "serie": "Wonder Woman",
-      "volumen": 5,
-      "numero": 1,
-      "titulo": "A\u00f1o Uno Parte 1: La Llegada",
-      "publicacion": "Enero 2017",
-      "guion": "Greg Rucka",
-      "arte": "Nicola Scott",
-      "bajada": "El origen de Wonder Woman es contado de nuevo en esta nueva serie. Diana, la princesa de las Amazonas, se ve obligada a abandonar su hogar para luchar por la justicia y la verdad en el mundo de los hombres. Pero el camino hacia la hero\u00edna no es f\u00e1cil, y pronto descubre que no todo es lo que parece.",
-      "portada": "Wonder-Woman2.jpg",
-      "precio": 1500
-    },
-    {
-      "id": 13,
-      "personaje": "wonder-woman",
-      "serie": "Wonder Woman",
-      "volumen": 5,
-      "numero": 14,
-      "titulo": "La Verdadera Amazona Parte 1",
-      "publicacion": "Noviembre 2017",
-      "guion": "Shea Fontana",
-      "arte": "David Messina",
-      "bajada": "Diana se embarca en una misi\u00f3n para descubrir la verdad detr\u00e1s de su origen y su conexi\u00f3n con las Amazonas. Pero sus esfuerzos son obstaculizados por una misteriosa figura que parece tener sus propios planes para la Princesa Amazona. \u00bfPodr\u00e1 Diana descubrir la verdad antes de que sea demasiado tarde?",
-      "portada": "Wonder-Woman3.jpg",
-      "precio": 1800
-    },
-    {
-      "id": 14,
-      "personaje": "wonder-woman",
-      "serie": "Wonder Woman",
-      "volumen": 5,
-      "numero": 22,
-      "titulo": "La Hija de Hades Parte 1",
-      "publicacion": "Julio 2018",
-      "guion": "James Robinson",
-      "arte": "Carlo Pagulayan",
-      "bajada": "Cuando una misteriosa figura del pasado de Wonder Woman aparece en la actualidad, Diana se encuentra cara a cara con su hermano perdido hace mucho tiempo: un semidi\u00f3s de la mitolog\u00eda griega llamado Heracles. Pero cuando la muerte y la destrucci\u00f3n empiezan a seguir sus pasos, Diana se da cuenta de que Heracles puede no ser lo que parece. \u00bfSer\u00e1 capaz de confiar en \u00e9l para detener la amenaza que se cierne sobre el mundo?",
-      "portada": "Wonder-Woman4.jpg",
-      "precio": 2000
-    }
-  ]
-  
+  { 
+    "id": 1,
+    "titulo": "TNSH",
+    "subtitulo": "Washed Black Hoodie",
+    "descripcion": "Te presentamos TNSH, la personificación de Hardcore Feelings. Esta sudadera negra lavada va más allá de lo ordinario, con meticulosos desgastes en los dobladillos y gráficos serigrafiados agrietados para una estética vintage sin esfuerzo, mientras que el efecto de salpicaduras de pintura inspirado en el bricolaje le da un toque auténtico y personalizado.",
+    "precio": 120,
+    "imagen": "assets/product/TNSH/TNSH1.png",
+    "categoria": "Buzos"
+  },
+  {
+    "id": 2,
+    "titulo": "Squeaky Clean",
+    "subtitulo": "White T-Shirt",
+    "descripcion": "Presentamos Squeaky Clean, una camiseta blanca oversize serigrafiada en nuestra sede de Sheffield con un gráfico no tan limpio de @bl00dina_.",
+    "precio": 50,
+    "imagen": "assets/product/SqueakyClean/SqueakyClean1.png",
+    "categoria": "Remeras" 
+  },
+  {
+    "id": 3,
+    "titulo": "28 Days",
+    "subtitulo": "Ring",
+    "descripcion": "Te presentamos a 28 Days, un amenazador conejo de aspecto demoníaco. En este anillo de acero inoxidable está grabado nuestro clásico logotipo Drop Dead.",
+    "precio": 20,
+    "imagen": "assets/product/28Days/28Days1.png",
+    "categoria": "Accesorios"
+  },
+  {
+    "id": 4,
+    "titulo": "Around The Fur",
+    "subtitulo": "Faux fur Jacket",
+    "descripcion": "Around The Fur es la chaqueta de Drop Dead con la que no querrás dormir. Fabricada en piel sintética, tiene un estampado de gritos en tonos apagados, cierre de cremallera y bolsillos. Es la prenda perfecta para el invierno.",
+    "precio": 200,
+    "imagen": "assets/product/AroundTheFur/AroundTheFur1.png",
+    "categoria": "Camperas" 
+  },
+  {
+    "id": 5,
+    "titulo": "Angel Soup",
+    "subtitulo": "Blue Longsleeve",
+    "descripcion": "Presentamos Angel Soup, nuestra nueva camiseta de mangas superpuestas. Esta camiseta azul marino viene en nuestro clásico corte oversize y tiene unas llamativas mangas a rayas rojas y blancas. En la parte delantera y central encontrarás un atrevido gráfico serigrafiado en nuestra sede de Sheffield.",
+    "precio": 70,
+    "imagen": "assets/product/AngelSoup/AngelSoup1.png",
+    "categoria": "Remeras" 
+  },
+  {
+    "id": 6,
+    "titulo": "Hollowed Soul",
+    "subtitulo": "Washed Black Hoodie",
+    "descripcion": "Aprende a controlar el hueco con nuestra sudadera con capucha Hollowed Soul. Esta sudadera con capucha, de corte cuadrado, es única y está cubierta de gráficos serigrafiados en nuestra sede de Sheffield.",
+    "precio": 120,
+    "imagen": "assets/product/HollowedSoul/HollowedSoul1.png",
+    "categoria": "Buzos" 
+  },
+  {
+    "id": 7,
+    "titulo": "Glow Bottoms",
+    "subtitulo": "Black Sweatpants",
+    "descripcion": "Ya puedes dejar de buscar; has encontrado el pantalón perfecto. Confeccionados con una meticulosa atención al detalle, nuestros 'Glow Bottoms' presentan un diseño de pernera ancha que ofrece comodidad y estilo.",
+    "precio": 120,
+    "imagen": "assets/product/GlowBottoms/GlowBottoms1.png",
+    "categoria": "Pantalones" 
+  },
+  {
+    "id": 8,
+    "titulo": "Blade",
+    "subtitulo": "Necklace",
+    "descripcion": "Una declaración audaz que exige atención, Blade es un collar vanguardista que cuenta con una estrella de la mañana y el encanto de la hoja de afeitar, elaborado a partir de acero inoxidable de alta calidad.",
+    "precio": 35,
+    "imagen": "assets/product/Blade/Blade1.png",
+    "categoria": "Accesorios" 
+  },
+  {
+    "id": 9,
+    "titulo": "Blessings",
+    "subtitulo": "Longsleeve",
+    "descripcion": "Lleva tu historia en la manga, literalmente, y cuenta tus bendiciones con esta camiseta de manga larga. Inspirada en el cautivador mundo del arte del tatuaje, esta exclusiva prenda de color beige muestra una serie de gráficos de intrincado diseño que celebran la esencia de las bendiciones.",
+    "precio": 70,
+    "imagen": "assets/product/Blessings/Blessings1.png",
+    "categoria": "Remeras" 
+  },
+  {
+    "id": 10,
+    "titulo": "Lure",
+    "subtitulo": "Distressed Hoodie",
+    "descripcion": "Confeccionada en suave algodón gris marengo, es la mezcla perfecta de comodidad y diseño contemporáneo. Lure tiene un corte relajado, una cómoda capucha y un práctico bolsillo canguro.",
+    "precio": 120,
+    "imagen": "assets/product/Lure/Lure1.png",
+    "categoria": "Buzos" 
+  },
+  {
+    "id": 11,
+    "titulo": "Makeover",
+    "subtitulo": "Washed Black T-Shirt",
+    "descripcion": "Makeover es un lienzo atemporal para el arte ponible. Esta camiseta oversize se presenta en un color negro lavado que le da un toque vintage, mientras que la característica más destacada es el gráfico frontal, que grita de la estética Drop Dead y ha sido meticulosamente diseñado por @kittysophie.art.",
+    "precio": 50,
+    "imagen": "assets/product/Makeover/Makeover1.png",
+    "categoria": "Remeras" 
+  },
+  {
+    "id": 12,
+    "titulo": "Runes",
+    "subtitulo": "Belt",
+    "descripcion": "Fabricado en acero inoxidable, Runes es un cinturón de cadena con colgantes metálicos en 3D.  Tanto si prefieres llevarlo ceñido a la cintura como drapeado alrededor de las caderas, este cinturón tiene un cierre de hebilla y una cadena extendida que se ajusta sin esfuerzo a tu estilo y tamaño preferidos. Se entrega en un estuche de regalo de la marca.",
+    "precio": 50,
+    "imagen": "assets/product/Runes/Runes1.png",
+    "categoria": "Accesorios" 
+  },
+  {
+    "id": 13,
+    "titulo": "Hollowfication",
+    "subtitulo": "Washed Black Hoodie",
+    "descripcion": "Abraza el lado oscuro con Hollowfication. Esta sudadera con capucha oversize es más que un básico de armario, con su bolsillo canguro para mayor practicidad,",
+    "precio": 120,
+    "imagen": "assets/product/Hollowfication/Hollowfication1.png",
+    "categoria": "Buzos" 
+  },
+  {
+    "id": 14,
+    "titulo": "Max Pain",
+    "subtitulo": "Racer Jacket",
+    "descripcion": "Un estilo cuadrado con cremallera que se completa con un cuello falso con doble botón a presión, mangas largas, bolsillos laterales y atrevidos parches y bordados moteros por toda la prenda.",
+    "precio": 250,
+    "imagen": "assets/product/MaxPain/MaxPain1.png",
+    "categoria": "Camperas" 
+  },
+  {
+    "id": 15,
+    "titulo": "Rot 'N' Roll",
+    "subtitulo": "Washed Black T-Shirt",
+    "descripcion": "Es hora de Rot n Roll. Esta camiseta lavada de gran tamaño ha sido desgastada como ninguna otra, con un estampado horripilante, es una prenda única para cualquier armario Drop Dead.",
+    "precio": 60,
+    "imagen": "assets/product/RotNRoll/RotNRoll1.png",
+    "categoria": "Remeras" 
+  },
+  {
+    "id": 16,
+    "titulo": "Razor's Edge",
+    "subtitulo": "Earrings",
+    "descripcion": "Un par de pendientes de aro de acero inoxidable con colgantes de navaja a juego. Pendiente de aro con bisagra y opción de colgante intercambiable.",
+    "precio": 20,
+    "imagen": "assets/product/RazorsEdge/RazorsEdge1.png",
+    "categoria": "Accesorios" 
+  },
+  {
+    "id": 17,
+    "titulo": "Seek & Destroy",
+    "subtitulo": "Denim Jeans",
+    "descripcion": "Corre hacia el abismo con los vaqueros Seek & Destroy. Con un denim negro lavado, puedes encontrar capas de rotos y desgastes por todo este par de vaqueros de pierna ancha. Debajo de los rotos hay un tejido interior que te protege.",
+    "precio": 120,
+    "imagen": "assets/product/SeekDestroy/SeekDestroy1.png",
+    "categoria": "Pantalones" 
+  },
+  {
+    "id": 18,
+    "titulo": "J'adore Hardcore",
+    "subtitulo": "2 in 1 Jacket",
+    "descripcion": "Presentamos J'adore Hardcore, la personificación de los sentimientos Hardcore. Esta poderosa prenda 2 en 1 se inspira directamente en la multitud de un concierto: es una versión de la clásica chaqueta de batalla corta, con una sudadera con capucha desmontable y tachuelas.",
+    "precio": 200,
+    "imagen": "assets/product/JadoreHardcore/JadoreHardcore1.png",
+    "categoria": "Camperas" 
+  },
+  {
+    "id": 19,
+    "titulo": "Spiritual",
+    "subtitulo": "Socks (Pack of 2)",
+    "descripcion": "Los clásicos calcetines Drop Dead 'Spiritual' en naranja/verde son de longitud media, con un grueso punto elástico alrededor del tobillo y los exclusivos gráficos DD spiritual hardcore en los laterales y la base.",
+    "precio": 20,
+    "imagen": "assets/product/Spiritual/Spiritual1.png",
+    "categoria": "Accesorios" 
+  },
+  {
+    "id": 20,
+    "titulo": "Violence",
+    "subtitulo": "Elasticated Shorts",
+    "descripcion": "Entra en la arena con nuestros pantalones cortos Violence. Confeccionados con un tejido de peso medio, estos suaves pantalones cortos de satén destacan por su durabilidad con intrincados bordados y parches de calavera cosidos en la parte delantera y en los laterales.",
+    "precio": 60,
+    "imagen": "assets/product/Violence/Violence1.png",
+    "categoria": "Pantalones" 
+  },
+  {
+    "id": 21,
+    "titulo": "Dead Cell",
+    "subtitulo": "Puffer Jacket",
+    "descripcion": "Presentamos Dead Cell, la chaqueta vanguardista que desafía las convenciones y supera los límites de la moda contemporánea.",
+    "precio": 250,
+    "imagen": "assets/product/DeadCell/DeadCell1.png",
+    "categoria": "Camperas" 
+  },
+  {
+    "id": 22,
+    "titulo": "Split Head",
+    "subtitulo": "Knitted Beanie",
+    "descripcion": "Este es el gorro de punto que lleva la moda para la cabeza a un nuevo nivel de estilo e intriga. Adornado con dinámicas rayas verdes y negras, este gorro es toda una declaración de intenciones.",
+    "precio": 40,
+    "imagen": "assets/product/SplitHead/SplitHead1.png",
+    "categoria": "Accesorios" 
+  },
+  {
+    "id": 23,
+    "titulo": "Want You",
+    "subtitulo": "Ringer T-Shirt",
+    "descripcion": "Esta camiseta, en nuestro color crudo personalizado, es un homenaje a nuestro estilo clásico DD. Esta camiseta entallada se ha impreso internamente en nuestra sede de Sheffield.",
+    "precio": 50,
+    "imagen": "assets/product/WantYou/WantYou1.png",
+    "categoria": "Remeras" 
+  },
+  {
+    "id": 24,
+    "titulo": "Hardcore",
+    "subtitulo": "Socks (Pack of 2)",
+    "descripcion": "Los calcetines clásicos Drop Dead 'Hardcore' en blanco/negro son de longitud media, con un grueso punto elástico alrededor del tobillo y gráficos exclusivos DD spiritual hardcore en los laterales y la base.",
+    "precio": 20,
+    "imagen": "assets/product/Hardcore/Hardcore1.png",
+    "categoria": "Accesorios" 
+  },
+  {
+    "id": 25,
+    "titulo": "Orion Skirt",
+    "subtitulo": "Wrap Skirt",
+    "descripcion": "Eleva tu vestuario con la falda de Orion. Confeccionada en franela marrón tonal. Esta falda escocesa cuenta con nuestro clásico diseño envolvente con una correa ajustable en la cintura, parches espirituales y un dobladillo asimétrico con un acabado de borde crudo.",
+    "precio": 50,
+    "imagen": "assets/product/OrionSkirt/OrionSkirt1.png",
+    "categoria": "Pantalones" 
+  }
+]

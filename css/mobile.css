@@ -24,7 +24,7 @@ footer p {
   font-weight: 400;
 }
 /* index.html */
-#pag-inicio {
+#pag-home {
   display: flex;
   flex-direction: column;
   gap: 4em;
@@ -113,7 +113,7 @@ footer p {
   row-gap: 4em;
 }
 /* categorias.html */
-#pag-categorias {
+#pag-categoria, #pag-catalogo {
   margin-block: 5em;
 }
 /* comprar.html */
@@ -143,7 +143,7 @@ footer p {
   cursor: default !important;
 }
 /* producto.html */
-#pag-producto {
+#pag-detalle {
   margin: 3em auto;
   width: calc(100% - 1em);
 }

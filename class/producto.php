@@ -2,18 +2,15 @@
 
 class Comic{
     //atributos
-    protected $id;                      //solo pueden acceder los metodos de la propia clase y los metodos de los hijos de esa clase
-    protected $personaje;
-    protected $serie;
-    protected $volumen;
-    protected $numero;
+    //solo pueden acceder los metodos de la propia clase y los metodos de los hijos de esa clase
+    protected $id;                      
     protected $titulo;
-    protected $publicacion;
-    protected $guion;
-    protected $arte;
-    protected $bajada;
-    protected $portada;
+    protected $subtitulo;
+    protected $descripcion;
     protected $precio;
+    protected $imagen;
+    protected $categoria;
+
     //metodos
     public function catalogo_completo(){
         $catalogo = [];
@@ -26,16 +23,16 @@ class Comic{
             $comic = new self();   //self
             //relleno los atributos
             $comic->id = $value->id;
-            $comic->personaje = $value->personaje;
-            $comic->serie = $value->serie;
-            $comic->volumen = $value->volumen;
             $comic->titulo = $value->titulo;
-            $comic->publicacion = $value->publicacion;
-            $comic->guion = $value->guion;
-            $comic->arte = $value->arte;
-            $comic->bajada = $value->bajada;
-            $comic->portada = $value->portada;
+            $comic->subtitulo = $value->subtitulo;
+            $comic->descripcion = $value->descripcion;
             $comic->precio = $value->precio;
+            $comic->imagen = $value->imagen;
+            $comic->categoria = $value->categoria;
+            // $comic->volumen = $value->volumen;
+            // $comic->publicacion = $value->publicacion;
+            // $comic->guion = $value->guion;
+            // $comic->arte = $value->arte;
             $catalogo []= $comic;
 
         }
@@ -53,12 +50,12 @@ class Comic{
         return [];
     }
 
-    public function catalogo_x_personaje($personaje){
+    public function catalogo_x_personaje($categoria){
         $comics = $this->catalogo_completo();
         $personajes = [];
     
         foreach ($comics as $comic) {
-            if( $comic->personaje == $personaje ){
+            if( $comic->categoria == $categoria ){
                 $personajes []= $comic;
             }
         }
@@ -68,7 +65,7 @@ class Comic{
 
     public function modificacionSerie(){
         //cambio el - por un " "
-        $tituloConEspacio = str_replace("-", " ", $this->serie);
+        $tituloConEspacio = str_replace("-", " ", $this->titulo);
         //explode divide por un caracter indicado
         $arrayTitulo = explode(" ", $tituloConEspacio);
         //paso ambas palabras a mayusculas
@@ -83,7 +80,7 @@ class Comic{
     public function getBajadaResumida( $cantidad = 20 ){
         //divido el texto usando explode 
         //str_word_count()
-        $arrayTexto = explode(" ", $this->bajada); //
+        $arrayTexto = explode(" ", $this->descripcion); //
         $textoResumido = [];
 
         foreach ($arrayTexto as $key => $value) {
@@ -101,86 +98,25 @@ class Comic{
     public function getId(){
         return $this->id;
     }
-    public function getPersonaje(){
-        return $this->personaje;
+    public function getCategoria(){
+        return $this->categoria;
     }
-    //set -> sirver para cambiar el valor del atributo
-
-    /**
-     * Get the value of volumen
-     */ 
-    public function getVolumen()
+    public function getSubtitulo()
     {
-        return $this->volumen;
+        return $this->subtitulo;
     }
-
-    /**
-     * Get the value of serie
-     */ 
-    public function getSerie()
-    {
-        return $this->serie;
-    }
-
-    /**
-     * Get the value of numero
-     */ 
-    public function getNumero()
-    {
-        return $this->numero;
-    }
-
-    /**
-     * Get the value of titulo
-     */ 
     public function getTitulo()
     {
         return $this->titulo;
     }
-
-    /**
-     * Get the value of publicacion
-     */ 
-    public function getPublicacion()
+    public function getDescripcion()
     {
-        return $this->publicacion;
+        return $this->descripcion;
     }
-
-    /**
-     * Get the value of guion
-     */ 
-    public function getGuion()
+    public function getImagen()
     {
-        return $this->guion;
+        return $this->imagen;
     }
-
-    /**
-     * Get the value of arte
-     */ 
-    public function getArte()
-    {
-        return $this->arte;
-    }
-
-    /**
-     * Get the value of bajada
-     */ 
-    public function getBajada()
-    {
-        return $this->bajada;
-    }
-
-    /**
-     * Get the value of portada
-     */ 
-    public function getPortada()
-    {
-        return $this->portada;
-    }
-
-    /**
-     * Get the value of precio
-     */ 
     public function getPrecio()
     {
         return $this->precio;
