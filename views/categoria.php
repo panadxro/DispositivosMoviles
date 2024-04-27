@@ -18,8 +18,8 @@ $comics = (new Comic())->catalogo_x_personaje($serieSeleccionada);
         <h3><?= $comic->getTitulo() ?></h3>
         <p><?= $comic->getSubtitulo() ?></p>
         <p class="price">$<?= $comic->getPrecio() ?></p>
+        <button class="add boton" data-id="1" data-val="120" data-cat="Buzos">Agregar al carrito</button>
       </a>
-      <button class="add boton" data-id="1" data-val="120" data-cat="Buzos">Agregar al carrito</button>
     </article>
 
   <?php } ?>

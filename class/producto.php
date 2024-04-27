@@ -1,5 +1,7 @@
 <?php
 
+
+
 class Comic{
     //atributos
     //solo pueden acceder los metodos de la propia clase y los metodos de los hijos de esa clase
