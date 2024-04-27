@@ -1,0 +1,14 @@
+[
+    { 
+      "nombre": "Lucas Panadero",
+      "edad": "24",
+      "email": "lucas.panadero@davinci.edu.ar",
+      "imagen": "assets/product/TNSH/TNSH1.png"
+    },
+    { 
+      "nombre": "Ezequiel Duce",
+      "edad": "19",
+      "email": "lucas.panadero@davinci.edu.ar",
+      "imagen": "assets/product/TNSH/TNSH1.png"
+    }
+]
