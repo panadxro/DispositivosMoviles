@@ -7,6 +7,6 @@
       </ul>
       <article>
         <p>Creado por</p>
-        <button type="button" data-bs-toggle="modal" data-bs-target="#modalAutor">@panadxro</button>
+        <a href="index.php?sec=quienes_somos">@panadxro</a>
       </article>
     </footer>

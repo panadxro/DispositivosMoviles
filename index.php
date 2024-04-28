@@ -1,6 +1,7 @@
 <?php 
     // require_once "libraries/productos.php";
     require_once "class/producto.php";
+    require_once "class/alumno.php";
 
     // echo "<pre>";
     // print_r($_GET["sec"]); //index.php

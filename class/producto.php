@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Comic{
     //atributos
     //solo pueden acceder los metodos de la propia clase y los metodos de los hijos de esa clase
@@ -31,10 +29,7 @@ class Comic{
             $comic->precio = $value->precio;
             $comic->imagen = $value->imagen;
             $comic->categoria = $value->categoria;
-            // $comic->volumen = $value->volumen;
-            // $comic->publicacion = $value->publicacion;
-            // $comic->guion = $value->guion;
-            // $comic->arte = $value->arte;
+
             $catalogo []= $comic;
 
         }
