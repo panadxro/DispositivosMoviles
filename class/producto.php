@@ -1,8 +1,6 @@
 <?php
 
-class Comic{
-    //atributos
-    //solo pueden acceder los metodos de la propia clase y los metodos de los hijos de esa clase
+class Producto{
     protected $id;                      
     protected $titulo;
     protected $subtitulo;
@@ -19,45 +17,45 @@ class Comic{
 
         foreach ($productosArray as $value) {
 
-            //creo una instancia de comic -> ahora tengo un objeto comic
-            $comic = new self();   //self
+            //creo una instancia de producto -> ahora tengo un objeto comic
+            $producto = new self();   //self
             //relleno los atributos
-            $comic->id = $value->id;
-            $comic->titulo = $value->titulo;
-            $comic->subtitulo = $value->subtitulo;
-            $comic->descripcion = $value->descripcion;
-            $comic->precio = $value->precio;
-            $comic->imagen = $value->imagen;
-            $comic->categoria = $value->categoria;
+            $producto->id = $value->id;
+            $producto->titulo = $value->titulo;
+            $producto->subtitulo = $value->subtitulo;
+            $producto->descripcion = $value->descripcion;
+            $producto->precio = $value->precio;
+            $producto->imagen = $value->imagen;
+            $producto->categoria = $value->categoria;
 
-            $catalogo []= $comic;
+            $catalogo []= $producto;
 
         }
         return $catalogo;
     }
     public function catalogo_x_id($id){
-        $comics = $this->catalogo_completo();
+        $productos = $this->catalogo_completo();
     
-        foreach ($comics as $comic) {
-            if( $comic->id == $id ){
-                return $comic;
+        foreach ($productos as $producto) {
+            if( $producto->id == $id ){
+                return $producto;
             }
         }
     
         return [];
     }
 
-    public function catalogo_x_personaje($categoria){
-        $comics = $this->catalogo_completo();
-        $personajes = [];
+    public function filtrar_x_categoria($categoria){
+        $productos = $this->catalogo_completo();
+        $lista_productos = [];
     
-        foreach ($comics as $comic) {
-            if( $comic->categoria == $categoria ){
-                $personajes []= $comic;
+        foreach ($productos as $producto) {
+            if( $producto->categoria == $categoria ){
+                $lista_productos []= $producto;
             }
         }
     
-        return $personajes;
+        return $lista_productos;
     }
 
     public function modificacionSerie(){

@@ -5,7 +5,7 @@
     "subtitulo": "Washed Black Hoodie",
     "descripcion": "Te presentamos TNSH, la personificación de Hardcore Feelings. Esta sudadera negra lavada va más allá de lo ordinario, con meticulosos desgastes en los dobladillos y gráficos serigrafiados agrietados para una estética vintage sin esfuerzo, mientras que el efecto de salpicaduras de pintura inspirado en el bricolaje le da un toque auténtico y personalizado.",
     "precio": 120,
-    "imagen": "assets/product/TNSH/TNSH1.png",
+    "imagen": "assets/product/smTNSH1.png",
     "categoria": "Buzos"
   },
   {
@@ -14,7 +14,7 @@
     "subtitulo": "White T-Shirt",
     "descripcion": "Presentamos Squeaky Clean, una camiseta blanca oversize serigrafiada en nuestra sede de Sheffield con un gráfico no tan limpio de @bl00dina_.",
     "precio": 50,
-    "imagen": "assets/product/SqueakyClean/SqueakyClean1.png",
+    "imagen": "assets/product/smSqueakyClean1.png",
     "categoria": "Remeras" 
   },
   {
@@ -23,7 +23,7 @@
     "subtitulo": "Ring",
     "descripcion": "Te presentamos a 28 Days, un amenazador conejo de aspecto demoníaco. En este anillo de acero inoxidable está grabado nuestro clásico logotipo Drop Dead.",
     "precio": 20,
-    "imagen": "assets/product/28Days/28Days1.png",
+    "imagen": "assets/product/sm28Days1.png",
     "categoria": "Accesorios"
   },
   {
@@ -32,7 +32,7 @@
     "subtitulo": "Faux fur Jacket",
     "descripcion": "Around The Fur es la chaqueta de Drop Dead con la que no querrás dormir. Fabricada en piel sintética, tiene un estampado de gritos en tonos apagados, cierre de cremallera y bolsillos. Es la prenda perfecta para el invierno.",
     "precio": 200,
-    "imagen": "assets/product/AroundTheFur/AroundTheFur1.png",
+    "imagen": "assets/product/smAroundTheFur1.png",
     "categoria": "Camperas" 
   },
   {
@@ -41,7 +41,7 @@
     "subtitulo": "Blue Longsleeve",
     "descripcion": "Presentamos Angel Soup, nuestra nueva camiseta de mangas superpuestas. Esta camiseta azul marino viene en nuestro clásico corte oversize y tiene unas llamativas mangas a rayas rojas y blancas. En la parte delantera y central encontrarás un atrevido gráfico serigrafiado en nuestra sede de Sheffield.",
     "precio": 70,
-    "imagen": "assets/product/AngelSoup/AngelSoup1.png",
+    "imagen": "assets/product/smAngelSoup1.png",
     "categoria": "Remeras" 
   },
   {
@@ -50,7 +50,7 @@
     "subtitulo": "Washed Black Hoodie",
     "descripcion": "Aprende a controlar el hueco con nuestra sudadera con capucha Hollowed Soul. Esta sudadera con capucha, de corte cuadrado, es única y está cubierta de gráficos serigrafiados en nuestra sede de Sheffield.",
     "precio": 120,
-    "imagen": "assets/product/HollowedSoul/HollowedSoul1.png",
+    "imagen": "assets/product/smHollowedSoul1.png",
     "categoria": "Buzos" 
   },
   {
@@ -59,7 +59,7 @@
     "subtitulo": "Black Sweatpants",
     "descripcion": "Ya puedes dejar de buscar; has encontrado el pantalón perfecto. Confeccionados con una meticulosa atención al detalle, nuestros 'Glow Bottoms' presentan un diseño de pernera ancha que ofrece comodidad y estilo.",
     "precio": 120,
-    "imagen": "assets/product/GlowBottoms/GlowBottoms1.png",
+    "imagen": "assets/product/smGlowBottoms1.png",
     "categoria": "Pantalones" 
   },
   {
@@ -68,7 +68,7 @@
     "subtitulo": "Necklace",
     "descripcion": "Una declaración audaz que exige atención, Blade es un collar vanguardista que cuenta con una estrella de la mañana y el encanto de la hoja de afeitar, elaborado a partir de acero inoxidable de alta calidad.",
     "precio": 35,
-    "imagen": "assets/product/Blade/Blade1.png",
+    "imagen": "assets/product/smBlade1.png",
     "categoria": "Accesorios" 
   },
   {
@@ -77,7 +77,7 @@
     "subtitulo": "Longsleeve",
     "descripcion": "Lleva tu historia en la manga, literalmente, y cuenta tus bendiciones con esta camiseta de manga larga. Inspirada en el cautivador mundo del arte del tatuaje, esta exclusiva prenda de color beige muestra una serie de gráficos de intrincado diseño que celebran la esencia de las bendiciones.",
     "precio": 70,
-    "imagen": "assets/product/Blessings/Blessings1.png",
+    "imagen": "assets/product/smBlessings1.png",
     "categoria": "Remeras" 
   },
   {
@@ -86,7 +86,7 @@
     "subtitulo": "Distressed Hoodie",
     "descripcion": "Confeccionada en suave algodón gris marengo, es la mezcla perfecta de comodidad y diseño contemporáneo. Lure tiene un corte relajado, una cómoda capucha y un práctico bolsillo canguro.",
     "precio": 120,
-    "imagen": "assets/product/Lure/Lure1.png",
+    "imagen": "assets/product/smLure1.png",
     "categoria": "Buzos" 
   },
   {
@@ -95,7 +95,7 @@
     "subtitulo": "Washed Black T-Shirt",
     "descripcion": "Makeover es un lienzo atemporal para el arte ponible. Esta camiseta oversize se presenta en un color negro lavado que le da un toque vintage, mientras que la característica más destacada es el gráfico frontal, que grita de la estética Drop Dead y ha sido meticulosamente diseñado por @kittysophie.art.",
     "precio": 50,
-    "imagen": "assets/product/Makeover/Makeover1.png",
+    "imagen": "assets/product/smMakeover1.png",
     "categoria": "Remeras" 
   },
   {
@@ -104,7 +104,7 @@
     "subtitulo": "Belt",
     "descripcion": "Fabricado en acero inoxidable, Runes es un cinturón de cadena con colgantes metálicos en 3D.  Tanto si prefieres llevarlo ceñido a la cintura como drapeado alrededor de las caderas, este cinturón tiene un cierre de hebilla y una cadena extendida que se ajusta sin esfuerzo a tu estilo y tamaño preferidos. Se entrega en un estuche de regalo de la marca.",
     "precio": 50,
-    "imagen": "assets/product/Runes/Runes1.png",
+    "imagen": "assets/product/smRunes1.png",
     "categoria": "Accesorios" 
   },
   {
@@ -113,7 +113,7 @@
     "subtitulo": "Washed Black Hoodie",
     "descripcion": "Abraza el lado oscuro con Hollowfication. Esta sudadera con capucha oversize es más que un básico de armario, con su bolsillo canguro para mayor practicidad,",
     "precio": 120,
-    "imagen": "assets/product/Hollowfication/Hollowfication1.png",
+    "imagen": "assets/product/smHollowfication1.png",
     "categoria": "Buzos" 
   },
   {
@@ -122,7 +122,7 @@
     "subtitulo": "Racer Jacket",
     "descripcion": "Un estilo cuadrado con cremallera que se completa con un cuello falso con doble botón a presión, mangas largas, bolsillos laterales y atrevidos parches y bordados moteros por toda la prenda.",
     "precio": 250,
-    "imagen": "assets/product/MaxPain/MaxPain1.png",
+    "imagen": "assets/product/smMaxPain1.png",
     "categoria": "Camperas" 
   },
   {
@@ -131,7 +131,7 @@
     "subtitulo": "Washed Black T-Shirt",
     "descripcion": "Es hora de Rot n Roll. Esta camiseta lavada de gran tamaño ha sido desgastada como ninguna otra, con un estampado horripilante, es una prenda única para cualquier armario Drop Dead.",
     "precio": 60,
-    "imagen": "assets/product/RotNRoll/RotNRoll1.png",
+    "imagen": "assets/product/smRotNRoll1.png",
     "categoria": "Remeras" 
   },
   {
@@ -140,7 +140,7 @@
     "subtitulo": "Earrings",
     "descripcion": "Un par de pendientes de aro de acero inoxidable con colgantes de navaja a juego. Pendiente de aro con bisagra y opción de colgante intercambiable.",
     "precio": 20,
-    "imagen": "assets/product/RazorsEdge/RazorsEdge1.png",
+    "imagen": "assets/product/smRazorsEdge1.png",
     "categoria": "Accesorios" 
   },
   {
@@ -149,7 +149,7 @@
     "subtitulo": "Denim Jeans",
     "descripcion": "Corre hacia el abismo con los vaqueros Seek & Destroy. Con un denim negro lavado, puedes encontrar capas de rotos y desgastes por todo este par de vaqueros de pierna ancha. Debajo de los rotos hay un tejido interior que te protege.",
     "precio": 120,
-    "imagen": "assets/product/SeekDestroy/SeekDestroy1.png",
+    "imagen": "assets/product/smSeekDestroy1.png",
     "categoria": "Pantalones" 
   },
   {
@@ -158,7 +158,7 @@
     "subtitulo": "2 in 1 Jacket",
     "descripcion": "Presentamos J'adore Hardcore, la personificación de los sentimientos Hardcore. Esta poderosa prenda 2 en 1 se inspira directamente en la multitud de un concierto: es una versión de la clásica chaqueta de batalla corta, con una sudadera con capucha desmontable y tachuelas.",
     "precio": 200,
-    "imagen": "assets/product/JadoreHardcore/JadoreHardcore1.png",
+    "imagen": "assets/product/smJadoreHardcore1.png",
     "categoria": "Camperas" 
   },
   {
@@ -167,7 +167,7 @@
     "subtitulo": "Socks (Pack of 2)",
     "descripcion": "Los clásicos calcetines Drop Dead 'Spiritual' en naranja/verde son de longitud media, con un grueso punto elástico alrededor del tobillo y los exclusivos gráficos DD spiritual hardcore en los laterales y la base.",
     "precio": 20,
-    "imagen": "assets/product/Spiritual/Spiritual1.png",
+    "imagen": "assets/product/smSpiritual1.png",
     "categoria": "Accesorios" 
   },
   {
@@ -176,7 +176,7 @@
     "subtitulo": "Elasticated Shorts",
     "descripcion": "Entra en la arena con nuestros pantalones cortos Violence. Confeccionados con un tejido de peso medio, estos suaves pantalones cortos de satén destacan por su durabilidad con intrincados bordados y parches de calavera cosidos en la parte delantera y en los laterales.",
     "precio": 60,
-    "imagen": "assets/product/Violence/Violence1.png",
+    "imagen": "assets/product/smViolence1.png",
     "categoria": "Pantalones" 
   },
   {
@@ -185,7 +185,7 @@
     "subtitulo": "Puffer Jacket",
     "descripcion": "Presentamos Dead Cell, la chaqueta vanguardista que desafía las convenciones y supera los límites de la moda contemporánea.",
     "precio": 250,
-    "imagen": "assets/product/DeadCell/DeadCell1.png",
+    "imagen": "assets/product/smDeadCell1.png",
     "categoria": "Camperas" 
   },
   {
@@ -194,7 +194,7 @@
     "subtitulo": "Knitted Beanie",
     "descripcion": "Este es el gorro de punto que lleva la moda para la cabeza a un nuevo nivel de estilo e intriga. Adornado con dinámicas rayas verdes y negras, este gorro es toda una declaración de intenciones.",
     "precio": 40,
-    "imagen": "assets/product/SplitHead/SplitHead1.png",
+    "imagen": "assets/product/smSplitHead1.png",
     "categoria": "Accesorios" 
   },
   {
@@ -203,7 +203,7 @@
     "subtitulo": "Ringer T-Shirt",
     "descripcion": "Esta camiseta, en nuestro color crudo personalizado, es un homenaje a nuestro estilo clásico DD. Esta camiseta entallada se ha impreso internamente en nuestra sede de Sheffield.",
     "precio": 50,
-    "imagen": "assets/product/WantYou/WantYou1.png",
+    "imagen": "assets/product/smWantYou1.png",
     "categoria": "Remeras" 
   },
   {
@@ -212,7 +212,7 @@
     "subtitulo": "Socks (Pack of 2)",
     "descripcion": "Los calcetines clásicos Drop Dead 'Hardcore' en blanco/negro son de longitud media, con un grueso punto elástico alrededor del tobillo y gráficos exclusivos DD spiritual hardcore en los laterales y la base.",
     "precio": 20,
-    "imagen": "assets/product/Hardcore/Hardcore1.png",
+    "imagen": "assets/product/smHardcore1.png",
     "categoria": "Accesorios" 
   },
   {
@@ -221,7 +221,7 @@
     "subtitulo": "Wrap Skirt",
     "descripcion": "Eleva tu vestuario con la falda de Orion. Confeccionada en franela marrón tonal. Esta falda escocesa cuenta con nuestro clásico diseño envolvente con una correa ajustable en la cintura, parches espirituales y un dobladillo asimétrico con un acabado de borde crudo.",
     "precio": 50,
-    "imagen": "assets/product/OrionSkirt/OrionSkirt1.png",
+    "imagen": "assets/product/smOrionSkirt1.png",
     "categoria": "Pantalones" 
   }
 ]

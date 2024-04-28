@@ -42,7 +42,7 @@
               <li><a href="index.php?sec=categoria&cat=Accesorios">ACCESORIOS</a></li>
             </ul>
           </li>
-          <li><a class="nav-link" href="comprar.html">COMPRAR</a></li>
+          <li><a class="nav-link" href="index.php?sec=envios">COMPRAR</a></li>
         </ul>
       </nav>
       <button 

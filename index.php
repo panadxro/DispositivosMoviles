@@ -1,11 +1,8 @@
 <?php 
-    // require_once "libraries/productos.php";
+
     require_once "class/producto.php";
     require_once "class/alumno.php";
 
-    // echo "<pre>";
-    // print_r($_GET["sec"]); //index.php
-    // echo "</pre>";
     $view = isset($_GET["sec"]) ? $_GET["sec"] : "home"; 
     $vista = "404";
     $seccionesValidas = [
@@ -26,6 +23,9 @@
         ],
         "quienes_somos"  => [
             "titulo" => "Quienes Somos?"
+        ],
+        "recibo"  => [
+          "titulo" => "Compra realizada"
         ],
         "catalogo" => [
             "titulo" => "Productos"
@@ -53,7 +53,6 @@
     <link rel="shortcut icon" href="assets/icon/faviconDrop.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/style.css" rel="stylesheet">
-
 </head>
 
 <body>

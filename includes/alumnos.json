@@ -1,15 +1,17 @@
 [
     { 
-      "nombre": "Lucas Panadero",
+      "nombre": "Lucas",
+      "apellido": "Panadero",
       "edad": "23",
       "email": "lucas.panadero@davinci.edu.ar",
-      "imagen": "assets/product/TNSH/TNSH1.png",
+      "imagen": "assets/fondos/lucas.jpg",
       "linkedin": "https://www.linkedin.com/in/panadxro/",
       "github": "https://github.com/panadxro",
       "instagram": "https://www.instagram.com/panadxro/"
     },
     { 
-      "nombre": "Ezequiel Duce",
+      "nombre": "Ezequiel",
+      "apellido": "Duce",
       "edad": "19",
       "email": "lucas.panadero@davinci.edu.ar",
       "imagen": "assets/fondos/eze.jpeg",

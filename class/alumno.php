@@ -1,7 +1,8 @@
 <?php
 
 class Alumno{
-    protected $nombre;                      
+    protected $nombre;  
+    protected $apellido;
     protected $edad;
     protected $email;
     protected $imagen;
@@ -13,14 +14,15 @@ class Alumno{
 public function alumnos(){
     $alumnos = [];
     $alumnosStringJson = file_get_contents("includes/alumnos.json");
-    $alumnosArray = json_decode($alumnosStringJson);        // -> un objeto de la clase stdClass
+    $alumnosArray = json_decode($alumnosStringJson);
 
     foreach ($alumnosArray as $value) {
 
-        //creo una instancia de comic -> ahora tengo un objeto comic
-        $alumno = new self();   //self
+        //creo una instancia de alumno
+        $alumno = new self();
         //relleno los atributos
         $alumno->nombre = $value->nombre;
+        $alumno->apellido = $value->apellido;
         $alumno->edad = $value->edad;
         $alumno->email = $value->email;
         $alumno->imagen = $value->imagen;
@@ -28,32 +30,34 @@ public function alumnos(){
         $alumno->github = $value->github;
         $alumno->instagram = $value->instagram;
         $alumnos []= $alumno;
-
     }
     return $alumnos;
-}
+  }
 
-public function getNombre(){
-    return $this->nombre;
-}
-public function getEdad(){
-    return $this->edad;
-}
-public function getEmail(){
-    return $this->email;
-}
-public function getImagen(){
-    return $this->imagen;
-}
-public function getLinkedin(){
-    return $this->linkedin;
-}
-public function getGithub(){
-    return $this->github;
-}
-public function getInstagram(){
-    return $this->instagram;
-}
+  public function getNombre(){
+      return $this->nombre;
+  }
+  public function getApellido(){
+      return $this->apellido;
+  }
+  public function getEdad(){
+      return $this->edad;
+  }
+  public function getEmail(){
+      return $this->email;
+  }
+  public function getImagen(){
+      return $this->imagen;
+  }
+  public function getLinkedin(){
+      return $this->linkedin;
+  }
+  public function getGithub(){
+      return $this->github;
+  }
+  public function getInstagram(){
+      return $this->instagram;
+  }
 
 }
 
