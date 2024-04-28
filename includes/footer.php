@@ -5,8 +5,5 @@
         <li><a href="https://twitter.com/DropDeadUK" target="_blank" class="icon a-tw"><small>Twitter</small></a></li>
         <li><a href="https://www.facebook.com/DROPDEADOFFICIAL/" target="_blank" class="icon a-fb"><small>Facebook</small></a></li>
       </ul>
-      <article>
-        <p>Creado por</p>
-        <a href="index.php?sec=quienes_somos">@panadxro</a>
-      </article>
+      <a href="index.php?sec=quienes_somos">Colaboraciones</a>
     </footer>

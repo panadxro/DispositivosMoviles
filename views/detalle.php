@@ -24,6 +24,6 @@ $producto = (new Producto())->catalogo_x_id($id);
         <p id="subtitulo-producto"><?= $producto->getSubtitulo() ?></p>
         <p id="descripcion-producto"><?= $producto->getDescripcion() ?></p>
         <p id="precio-producto"><?= $producto->getPrecio() ?></p>
-        <button id="boton-agregar" class="boton add" data-id="2" data-val="50" data-cat="Remeras">Agregar al carrito</button>
+        <a id="boton-agregar" class="boton add" href="index.php?sec=envios">Comprar</a>
       </article>
     </div>

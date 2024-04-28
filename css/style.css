@@ -938,7 +938,6 @@ select {
 /* Alumnos */
 .seccion-alumnos {
   display: flex;
-  flex-direction: row;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -969,4 +968,8 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+/* Recibo */
+#pag-recibo {
+  padding-block: 5em;
 }

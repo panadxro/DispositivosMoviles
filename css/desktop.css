@@ -149,4 +149,7 @@
   font-weight: bold;
   font-size: calc(1rem + 0.6vw);
 }
-  /* comprobante.html */
+/* Alumno */
+.seccion-alumnos {
+  flex-direction: row;
+}

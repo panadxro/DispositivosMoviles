@@ -171,3 +171,7 @@ footer p {
 #precio-producto {
   font-size: 2em;
 }
+.seccion-alumnos {
+  padding-block: 5em;
+  flex-direction: column;
+}

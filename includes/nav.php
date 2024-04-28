@@ -8,7 +8,7 @@
         >
         <small>Abrir navegador</small>
       </button>
-      <h1><a class="a-logo" href="index.html">DROPDEAD</a></h1>
+      <h1><a class="a-logo" href="index.php">DROPDEAD</a></h1>
       <nav 
         class="nav-list offcanvas-start" 
         id="navDesplegable" 
