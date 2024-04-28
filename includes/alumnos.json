@@ -1,7 +1,6 @@
 [
     { 
-      "nombre": "Lucas",
-      "apellido": "Panadero",
+      "nombre": "Lucas Panadero",
       "edad": "23",
       "email": "lucas.panadero@davinci.edu.ar",
       "imagen": "assets/fondos/lucas.jpg",
@@ -10,12 +9,11 @@
       "instagram": "https://www.instagram.com/panadxro/"
     },
     { 
-      "nombre": "Ezequiel",
-      "apellido": "Duce",
+      "nombre": "Ezequiel Duce",
       "edad": "19",
-      "email": "lucas.panadero@davinci.edu.ar",
+      "email": "ezequiel.duce@davinci.edu.ar",
       "imagen": "assets/fondos/eze.jpeg",
-      "linkedin": "www.linkedin.com/in/ezequiel-ignacio-duce-arroyo-b64049264",
+      "linkedin": "https://www.linkedin.com/in/ezequiel-ignacio-duce-arroyo-b64049264",
       "github": "https://github.com/Ezequielduce",
       "instagram": "https://www.instagram.com/zequiduce/"
     }

@@ -2,7 +2,6 @@
 
 class Alumno{
     protected $nombre;  
-    protected $apellido;
     protected $edad;
     protected $email;
     protected $imagen;
@@ -22,7 +21,6 @@ public function alumnos(){
         $alumno = new self();
         //relleno los atributos
         $alumno->nombre = $value->nombre;
-        $alumno->apellido = $value->apellido;
         $alumno->edad = $value->edad;
         $alumno->email = $value->email;
         $alumno->imagen = $value->imagen;
@@ -36,9 +34,6 @@ public function alumnos(){
 
   public function getNombre(){
       return $this->nombre;
-  }
-  public function getApellido(){
-      return $this->apellido;
   }
   public function getEdad(){
       return $this->edad;
