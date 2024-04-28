@@ -969,7 +969,3 @@ select {
   flex-direction: column;
   align-items: center;
 }
-/* Recibo */
-#pag-recibo {
-  padding-block: 5em;
-}
