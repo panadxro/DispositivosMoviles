@@ -7,6 +7,6 @@
       </ul>
       <article>
         <p>Creado por</p>
-        <a href="index.php?sec=quienes_somos">@panadxro</a>
+        <a href="index.php?sec=quienes_somos">@panadxro - @duce</a>
       </article>
     </footer>

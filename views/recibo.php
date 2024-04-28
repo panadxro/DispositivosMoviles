@@ -1,5 +1,6 @@
-<div class="inicio notfound">
+<div class="inicio mt-5">
   <article>
+    <h2 id="tituloRecibo">MUCHAS GRACIAS POR SU COMPRA, LE HAREMOS LLEGAR SU MERCANCÍA A LA BREVEDAD.</h2>
     <ul>
       <?php
       $email;
