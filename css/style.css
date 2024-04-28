@@ -98,7 +98,7 @@ a small {
   position: fixed;
   top: 0;
   z-index: 2;
-  backdrop-filter: blur(.1rem);
+  background-color: #f3efeb;
   display: flex;
   align-items: center;
   height: 5rem;
@@ -138,7 +138,7 @@ a small {
   padding: .5em;
 }
 .dropdown #dropdown-menu { 
-  backdrop-filter: blur(.1rem);
+  background-color: #f3efeb;
   border: none;
   position: fixed;
 }
@@ -219,7 +219,7 @@ a small {
     background-color: #bfbfbf;
   }
   .dropdown #dropdown-menu { 
-    backdrop-filter: blur(.1rem);
+    background-color: #f3efeb;
     filter: invert(0%) !important;
     background-color: #f3efeb !important;
     position: static;
