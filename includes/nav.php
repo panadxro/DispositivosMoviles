@@ -32,8 +32,8 @@
           <li><a class="nav-link active" href="index.php?sec=home">INICIO</a></li>
           <li class="dropdown">
             <a class="nav-link" data-bs-toggle="collapse" 
-            href="#dropdown-menu" role="button" aria-expanded="false" aria-controls="dropdown-menu">CATEGORIAS</a>
-            <ul class="collapse" id="dropdown-menu">
+            href="#dropdown-categoria" role="button" aria-expanded="false" aria-controls="dropdown-categoria">CATEGORIAS</a>
+            <ul class="collapse" id="dropdown-categoria">
               <li><a href="index.php?sec=catalogo">TODO</a></li>
               <li><a href="index.php?sec=categoria&cat=Remeras">REMERAS</a></li>
               <li><a href="index.php?sec=categoria&cat=Buzos">BUZOS</a></li>
@@ -43,6 +43,17 @@
             </ul>
           </li>
           <li><a class="nav-link" href="index.php?sec=envios">COMPRAR</a></li>
+          <li class="dropdown">
+            <a class="nav-link" data-bs-toggle="collapse" 
+            href="#dropdown-cuenta" role="button" aria-expanded="false" aria-controls="dropdown-cuenta">CUENTA</a>
+            <ul class="collapse" id="dropdown-cuenta">
+              <?php if( isset($_SESSION["login"]) ){ ?>       
+              <li><a href="admin/actions/auth_logout.php">SALIR</a></li>
+              <?php }else{ ?>
+              <li><a href="index.php?sec=login">LOGIN</a></li>
+              <?php } ?>                              
+            </ul>
+          </li>
         </ul>
       </nav>
       <button 
