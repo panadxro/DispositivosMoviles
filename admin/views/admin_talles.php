@@ -5,19 +5,19 @@ $talles = (new Talle())->catalogo_completo();
 ?>
 
 <div class="col pt-5">
-      <h1 class="text-center mb-5 fw-bold">Administracion de Talles</h1>
+      <h1 class="text-center mb-5 fw-bold">ADMINISTRACIÓN DE TALLES</h1>
       <div class="row mb-5 d-flex align-items-center">
           <table class="table">
               <thead>
                   <tr>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Acciones</th>
+                      <th class="fw-bold" scope="col">Nombre</th>
+                      <th class="fw-bold" scope="col">Acciones</th>
                   </tr>
               </thead>
               <tbody>
                   <?php foreach ($talles as $talle) { ?>
                   <tr>
-                      <td class="w-100"><?= $talle->getNombre() ?> </td>
+                      <td class="d-flex align-items-center fw-bold" w-100"><?= $talle->getNombre() ?> </td>
                       <td>
                           <a href="index.php?sec=edit_talle&id=<?= $talle->getId() ?>" class="d-block btn btn-sm btn-warning mb-1">Editar</a>
                           <a href="index.php?sec=delete_talle&id=<?= $talle->getId() ?>" class="d-block btn btn-sm btn-danger">Eliminar</a>

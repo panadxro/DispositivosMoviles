@@ -53,7 +53,7 @@
               </div>
             </fieldset>
             <div class="form-submit">
-              <a href="index.php" class="volver">Volver al inicio</a>
+              <a href="index.php?sec=home" class="volver">Volver al inicio</a>
               <input class="boton" value="Enviar" type="submit">
             </div>
           </form>

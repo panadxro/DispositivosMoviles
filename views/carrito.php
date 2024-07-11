@@ -27,7 +27,7 @@ $items = ($miCarrito)->getCarrito();
             <tbody>
                 <?php foreach( $items as $key => $item ) {?>
                     <tr>
-                        <td><img class="img-fluid rounded shadow-sm" src="/dropdead/dropdead/img/covers/<?php echo $item["imagen"]; ?>" alt="<?php echo $item["producto"]; ?>" width="50"></td>
+                        <td><img class="img-fluid rounded shadow-sm" src="../img/covers/<?php echo $item["imagen"]; ?>" alt="<?php echo $item["producto"]; ?>" width="50"></td>
                         <td class="align-middle">
                             <p class="h5"><?php echo $item["producto"]; ?></p>
                         </td>

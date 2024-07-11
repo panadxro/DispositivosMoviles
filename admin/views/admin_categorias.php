@@ -11,14 +11,14 @@ $categorias = (new Categoria())->catalogo_completo();
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Acciones</th>
+                    <th class="fw-bold" scope="col">Nombre</th>
+                    <th class="fw-bold" scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($categorias as $categoria) { ?>
                     <tr>
-                        <td class="w-100"><?= $categoria->getNombre() ?> </td>
+                        <td class="d-flex align-items-center w-100"><?= $categoria->getNombre() ?> </td>
                         <td>
                             <a href="index.php?sec=edit_categoria&id=<?= $categoria->getId() ?>" class="d-block btn btn-sm btn-warning mb-1">Editar</a>
                             <a href="index.php?sec=delete_categoria&id=<?= $categoria->getId() ?>" class="d-block btn btn-sm btn-danger">Eliminar</a>

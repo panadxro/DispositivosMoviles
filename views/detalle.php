@@ -16,8 +16,8 @@ $talles_id = $producto->getTalles_id();
         <figure id="galeria-productos" class="carousel-inner">
 <!-- Hay que cambiar la src despues /dropdead/dropdead/ -->
           <picture class="carousel-item active">
-            <source media="(max-width: 1024px)" srcset="/dropdead/dropdead/img/covers/<?= $producto->getImagen() ?>">
-            <img src="/dropdead/dropdead/img/covers/<?= $producto->getImagen() ?>" alt="<?= $producto->getNombre() ?>">
+            <source media="(max-width: 1024px)" srcset="../img/covers/<?= $producto->getImagen() ?>">
+            <img src="../img/covers/<?= $producto->getImagen() ?>" alt="<?= $producto->getNombre() ?>">
           </picture>
         </figure>
       </div>

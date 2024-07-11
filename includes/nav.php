@@ -12,7 +12,7 @@
     >
     <small>Abrir navegador</small>
   </button>
-  <h1><a class="a-logo" href="index.php">DROPDEAD</a></h1>
+  <h1><a class="a-logo" href="index.php?sec=home">DROPDEAD</a></h1>
   <nav 
     class="nav-list offcanvas-start" 
     id="navDesplegable" 
@@ -33,9 +33,9 @@
       </button>
     </div>
     <ul class="ul-list nav-underline" >
-      <li><a class="nav-link active" href="index.php?sec=home">INICIO</a></li>
+      <li><a class="nav-link <?= $_GET["sec"] == "home" ? "active" : "" ?>" href="index.php?sec=home">INICIO</a></li>
       <li class="dropdown">
-        <a class="nav-link" data-bs-toggle="collapse" 
+        <a class="nav-link <?= $_GET["sec"] == "productos" ? "active" : "" ?>" data-bs-toggle="collapse" 
         href="#dropdown-menu" role="button" aria-expanded="false" aria-controls="dropdown-menu">CATEGORIAS</a>
         <ul class="collapse" id="dropdown-menu">
           <li><a href="index.php?sec=productos">Todo</a></li>

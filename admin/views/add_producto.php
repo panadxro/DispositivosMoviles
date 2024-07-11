@@ -34,14 +34,14 @@ $talles = (new Talle())->catalogo_completo();
                     <input class="form-control" type="number" name="precio">
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label class="form-label" for="">Talles Disponibles</label>
+                    <label class="mt-2 d-flex form-label" for="">Talles Disponibles</label>
                     <?php foreach ($talles as $talle) { ?>
-                    <div>
-                        <input type="checkbox" name="talles[]"
+                    <div class="d-inline">
+                        <input class="btn-check" type="checkbox" name="talles[]"
                             id="talle<?= $talle->getId() ?>"
                             value="<?= $talle->getId() ?>"
                         >
-                        <label for="talle<?= $talle->getId() ?>">
+                        <label class="btn" for="talle<?= $talle->getId() ?>">
                             <?= $talle->getNombre() ?>
                         </label>
                     </div>

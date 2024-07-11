@@ -1,11 +1,11 @@
-<div class="row my-5">
+<div class="row pt-5">
     <div class="col">
-        <h1 class="text-center mb-5 fw-bold">Administracion de artista</h1>
-        <div class="row mb-5 d-flex align-items-center">
-            <form class="row g-3" action="actions/add_talle_acc.php" method="post" enctype="multipart/form-data">
+        <h1 class="text-center mb-5 fw-bold">AGREGAR TALLE</h1>
+        <div class="row d-flex flex-column justify-content-center align-items-center">
+            <form class="row g-3 w-25" action="actions/add_categoria_acc.php" method="post" enctype="multipart/form-data">
               <label class="form-label">Nombre</label>
               <input class="form-control" type="text" name="nombre">
-              <button class="btn btn-primary" type="submit">Cargar</button>
+              <button class="btn btn-primary" type="submit">Agregar</button>
             </form>
         </div>
     </div>

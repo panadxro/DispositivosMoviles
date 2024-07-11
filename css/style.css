@@ -47,7 +47,8 @@ table tr:first-child {
   border-bottom: none;
 }
 th {
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 iframe {
   height: 100%;
