@@ -7,7 +7,7 @@ $producto = (new Producto())->catalogo_x_id($_GET["id"]);
 <div class="row pt-5">
     <div class="col">
         <h1 class="text-center mb-5 fw-bold">EDITAR PRODUCTO</h1>
-        <div class="row mb-5 d-flex align-items-center">
+        <div class="row mb-5 d-flex justify-content-center align-items-center">
             <form class="row g-3" action="actions/edit_producto_acc.php" method="post" enctype="multipart/form-data">
 
                 <input type="hidden" name="id" value="<?= $producto->getId() ?>">

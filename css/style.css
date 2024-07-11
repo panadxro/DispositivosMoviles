@@ -138,20 +138,20 @@ a small {
 .nav-list a {
   padding: .5em;
 }
-.dropdown .menu-desplegable { 
+.dropdown #dropdown-menu { 
   background-color: #f3efeb;
   border: none;
   position: fixed;
 }
-.menu-desplegable {
+#dropdown-menu {
   border-radius: 0;
 }
-.menu-desplegable li a{
+#dropdown-menu li a{
   display: block;
   padding: 1em 1.5em;
   color: black;
 }
-.menu-desplegable li a:hover{
+#dropdown-menu li a:hover{
   background-color: #bfbfbf;
 }
 .a-cart {
@@ -219,7 +219,7 @@ a small {
   .nav-link:hover {
     background-color: #bfbfbf;
   }
-  .dropdown .menu-desplegable { 
+  .dropdown #dropdown-menu { 
     background-color: #f3efeb;
     filter: invert(0%) !important;
     background-color: #f3efeb !important;
@@ -976,8 +976,4 @@ select {
 }
 #tituloRecibo{
   font-size: 15pt;
-}
-/* Tablas admin */
-td img {
-  max-height: 100px;
 }

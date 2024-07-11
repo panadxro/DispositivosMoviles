@@ -9,7 +9,7 @@
 <!-- Hay que cambiar la src despues /dropdead/dropdead/ -->
     <article class="card">
       <a href="index.php?sec=detalle&id=<?=$producto->getId()?>">
-        <figure><img src="../img/covers/<?= $producto->getImagen() ?>"></figure>
+        <figure><img src="../dropdead/img/covers/<?= $producto->getImagen() ?>"></figure>
         <h3><?= $producto->getNombre() ?></h3>
         <p><?= $producto->getAlias() ?></p>
         <p class="price">$<?= $producto->getPrecio() ?></p>
