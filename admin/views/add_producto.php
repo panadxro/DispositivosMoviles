@@ -3,9 +3,9 @@ $categorias = (new Categoria())->catalogo_completo();
 $talles = (new Talle())->catalogo_completo();
 ?>
 
-<div class="row my-5">
+<div class="row pt-5">
     <div class="col">
-        <h1 class="text-center mb-5 fw-bold">Agregar  Producto</h1>
+        <h1 class="text-center mb-5 fw-bold">AGREGAR PRODUCTO</h1>
         <div class="row mb-5 d-flex align-items-center">
             <form class="row g-3" action="actions/add_producto_acc.php" method="post" enctype="multipart/form-data">
                 <div class="col-md-6 mb-3">
@@ -33,7 +33,7 @@ $talles = (new Talle())->catalogo_completo();
                     <label class="form-label" for="">Precio</label>
                     <input class="form-control" type="number" name="precio">
                 </div>
-                <div class="col-md-12 mb-3">
+                <div class="col-md-6 mb-3">
                     <label class="form-label" for="">Talles Disponibles</label>
                     <?php foreach ($talles as $talle) { ?>
                     <div>

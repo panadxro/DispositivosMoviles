@@ -5,7 +5,7 @@ $categorias = (new Categoria())->catalogo_completo();
 ?>
 
 <div class="row my-5">
-    <div class="col">
+  <div class="col pt-5">
         <h1 class="text-center mb-5 fw-bold">Administracion de categorías</h1>
         <div class="row mb-5 d-flex align-items-center">
             <table class="table">
@@ -18,7 +18,7 @@ $categorias = (new Categoria())->catalogo_completo();
                 <tbody>
                     <?php foreach ($categorias as $categoria) { ?>
                     <tr>
-                        <td><?= $categoria->getNombre() ?> </td>
+                        <td class="w-100"><?= $categoria->getNombre() ?> </td>
                         <td>
                             <a href="index.php?sec=edit_categoria&id=<?= $categoria->getId() ?>" class="d-block btn btn-sm btn-warning mb-1">Editar</a>
                             <a href="index.php?sec=delete_categoria&id=<?= $categoria->getId() ?>" class="d-block btn btn-sm btn-danger">Eliminar</a>

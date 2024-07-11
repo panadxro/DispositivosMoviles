@@ -3,9 +3,9 @@ $categoria = $_GET['cat'];
 $productos = (new Producto())->catalogo_x_categoria($categoria);
 ?>
 
-<section class="sect-comprar">
+<section class="seccion-productos mt-5">
   <h2 class="titulo-2" id="tit-categoria"><?= $productos[0]->getCategoria() ?></h2>
-  <div id="productos">
+  <div class="mb-5" id="productos">
     <?php foreach ($productos as $producto) { ?>
       <!-- Hay que cambiar la src despues /dropdead/dropdead/ -->
     <article class="card">

@@ -2,9 +2,9 @@
     $productos = ( new Producto() )->catalogo_completo();
 ?>
 
-<section class="seccion-productos">
+<section class="seccion-productos mt-5">
   <h2 class="titulo-2" id="tit-categoria">PRODUCTOS</h2>
-  <div id="productos">
+  <div class="mb-5" id="productos">
   <?php foreach ($productos as $producto) { ?>
 <!-- Hay que cambiar la src despues /dropdead/dropdead/ -->
     <article class="card">

@@ -5,7 +5,7 @@
 
 <div class="row my-5">
     <div class="col">
-        <h1 class="text-center mb-5 fw-bold">Editar artista</h1>
+        <h1 class="text-center mb-5 fw-bold">Editar Categoria</h1>
         <div class="row mb-5 d-flex align-items-center">
             <form class="row g-3" action="actions/edit_categoria_acc.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?= $categoria->getId() ?>">

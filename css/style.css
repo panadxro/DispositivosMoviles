@@ -976,3 +976,7 @@ select {
 #tituloRecibo{
   font-size: 15pt;
 }
+/* Tablas admin */
+td img {
+  max-height: 100px;
+}

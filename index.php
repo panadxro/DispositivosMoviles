@@ -68,7 +68,7 @@
 <body>
     <?php include_once "includes/nav.php" ?>
 
-    <main id="pag-<?= $view ?>">
+    <main class="pt-5" id="pag-<?= $view ?>">
         <?php file_exists("views/$vista.php") 
                 ? include "views/$vista.php" 
                 : include "views/404.php" ?>
