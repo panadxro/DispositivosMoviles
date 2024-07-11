@@ -39,7 +39,7 @@ $talles_id = $producto->getTalles_id();
               <input class="form-control form-control-lg" type="number" name="c" id="c" value="1">
             </div>
             <div class="col-12">
-              <input id="boton-agregar" class="boton add" type="submit" value="Agregar al carrito">
+              <input id="boton-agregar" class="mt-3 boton add" type="submit" value="Agregar al carrito">
               <input type="hidden" name="id" value="<?= $producto->getId() ?>">
             </div>
         </form>
