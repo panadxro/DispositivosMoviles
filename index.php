@@ -28,7 +28,7 @@
         "recibo"  => [
           "titulo" => "Compra realizada"
         ],
-        "catalogo" => [
+        "productos" => [
             "titulo" => "Productos"
         ],
         "login" => [
@@ -36,6 +36,9 @@
         ],
         "registro" => [
             "titulo" => "Registro"
+        ],
+        "carrito" => [
+          "titulo" => "Carrito"
         ]
     ];
 

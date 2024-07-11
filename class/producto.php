@@ -14,15 +14,12 @@ class Producto{
     protected static $valores = ["id", "nombre", "alias", "descripcion", "precio", "imagen"];
 
     // Metodos
-    public function mapear($productoArrayAsociativo) : self
-    {
+    public function mapear($productoArrayAsociativo) : self {
         $producto = new self();
         foreach (self::$valores as $valor) {
             $producto->{$valor} = $productoArrayAsociativo[$valor];
         }
-
         $producto->categoria = (new Categoria())->get_x_id($productoArrayAsociativo["categoria_id"]);
-
         $Tids = explode(",", $productoArrayAsociativo["talles"]);
         $talles_array = [];
         foreach ($Tids as $Tid) {
@@ -32,6 +29,14 @@ class Producto{
         $producto->talles_ids = $productoArrayAsociativo["talles"];
         return $producto;
     }
+    public function mapearCat($productoArrayAsociativo) : self {
+      $producto = new self();
+      foreach (self::$valores as $valor) {
+          $producto->{$valor} = $productoArrayAsociativo[$valor];
+      }
+      $producto->categoria = (new Categoria())->get_x_id($productoArrayAsociativo["categoria_id"]);
+      return $producto;
+  }
     public function catalogo_completo()
     {
         $catalogo = [];
@@ -59,18 +64,20 @@ class Producto{
     
         return [];
     }
+    public function catalogo_x_categoria(int $categoria_id): array {
+        $personajes = [];
 
-    public function filtrar_x_categoria($categoria){
-        $productos = $this->catalogo_completo();
-        $lista_productos = [];
-    
-        foreach ($productos as $producto) {
-            if( $producto->categoria == $categoria ){
-                $lista_productos []= $producto;
-            }
+        $conexion = Conexion::getConexion();
+        $query = "SELECT productos.*, categorias.nombre AS categoria FROM productos 
+        JOIN categorias ON productos.categoria_id = categorias.id 
+        WHERE categorias.id = $categoria_id";
+        $PDOStatement = $conexion->prepare($query);
+        $PDOStatement->setFetchMode(PDO::FETCH_ASSOC);
+        $PDOStatement->execute();
+        while ($comic = $PDOStatement->fetch()) {
+            $personajes[] = $this->mapearCat($comic);
         }
-    
-        return $lista_productos;
+        return $personajes;
     }
     public function insert($nombre, $alias, $categoria_id, $descripcion, $imagen, $precio): int
     {
@@ -148,6 +155,7 @@ class Producto{
     public function getImagen() { return $this->imagen; }
     public function getPrecio() { return $this->precio; }
     public function getTalles() { return $this->talles_ids; }
+    public function getTalles_id() { return $this->talles; }
 
     /**
      * Set the value of editorial

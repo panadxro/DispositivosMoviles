@@ -137,36 +137,20 @@ a small {
 .nav-list a {
   padding: .5em;
 }
-.dropdown #dropdown-categoria { 
+.dropdown .menu-desplegable { 
   background-color: #f3efeb;
   border: none;
   position: fixed;
 }
-#dropdown-categoria {
+.menu-desplegable {
   border-radius: 0;
 }
-#dropdown-categoria li a{
+.menu-desplegable li a{
   display: block;
   padding: 1em 1.5em;
   color: black;
 }
-#dropdown-categoria li a:hover{
-  background-color: #bfbfbf;
-}
-.dropdown #dropdown-cuenta { 
-  background-color: #f3efeb;
-  border: none;
-  position: fixed;
-}
-#dropdown-cuenta {
-  border-radius: 0;
-}
-#dropdown-cuenta li a{
-  display: block;
-  padding: 1em 1.5em;
-  color: black;
-}
-#dropdown-cuenta li a:hover{
+.menu-desplegable li a:hover{
   background-color: #bfbfbf;
 }
 .a-cart {
@@ -234,14 +218,7 @@ a small {
   .nav-link:hover {
     background-color: #bfbfbf;
   }
-  .dropdown #dropdown-categoria { 
-    background-color: #f3efeb;
-    filter: invert(0%) !important;
-    background-color: #f3efeb !important;
-    position: static;
-    border: none;
-  }
-  .dropdown #dropdown-cuenta { 
+  .dropdown .menu-desplegable { 
     background-color: #f3efeb;
     filter: invert(0%) !important;
     background-color: #f3efeb !important;
@@ -403,9 +380,9 @@ aside {
   background-color: #c2bfbc !important;
   cursor: not-allowed;
 }
-.cantidades-carrito {
+/* .cantidades-carrito {
   display: none;
-}
+} */
 /* Footer */
 footer {
   background: #202020;

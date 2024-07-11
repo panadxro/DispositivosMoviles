@@ -40,7 +40,7 @@ $talles = (new Talle())->catalogo_completo();
                         <input type="checkbox" name="talles[]"
                             id="talle<?= $talle->getId() ?>"
                             value="<?= $talle->getId() ?>"
-                            >
+                        >
                         <label for="talle<?= $talle->getId() ?>">
                             <?= $talle->getNombre() ?>
                         </label>

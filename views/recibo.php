@@ -1,3 +1,10 @@
+<?php
+$carrito = new Carrito();
+// $carrito->borrarCarritosAnteriores();
+$carrito->finalizarCompra();
+$carrito->vaciarCarrito();
+?>
+
 <div class="inicio mt-5">
   <article>
     <h2 id="tituloRecibo">MUCHAS GRACIAS POR SU COMPRA, LE HAREMOS LLEGAR SU MERCANCÍA A LA BREVEDAD.</h2>

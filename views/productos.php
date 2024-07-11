@@ -1,13 +1,12 @@
 <?php
-$categoria = $_GET['cat'];
-$productos = (new Producto())->catalogo_x_categoria($categoria);
+    $productos = ( new Producto() )->catalogo_completo();
 ?>
 
-<section class="sect-comprar">
-  <h2 class="titulo-2" id="tit-categoria"><?= $productos[0]->getCategoria() ?></h2>
+<section class="seccion-productos">
+  <h2 class="titulo-2" id="tit-categoria">PRODUCTOS</h2>
   <div id="productos">
-    <?php foreach ($productos as $producto) { ?>
-      <!-- Hay que cambiar la src despues /dropdead/dropdead/ -->
+  <?php foreach ($productos as $producto) { ?>
+<!-- Hay que cambiar la src despues /dropdead/dropdead/ -->
     <article class="card">
       <a href="index.php?sec=detalle&id=<?=$producto->getId()?>">
         <figure><img src="/dropdead/dropdead/img/covers/<?= $producto->getImagen() ?>"></figure>
