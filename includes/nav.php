@@ -56,6 +56,5 @@
     href="index.php?sec=carrito"
     >
     <small>Carrito</small>
-    <span class="badge bg-danger cantidades-carrito">0</span>
   </a>
 </header>

@@ -49,14 +49,14 @@ $items = ($miCarrito)->getCarrito();
         </table>
 
         <div class="mt-4 d-flex justify-content-center gap-2">
-            <input type="submit" value="Actualizar cantidades" class="btn btn-primary">
-            <a class="btn btn-warning" href="index.php?sec=productos">Seguir Comprando</a>
-            <a class="btn btn-danger"  href="admin/actions/vaciar_carrito_acc.php">Vaciar Carrito</a>
+            <a class="btn btn-warning" href="index.php?sec=productos">Volver</a>
+            <input type="submit" value="Actualizar" class="btn btn-primary">
+            <a class="btn btn-danger"  href="admin/actions/vaciar_carrito_acc.php">Vaciar</a>
             <a class="btn btn-success"  href="index.php?sec=envios">Comprar</a>
         </div>
     </form>
     <?php }else{ ?>
         <p>No hay productos en el carrito</p>
-        <a class="btn btn-warning" href="index.php?sec=productos">Seguir Comprando</a>
+        <a class="mb-4 btn btn-warning" href="index.php?sec=productos">Seguir Comprando</a>
     <?php } ?>
 </div>
