@@ -39,6 +39,18 @@ $secciones_validas = [
     ],
     'delete_talle' => [
       'titulo' => 'Eliminar Talle'
+    ],
+    'admin_usuarios' => [
+      'titulo' => 'Administración de Usuarios'
+    ],
+    'add_usuario' => [
+      'titulo' => 'Agregar Usuario'
+    ],
+    'edit_usuario' => [
+      'titulo' => 'Editar Usuario'
+    ],
+    'delete_usuario' => [
+      'titulo' => 'Eliminar Usuario'
     ]
 ];
 
@@ -103,6 +115,7 @@ if (!array_key_exists($seccion, $secciones_validas)) {
           <li><a class="nav-link <?= $_GET["sec"] == "admin_productos" ? "active" : "" ?>" href="index.php?sec=admin_productos">PRODUCTOS</a></li>
           <li><a class="nav-link <?= $_GET["sec"] == "admin_categorias" ? "active" : "" ?>" href="index.php?sec=admin_categorias">CATEGORIAS</a></li>
           <li><a class="nav-link <?= $_GET["sec"] == "admin_talles" ? "active" : "" ?>" href="index.php?sec=admin_talles">TALLES</a></li>
+          <li><a class="nav-link <?= $_GET["sec"] == "admin_usuarios" ? "active" : "" ?>" href="index.php?sec=admin_usuarios">USUARIOS</a></li>
           <li><a class="nav-link" href="actions/auth_logout.php">SALIR</a></li>
           <?php }else{ ?>
           <li><a class="nav-link <?= $_GET["sec"] == "login" ? "active" : "" ?>" href="../index.php?sec=login">LOGIN</a></li>

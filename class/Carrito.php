@@ -1,9 +1,11 @@
 <?php
 
 class Carrito{
-    /**Agregar producto */
-
-    public function add_item(int $id_producto, int $cantidad, $talle){
+  protected $id;
+  protected $usuario_id;
+  /**Agregar producto */
+  // Metodos
+    /* public function add_item(int $id_producto, int $cantidad, $talle){
         $itemData = (new Producto())->catalogo_x_id($id_producto);
         if($itemData){
             $_SESSION["carrito"][$id_producto] = [
@@ -14,7 +16,7 @@ class Carrito{
                 "talle" => $talle
             ];
         }
-    }
+    } */
 
     /**Mostrar productos */
 
@@ -68,16 +70,24 @@ class Carrito{
             }
         }
     } 
-
-    public function insert(int $id_producto, int $id_usuario, int $cantidad){
+    public function insert(int $usuarioId) {
+      $conexion = Conexion::getConexion();
+      $query = "INSERT INTO carritos VALUES (null, :usuarioId)";
+      $PDOStatement = $conexion->prepare($query);
+      $PDOStatement->execute([
+        "usuarioId" => htmlspecialchars($usuarioId)
+    ]);
+    }
+    public function add_item(int $id_producto, int $id_usuario, int $cantidad, $talle){
         try {
             $conexion = Conexion::getConexion();
-            $query = "INSERT INTO `carrito` (`id`, `id_comic`, `id_usuario`, `cantidad`) VALUES (NULL, :id_producto, :id_usuario, :cantidad)";
+            $query = "INSERT INTO `productos_x_carrito` (`id_usuario`, `id_producto`, `cantidad`, `talle`) VALUES (:id_producto, :id_usuario, :cantidad, :talle)";
             $PDOStatement = $conexion->prepare($query);
             $PDOStatement->execute([
                 "id_producto" => htmlspecialchars($id_producto),
                 "id_usuario" => htmlspecialchars($id_usuario),
                 "cantidad" => htmlspecialchars($cantidad),
+                "talle" => htmlspecialchars($talle)
             ]);
         } catch (Exception $e) {
             echo $e->getMessage();

@@ -9,6 +9,7 @@ $login = (new Autenticacion())->log_in($email, $pass);
 if( $login ){
     if($_SESSION["login"]["roles"] != "usuario" ){
         (new Alerta())->add_alerta("Bienvenido administrador", "success");
+        (new Usuario())->usuario_x_email($email);
         header("Location: ../index.php?sec=dashboard");
     }else{
         header("Location: ../../index.php?sec=home");

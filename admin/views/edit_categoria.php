@@ -11,7 +11,7 @@
                 <input type="hidden" name="id" value="<?= $categoria->getId() ?>">
                 <div class="col mb-3">
                     <label class="form-label">Nombre</label>
-                    <input class="form-control" type="text" name="nombre" value="<?= $categoria->getNombre() ?>">
+                    <input class="form-control" type="text" name="nombre" value="<?= $categoria->getNombre() ?>" required>
                 </div>                
                 <button class="btn btn-primary" type="submit">Editar</button>
             </form>

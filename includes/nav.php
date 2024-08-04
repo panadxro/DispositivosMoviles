@@ -1,5 +1,6 @@
 <?php 
   $categorias = (new Categoria())->catalogo_completo();
+  // $usuario = (new Usuario())
 ?>
 
 <header class="navt">

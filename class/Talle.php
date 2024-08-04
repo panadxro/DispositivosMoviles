@@ -5,12 +5,6 @@ class Talle
     //atributos
     protected $id;
     protected $nombre;
-    
-    protected $alias;
-    protected $biografia;
-    protected $creador;
-    protected $primera_aparicion;
-    protected $imagen;
 
     //metodos
     public function catalogo_completo(): array
@@ -85,11 +79,6 @@ class Talle
     // Getters
     public function getNombre() { return $this->nombre; }
     public function getId() { return $this->id; }
-    public function getAlias() { return $this->alias; }
-    public function getBiografia() { return $this->biografia;}
-    public function getCreador() { return $this->creador; }
-    public function getPrimeraAparicion() { return $this->primera_aparicion; }
-    public function getImagen() { return $this->imagen; }
 
     // Setters
     public function setNombre($nombre): self {
@@ -98,26 +87,6 @@ class Talle
     }
     public function setId($id): self {
         $this->id = $id;
-        return $this;
-    }
-    public function setAlias($alias): self {
-        $this->alias = $alias;
-        return $this;
-    }
-    public function setBiografia($biografia): self {
-        $this->biografia = $biografia;
-        return $this;
-    }
-    public function setCreador($creador): self {
-        $this->creador = $creador;
-        return $this;
-    }
-    public function setPrimeraAparicion($primera_aparicion): self {
-        $this->primera_aparicion = $primera_aparicion;
-        return $this;
-    }
-    public function setImagen($imagen): self {
-        $this->imagen = $imagen;
         return $this;
     }
 }

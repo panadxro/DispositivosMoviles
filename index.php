@@ -1,9 +1,6 @@
 <?php 
     require_once "functions/autoload.php";
-
-/*     require_once "class/producto.php";
-    require_once "class/alumno.php"; */
-
+    
     $view = isset($_GET["sec"]) ? $_GET["sec"] : "home"; 
     $vista = "404";
     $seccionesValidas = [

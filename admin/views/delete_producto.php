@@ -13,7 +13,7 @@ $producto = (new Producto())->catalogo_x_id($id);
           <a class="d-block btn btn-sm btn-danger mt-2" href="actions/delete_producto_acc.php?id=<?= $producto->getId() ?>">Eliminar</a>
       </div>
       <div class="col-6">
-          <a class="d-block btn btn-sm btn-warning mt-2" href="index.php?sec=dashboard">Cancelar</a>
+          <a class="d-block btn btn-sm btn-warning mt-2" href="index.php?sec=admin_productos">Cancelar</a>
       </div>
 
 </div>
