@@ -14,6 +14,7 @@
         <p><?= $producto->getAlias() ?></p>
         <p class="price">$<?= $producto->getPrecio() ?></p>
       </a>
+      <button class="add boton" data-id="8" data-val="35" data-cat="Accesorio">Agregar al carrito</button>
     </article>
 
   <?php } ?>

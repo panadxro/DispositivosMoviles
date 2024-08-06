@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2024 at 07:12 PM
+-- Generation Time: Jul 11, 2024 at 10:24 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -20,24 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `ecommerce`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `carritos`
---
-
-CREATE TABLE `carritos` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `usuario_id` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `carritos`
---
-
-INSERT INTO `carritos` (`id`, `usuario_id`) VALUES
-(1, 11);
 
 -- --------------------------------------------------------
 
@@ -107,19 +89,6 @@ INSERT INTO `productos` (`id`, `nombre`, `alias`, `descripcion`, `precio`, `imag
 (32, 'Want You', 'Ringer T-Shirt', 'Esta camiseta, en nuestro color crudo personalizado, es un homenaje a nuestro estilo clásico DD. Esta camiseta entallada se ha impreso internamente en nuestra sede de Sheffield.', 50.00, '668f8bf124a0c-smWantYou1.png', 2),
 (33, 'Hardcore', 'Socks (Pack of 2)', 'Los calcetines clásicos Drop Dead &#039;Hardcore&#039; en blanco/negro son de longitud media, con un grueso punto elástico alrededor del tobillo y gráficos exclusivos DD spiritual hardcore en los laterales y la base.', 20.00, '668f8c0baa923-smHardcore1.png', 5),
 (34, 'Orion Skirt', 'Wrap Skirt', 'Eleva tu vestuario con la falda de Orion. Confeccionada en franela marrón tonal. Esta falda escocesa cuenta con nuestro clásico diseño envolvente con una correa ajustable en la cintura, parches espirituales y un dobladillo asimétrico con un acabado de borde crudo.', 50.00, '668f8c365de63-smOrionSkirt1.png', 3);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `productos_x_carritos`
---
-
-CREATE TABLE `productos_x_carritos` (
-  `carrito_id` int(10) UNSIGNED NOT NULL,
-  `producto_id` int(10) UNSIGNED NOT NULL,
-  `cantidad` int(10) UNSIGNED DEFAULT NULL,
-  `talle` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -256,6 +225,8 @@ INSERT INTO `talles` (`id`, `nombre`) VALUES
 CREATE TABLE `usuarios` (
   `id` int(10) UNSIGNED NOT NULL,
   `email` varchar(100) DEFAULT NULL,
+  `nombre_usuario` varchar(20) DEFAULT NULL,
+  `nombre_completo` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `roles` enum('admin','usuario') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -264,24 +235,13 @@ CREATE TABLE `usuarios` (
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `email`, `password`, `roles`) VALUES
-(1, 'hola', '$2y$10$bMyOgb/aGoEW52DaB/ulTeMzfk.s59JS.cGom6tUCRHNKrZrJyJEi', 'admin'),
-(2, 'lucas', '$2y$10$T1vQcGf06QWVnUYxXGJy4ebY0UmAq2JCjzkJYPELnPScLvdSoo2hS', 'usuario'),
-(3, 'chau', '$2y$10$5lvyxac.CTNNUsTmo394COtJSJ9qxRzjgG3J4Gc7o5ejV/8Y8LFFa', 'usuario'),
-(4, 'ke', '$2y$10$zN7XLkC2F8nrBX8.I6rHPu83cqefL8Z5JN2Kemd2yty2aGsHFNOSK', 'usuario'),
-(6, 'si', '$2y$10$KkNtw2gqFAkK629WpROXR.E9Mwcg0wo5afkUOoA7.vrIV0XQrvDpC', 'admin'),
-(11, 'de', '$2y$10$jPcQ6lhseu4ncPPrmzWbSO12TiNwrQ9WF7WSbA0SQHB//ePSkiW3.', 'usuario');
+INSERT INTO `usuarios` (`id`, `email`, `nombre_usuario`, `nombre_completo`, `password`, `roles`) VALUES
+(1, 'hola', '', '', '$2y$10$bMyOgb/aGoEW52DaB/ulTeMzfk.s59JS.cGom6tUCRHNKrZrJyJEi', 'admin'),
+(2, 'lucas', '', '', '$2y$10$T1vQcGf06QWVnUYxXGJy4ebY0UmAq2JCjzkJYPELnPScLvdSoo2hS', 'usuario');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `carritos`
---
-ALTER TABLE `carritos`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `usuario_id` (`usuario_id`);
 
 --
 -- Indexes for table `categorias`
@@ -296,13 +256,6 @@ ALTER TABLE `categorias`
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `categoria_id` (`categoria_id`);
-
---
--- Indexes for table `productos_x_carritos`
---
-ALTER TABLE `productos_x_carritos`
-  ADD PRIMARY KEY (`carrito_id`,`producto_id`),
-  ADD KEY `producto_id` (`producto_id`);
 
 --
 -- Indexes for table `productos_x_talles`
@@ -331,28 +284,22 @@ ALTER TABLE `usuarios`
 --
 
 --
--- AUTO_INCREMENT for table `carritos`
---
-ALTER TABLE `carritos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `productos_x_talles`
 --
 ALTER TABLE `productos_x_talles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT for table `talles`
@@ -364,30 +311,17 @@ ALTER TABLE `talles`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `carritos`
---
-ALTER TABLE `carritos`
-  ADD CONSTRAINT `carritos_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
-
---
 -- Constraints for table `productos`
 --
 ALTER TABLE `productos`
   ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`);
-
---
--- Constraints for table `productos_x_carritos`
---
-ALTER TABLE `productos_x_carritos`
-  ADD CONSTRAINT `productos_x_carritos_ibfk_1` FOREIGN KEY (`carrito_id`) REFERENCES `carritos` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `productos_x_carritos_ibfk_2` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`);
 
 --
 -- Constraints for table `productos_x_talles`

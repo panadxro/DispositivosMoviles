@@ -79,7 +79,7 @@ class Usuario{
 		$query = "INSERT INTO usuarios VALUES (NULL, '$email', '$password', '$rol')";
 		$PDOStatement = $conexion->prepare($query);
 		$PDOStatement->execute();
-    return $conexion->lastInsertId();
+    // return $conexion->lastInsertId();
 	}
   public function edit($nombre, $id){
     $conexion = Conexion::getConexion();

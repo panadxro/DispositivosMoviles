@@ -37,7 +37,7 @@ $producto = (new Producto())->catalogo_x_id($_GET["id"]);
                       <label class="mt-2 d-flex form-label" for="">Talles Disponibles</label>
                       <div>
                         <?php foreach ($talles as $talle) { 
-                          $talle_seleccionado = explode(",",$producto->getTalles());        
+                          $talle_seleccionado = explode(",",$producto->getTalles_id());        
                         ?>
                         <div class="d-inline">
                             <input class="btn-check" type="checkbox" name="talles[]"

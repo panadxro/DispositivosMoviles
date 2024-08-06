@@ -26,9 +26,12 @@ class Producto{
       $talles_array []= (new Talle())->catalogo_x_id(intval($Tid));
     }
     $producto->talles = $talles_array;
-    $producto->talles_ids = $productoArrayAsociativo["talles"];
+    // $producto->talles_ids = $productoArrayAsociativo["talles"];
+    $producto->talles_ids = $Tids;
     return $producto;
   }
+
+
   public function mapearCat($productoArrayAsociativo) : self {
     $producto = new self();
     foreach (self::$valores as $valor) {
@@ -46,8 +49,8 @@ class Producto{
     $PDOStatement = $conexion->prepare($query);
     $PDOStatement->setFetchMode(PDO::FETCH_ASSOC);
     $PDOStatement->execute();
-    while ($comic = $PDOStatement->fetch()) {
-      $catalogo[] = $this->mapear($comic);
+    while ($producto = $PDOStatement->fetch()) {
+      $catalogo[] = $this->mapear($producto);
     }
     return $catalogo;
   }
@@ -69,12 +72,12 @@ class Producto{
     $PDOStatement = $conexion->prepare($query);
     $PDOStatement->setFetchMode(PDO::FETCH_ASSOC);
     $PDOStatement->execute();
-    while ($comic = $PDOStatement->fetch()) {
-      $personajes[] = $this->mapearCat($comic);
+    while ($producto = $PDOStatement->fetch()) {
+      $personajes[] = $this->mapearCat($producto);
     }
     return $personajes;
   }
-  public function insert($nombre, $alias, $categoria_id, $descripcion, $imagen, $precio): int {
+  public function insert($nombre, $alias, $categoria_id, $descripcion, $imagen, $precio): void {
     try {
       $conexion = Conexion::getConexion();
       $query = "INSERT INTO `productos` (`id`, `nombre`, `alias`, `categoria_id`, `descripcion`, `imagen`, `precio`) VALUES (NULL, :nombre, :alias, :categoria_id, :descripcion, :imagen, :precio)";
@@ -87,7 +90,7 @@ class Producto{
         'imagen' => htmlspecialchars($imagen),
         'precio' => htmlspecialchars($precio),
       ]);
-      return $conexion->lastInsertId();
+      // return $conexion->lastInsertId();
     } catch (Exception $e) {
       echo $e->getMessage();
     }
@@ -148,8 +151,8 @@ class Producto{
   public function getDescripcion() { return $this->descripcion; }
   public function getImagen() { return $this->imagen; }
   public function getPrecio() { return $this->precio; }
-  public function getTalles() { return $this->talles_ids; }
-  public function getTalles_id() { return $this->talles; }
+  public function getTalles() { return $this->talles; }
+  public function getTalles_id() { return $this->talles_ids; }
 
   /**
    * Set the value of editorial

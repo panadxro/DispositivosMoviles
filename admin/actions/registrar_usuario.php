@@ -11,8 +11,8 @@ try {
     if($usuarioAnterior){
         //mensaje al usuario
     }else{
-      $usuarioId = (new Usuario())->insert($email, $pass, $rol);
-      (new Carrito())->insert($usuarioId);        
+      (new Usuario())->insert($email, $pass, $rol);
+      // (new Carrito())->insert($usuarioId);        
     }
     header("Location: ../../index.php?sec=login");
 } catch (Exception $e) {

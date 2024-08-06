@@ -3,12 +3,36 @@
 class Carrito{
   protected $id;
   protected $usuario_id;
-  /**Agregar producto */
+  protected $producto_id;
+  protected $cantidad;
+  protected $talle;
   // Metodos
-    /* public function add_item(int $id_producto, int $cantidad, $talle){
-        $itemData = (new Producto())->catalogo_x_id($id_producto);
+  public function catalogo_completo(): array {
+      $catalogo = [];
+      $conexion = Conexion::getConexion();
+      $query = "SELECT * FROM carritos_x_usuarios WHERE usuario_id = :id_usuario";
+      $PDOStatement = $conexion->prepare($query);
+      $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+      $PDOStatement->execute([
+        "id_usuario" => htmlspecialchars($_SESSION["login"]["id"])
+      ]);
+      $catalogo = $PDOStatement->fetchAll();
+      return $catalogo;
+  }
+  public function catalogo_x_id(int $id){
+        $talles = $this->catalogo_completo();
+        foreach ($talles as $talle) {
+            if ($talle->usuario_id == $id) {
+                return $talle;
+            }
+        }
+        return [];
+    }
+
+    public function add_item(int $producto_id, int $cantidad, $talle){
+        $itemData = (new Producto())->catalogo_x_id($producto_id);
         if($itemData){
-            $_SESSION["carrito"][$id_producto] = [
+            $_SESSION["carrito"][$producto_id] = [
                 "producto" => $itemData->getNombre(),
                 "imagen" => $itemData->getImagen(),
                 "precio" => $itemData->getPrecio(),
@@ -16,25 +40,39 @@ class Carrito{
                 "talle" => $talle
             ];
         }
-    } */
+    }
 
-    /**Mostrar productos */
-
-    public function getCarrito(){
+/*     public function getCarrito(){
         if( !empty($_SESSION["carrito"]) ){
             return $_SESSION["carrito"];
         }
         return [];
-    }
+    } */
+    public function getCarrito() {
+      try {
+          $conexion = Conexion::getConexion();
+          $query = "SELECT c.id, c.usuario_id, c.producto_id, c.cantidad, c.talle, p.nombre as producto, p.imagen, p.precio 
+                    FROM carritos_x_usuarios c 
+                    JOIN productos p ON c.producto_id = p.id 
+                    WHERE c.usuario_id = :id_usuario";
+          $PDOStatement = $conexion->prepare($query);
+          $PDOStatement->execute([
+              "id_usuario" => htmlspecialchars($_SESSION["login"]["id"])
+          ]);
+          return $PDOStatement->fetchAll(PDO::FETCH_ASSOC);
+      } catch (Exception $e) {
+          echo $e->getMessage();
+          return [];
+      }
+  }
     /**Devolver el precio total */
-    public function getTotal(){
-        $total = 0;
-        if( !empty($_SESSION["carrito"]) ){
-            foreach( $_SESSION["carrito"] as $item ){
-                $total += $item["precio"] * $item["cantidad"];
-            }
-        }
-        return $total;
+    public function getTotal() {
+      $items = $this->getCarrito();
+      $total = 0;
+      foreach ($items as $item) {
+          $total += $item['precio'] * $item['cantidad'];
+      }
+      return $total;
     }
     /**Vaciar carrito */
     public function vaciarCarrito(){
@@ -78,14 +116,14 @@ class Carrito{
         "usuarioId" => htmlspecialchars($usuarioId)
     ]);
     }
-    public function add_item(int $id_producto, int $id_usuario, int $cantidad, $talle){
+    public function insert_item(int $id_usuario, int $id_producto, int $cantidad, string $talle){
         try {
             $conexion = Conexion::getConexion();
-            $query = "INSERT INTO `productos_x_carrito` (`id_usuario`, `id_producto`, `cantidad`, `talle`) VALUES (:id_producto, :id_usuario, :cantidad, :talle)";
+            $query = "INSERT INTO carritos_x_usuarios (`id`, `usuario_id`, `producto_id`, `cantidad`, `talle`) VALUES (NULL, :usuario_id, :producto_id, :cantidad, :talle)";
             $PDOStatement = $conexion->prepare($query);
             $PDOStatement->execute([
-                "id_producto" => htmlspecialchars($id_producto),
-                "id_usuario" => htmlspecialchars($id_usuario),
+                "producto_id" => htmlspecialchars($id_producto),
+                "usuario_id" => htmlspecialchars($id_usuario),
                 "cantidad" => htmlspecialchars($cantidad),
                 "talle" => htmlspecialchars($talle)
             ]);
@@ -93,11 +131,20 @@ class Carrito{
             echo $e->getMessage();
         }
     }
-
+    public function delete_item(int $id_producto){
+      $conexion = Conexion::getConexion();
+      $query = "DELETE FROM carritos_x_usuarios WHERE id = :id";
+      $PDOStatement = $conexion->prepare($query);
+      $PDOStatement->execute([
+          "id" => htmlspecialchars($id_producto)
+      ]);
+      (new Alerta())->add_alerta("Producto eliminado", "success");
+    }
+    
     public function borrarCarritosAnteriores(){
         try {
             $conexion = Conexion::getConexion();
-            $query = "DELETE FROM `carrito` WHERE id_usuario = :id_usuario";
+            $query = "DELETE FROM `carritos_x_usuarios` WHERE usuario_id = :id_usuario";
             $PDOStatement = $conexion->prepare($query);
             $PDOStatement->execute([
                 "id_usuario" => htmlspecialchars($_SESSION["login"]["id"])
@@ -106,4 +153,12 @@ class Carrito{
             echo $e->getMessage();
         }
     }
+    /* Getters */
+    public function getId() { return $this->id; }
+    public function getUserId() { return $this->usuario_id; }
+    public function getProductId() { return $this->producto_id; }
+    public function getCantidad() { return $this->cantidad; }
+    public function getTalle() { return $this->talle; }
+    
+    /* Setters */
 }

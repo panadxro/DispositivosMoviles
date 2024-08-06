@@ -1,4 +1,10 @@
+<?php
+$miCarrito = new Carrito();
+$items = ($miCarrito)->getCarrito();
+?>
+
 <div class="sect-comprar">
+  <?php if( count($items) ){ ?>
         <div id="formularioDatosPersonales">
           <form class="inicio" action="index.php?sec=recibo" method=POST id="datosPersonalesForm">
             <fieldset>
@@ -54,8 +60,43 @@
             </fieldset>
             <div class="form-submit">
               <a href="index.php?sec=home" class="volver">Volver al inicio</a>
-              <input class="boton" value="Enviar" type="submit">
+              <input class="boton" value="Realizar compra" type="submit">
             </div>
           </form>
         </div>
+
+        <aside>
+          <section id="pag-comprar">
+            <div class="cart-head d-none">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h2>CARRITO</h2>
+              <button id="reset"><small>Vaciar carrito</small>
+                <span class="badge bg-danger cantidades-carrito">0</span>
+              </button>
+            </div>
+            <ul id="lista-carrito">
+            <?php foreach( $items as $key => $item ) {?>
+              <li class="item-producto">
+                <figure class="descrip-car">
+                  <img class="miniportada" src="../dropdead/img/covers/<?php echo $item["imagen"]; ?>" alt="<?php echo $item["producto"]; ?>">
+                  <figcaption class="titulo-car"><?php echo $item["producto"]; ?><p> $<?php echo $item["precio"]; ?><span class="cantidad-prod">x<?php echo $item["cantidad"]; ?></span></p></figcaption>
+                </figure>
+                <button class="del" data-id="6" data-val="120" data-cat="Buzos">Eliminar</button>
+              </li>
+              <?php } ?> 
+
+            </ul>
+
+            <article id="articleInfo" class="info">
+              <p>TOTAL:<span class="icon" id="total-carrito">$<?= $miCarrito->getTotal() ?></span></p>
+            </article>
+          </section>
+        </aside>
+      <?php }else{ ?>
+        <h1 class="mt-5 text-center titulo-2" id="tit-categoria">Envios</h1>
+        <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+          <p>No hay productos en el carrito</p>
+          <a href="index.php?sec=home" class="boton mb-3">Volver al inicio</a>
         </div>
+      <?php } ?>
+      </div>

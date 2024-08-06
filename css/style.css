@@ -17,7 +17,7 @@ body {
 }
 img, figure {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   overflow: hidden;
 }
@@ -240,7 +240,7 @@ a small {
 aside {
   flex-direction: column;
   justify-content: space-between;
-  height: 100dvh;
+  /* height: 100dvh; */
   background-color: #f3efeb !important;
   position: relative;
   padding: 1em;
@@ -280,7 +280,7 @@ aside {
   list-style: none;
   display: flex;
   margin-block: 1em;
-  padding-block-end: 10em;
+  /* padding-block-end: 10em; */
   gap: 1.5em;
   flex-direction: column;
   width: 100%;
@@ -299,6 +299,7 @@ aside {
   display: flex;
   justify-content: center;
   gap: 1em;
+  align-items: center;
 }
 .cantidad-prod {
   display: inline-block;
@@ -347,7 +348,7 @@ aside {
   font-weight: bold;
 }
 .info {
-  position: sticky;
+  /* position: sticky; */
   bottom: 0;
   background-color: #f3efeb;
   border-top: solid 1px rgb(189, 189, 189);
@@ -680,6 +681,7 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
   gap: 4em;
 }
 #productos {
@@ -779,6 +781,7 @@ select {
   justify-content: space-between;
   min-width: 100%;
   padding: 0;
+  align-items: center;
 }
 .sect-comprar form .boton input {
   padding: 1.5em;

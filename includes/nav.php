@@ -1,6 +1,5 @@
 <?php 
   $categorias = (new Categoria())->catalogo_completo();
-  // $usuario = (new Usuario())
 ?>
 
 <header class="navt">
@@ -46,16 +45,17 @@
         </ul>
       </li>
       <?php if( isset($_SESSION["login"]) ){ ?>       
-      <li><a class="nav-link" href="admin/actions/auth_logout.php">SALIR</a></li>
+      <li><a class="nav-link" href="admin/actions/auth_logout.php"><?= $_SESSION['login']['email'] ?>SALIR</a></li>
       <?php }else{ ?>
       <li><a class="nav-link" href="index.php?sec=login">LOGIN</a></li>
       <?php } ?>                              
     </ul>
   </nav>
-  <a 
-    class="icon a-cart" 
-    href="index.php?sec=carrito"
-    >
+  <?php if( isset($_SESSION["login"]) ){ ?>       
+  <a class="icon a-cart" href="index.php?sec=carrito">
+  <?php }else{ ?>
+  <a class="icon a-cart" href="index.php?sec=login">
+  <?php } ?>
     <small>Carrito</small>
   </a>
 </header>
