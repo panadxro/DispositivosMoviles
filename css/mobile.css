@@ -113,13 +113,13 @@ footer p {
   row-gap: 4em;
 }
 /* categorias.html */
-#pag-categoria, #pag-catalogo {
+/* #pag-categoria, #pag-catalogo {
   margin-block: 5em;
-}
+} */
 /* comprar.html */
 .sect-comprar {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   padding-block: 5em;

@@ -17,14 +17,13 @@
   <article>
     <p>Donde cada prenda es una declaración de audacia y autenticidad. Define tu estilo con la fusión única de moda y actitud que solo DropDead puede ofrecer.</p>
     <picture>
-      <source media="(max-width: 576px)" srcset="./assets/fondos/deadcell-md.png">
-      <img src="assets/fondos/deadcell-lg.png" title="Modelo Dead Cell de espaldas" alt="Modelo Dead Cell de espaldas">
+      <img src="assets/fondos/deadcell-md.png" title="Modelo Dead Cell de espaldas" alt="Modelo Dead Cell de espaldas">
     </picture>
   </article>
   <article>
     <picture>
       <source media="(max-width: 576px)" srcset="./assets/fondos/tnsh-md.png">
-      <img src="assets/fondos/tnsh-lg.png" title="Modelo TNSH de costado" alt="Modelo TNSH de costado">
+      <img src="assets/fondos/tnsh-md.png" title="Modelo TNSH de costado" alt="Modelo TNSH de costado">
     </picture>
     <p>Drop Dead es más que una marca de ropa; es una declaración de estilo. Fundada en la intersección de la moda alternativa y la estética gótica, Drop Dead ofrece prendas únicas y atrevidas para aquellos que buscan destacar en la multitud.</p>
   </article>
@@ -52,28 +51,25 @@
             <picture class="d-block w-100">
               <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider1.jpg">
               <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider1.jpg">
-              <img src="assets/fondos/lg-slider1.jpg" alt="Banner con modelos historia de la marca">
+              <img src="assets/fondos/md-slider1.jpg" alt="Banner con modelos historia de la marca">
             </picture>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
             <picture class="d-block w-100">
-              <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider2.jpg">
               <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider2.jpg">
-              <img src="assets/fondos/lg-slider2.jpg" alt="Banner con modelos el comienzo de la marca">
+              <img src="assets/fondos/md-slider2.jpg" alt="Banner con modelos el comienzo de la marca">
             </picture>
           </div>
           <div class="carousel-item active" data-bs-interval="5000">
             <picture class="d-block w-100">
-              <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider3.jpg">
               <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider3.jpg">
-              <img src="assets/fondos/lg-slider3.jpg" alt="Banner con modelos y su filosofia">
+              <img src="assets/fondos/md-slider3.jpg" alt="Banner con modelos y su filosofia">
             </picture>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
             <picture class="d-block w-100">
-              <source media="(max-width: 576px)" srcset="assets/fondos/sm-slider4.jpg">
               <source media="(max-width: 1024px)" srcset="assets/fondos/md-slider4.jpg">
-              <img src="assets/fondos/lg-slider4.jpg" alt="Banner con modelos y su dilema">
+              <img src="assets/fondos/md-slider4.jpg" alt="Banner con modelos y su dilema">
             </picture>
           </div>
         </div>
@@ -87,102 +83,25 @@
 <section class="sec-productos">
   <h2 class="titulo-2" id="tit-categoria">Productos</h2>
   <div id="productos">
+  <?php foreach ($productos as $producto) { ?>
     <article class="card">
-      <a href="producto.html?id=8">
+      <a href="producto.html?id=<?=$producto->getId()?>">
         <figure>
-          <img src="assets/product/Blade/Blade1.png" alt="Blade">
+          <img src="../dropdead/img/covers/<?= $producto->getImagen() ?>" alt="Blade">
         </figure>
-        <h3>Blade</h3>
-        <p>Necklace</p>
-        <p class="price">$<span>35</span></p>
+        <h3><?= $producto->getNombre() ?></h3>
+        <p><?= $producto->getAlias() ?></p>
       </a>
-      <button class="add boton" data-id="8" data-val="35" data-cat="Accesorio">Agregar al carrito</button>
     </article>
-    <article class="card">
-      <a href="producto.html?id=13">
-        <figure>
-          <img src="assets/product/Hollowfication/Hollowfication1.png" alt="Hollowfication">
-        </figure>
-        <h3>Hollowfication</h3>
-        <p>Washed Black Hoodie</p>
-        <p class="price">$<span>120</span></p>
-      </a>
-      <button class="add boton" data-id="13" data-val="120" data-cat="Buzo">Agregar al carrito</button>
-    </article>
-    <article class="card">
-      <a href="producto.html?id=18">
-        <figure>
-          <img src="assets/product/JadoreHardcore/JadoreHardcore1.png" alt="J'adore Hardcore">
-        </figure>
-        <h3>J'adore Hardcore</h3>
-        <p>2 in 1 Jacket</p>
-        <p class="price">$<span>200</span></p>
-      </a>
-      <button class="add boton" data-id="18" data-val="200" data-cat="Campera">Agregar al carrito</button>
-    </article>
-    <article class="card">
-      <a href="producto.html?id=19">
-        <figure>
-          <img src="assets/product/Spiritual/Spiritual1.png" alt="Spiritual">
-        </figure>
-        <h3>Spiritual</h3>
-        <p>Socks (Pack of 2)</p>
-        <p class="price">$<span>20</span></p>
-      </a>
-      <button class="add boton" data-id="19" data-val="20" data-cat="Accesorio">Agregar al carrito</button>
-    </article>
-    <article class="card">
-      <a href="producto.html?id=17">
-        <figure>
-          <img src="assets/product/Violence/Violence1.png" alt="Violence">
-        </figure>
-        <h3>Violence</h3>
-        <p>Elasticated Shorts</p>
-        <p class="price">$<span>60</span></p>
-      </a>
-      <button class="add boton" data-id="20" data-val="60" data-cat="Pantalon">Agregar al carrito</button>
-    </article>
-    <article class="card">
-      <a href="producto.html?id=10">
-        <figure>
-          <img src="assets/product/Lure/Lure1.png" alt="Lure">
-        </figure>
-        <h3>Lure</h3>
-        <p>Distressed Hoodie</p>
-        <p class="price">$<span>120</span></p>
-      </a>
-      <button class="add boton" data-id="10" data-val="120" data-cat="Buzo">Agregar al carrito</button>
-    </article>
-    <article class="card">
-      <a href="producto.html?id=11">
-        <figure>
-          <img src="assets/product/Makeover/Makeover1.png" alt="Makeover">
-        </figure>
-        <h3>Makeover</h3>
-        <p>Washed Black T-Shirt</p>
-        <p class="price">$<span>50</span></p>
-      </a>
-      <button class="add boton" data-id="11" data-val="50" data-cat="Remera">Agregar al carrito</button>
-    </article>
-    <article class="card">
-      <a href="producto.html?id=9">
-        <figure>
-          <img src="assets/product/Blessings/Blessings1.png" alt="Blessings">
-        </figure>
-        <h3>Blessings</h3>
-        <p>Longsleeve</p>
-        <p class="price">$<span>70</span></p>
-      </a>
-      <button class="add boton" data-id="9" data-val="70" data-cat="Accesorio">Agregar al carrito</button>
-    </article>
+  <?php } ?>
   </div>
-  <a href="categorias.html" class="boton">Ver más</a>
+  <a href="index.php?sec=productos" class="boton">Ver más</a>
 </section>
 
 <section class="newsletter">
   <h2 class="titulo-2">Newsletter</h2>
   <p>Suscríbase a nuestra newsletter para recibir noticias exclusivas sobre nuestra próxima colección</p>
-  <form class="form-newsletter" action="index.html" >
+  <form class="form-newsletter" action="admin/actions/enviar_newsletter_acc.php" >
     <fieldset>
       <legend>Nombre formulario</legend>
       <div>
@@ -206,4 +125,5 @@
       <input value="Subscribirse" type="submit">
     </div>
   </form>
+  <?= (new Alerta())->get_alertas() ?>
 </section>

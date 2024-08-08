@@ -44,8 +44,8 @@
         <?php } ?>
         </ul>
       </li>
-      <?php if( isset($_SESSION["login"]) ){ ?>       
-      <li><a class="nav-link" href="admin/actions/auth_logout.php"><?= $_SESSION['login']['email'] ?>SALIR</a></li>
+      <?php if( isset($_SESSION["login"]) ){ ?>
+      <li><a class="nav-link <?= $_GET["sec"] == "perfil" ? "active" : "" ?>" href="index.php?sec=perfil">PERFIL</a></li>       
       <?php }else{ ?>
       <li><a class="nav-link" href="index.php?sec=login">LOGIN</a></li>
       <?php } ?>                              

@@ -36,6 +36,9 @@
         ],
         "carrito" => [
           "titulo" => "Carrito"
+        ],
+        "perfil" => [
+          "titulo" => "Perfil del Usuario"
         ]
     ];
 

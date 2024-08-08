@@ -26,8 +26,8 @@ class Producto{
       $talles_array []= (new Talle())->catalogo_x_id(intval($Tid));
     }
     $producto->talles = $talles_array;
-    // $producto->talles_ids = $productoArrayAsociativo["talles"];
-    $producto->talles_ids = $Tids;
+    $producto->talles_ids = $productoArrayAsociativo["talles"];
+    // $producto->talles_ids = $Tids;
     return $producto;
   }
 
@@ -77,7 +77,7 @@ class Producto{
     }
     return $personajes;
   }
-  public function insert($nombre, $alias, $categoria_id, $descripcion, $imagen, $precio): void {
+  public function insert($nombre, $alias, $categoria_id, $descripcion, $imagen, $precio): int {
     try {
       $conexion = Conexion::getConexion();
       $query = "INSERT INTO `productos` (`id`, `nombre`, `alias`, `categoria_id`, `descripcion`, `imagen`, `precio`) VALUES (NULL, :nombre, :alias, :categoria_id, :descripcion, :imagen, :precio)";
@@ -90,7 +90,7 @@ class Producto{
         'imagen' => htmlspecialchars($imagen),
         'precio' => htmlspecialchars($precio),
       ]);
-      // return $conexion->lastInsertId();
+      return $conexion->lastInsertId();
     } catch (Exception $e) {
       echo $e->getMessage();
     }

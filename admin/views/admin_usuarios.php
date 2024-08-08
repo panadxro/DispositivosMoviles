@@ -1,6 +1,7 @@
 <?php
 
 $usuarios = (new Usuario())->catalogo_completo();
+$miCompra = new Compra();
 
 ?>
 
@@ -11,13 +12,21 @@ $usuarios = (new Usuario())->catalogo_completo();
               <thead>
                   <tr>
                       <th class="fw-bold" scope="col">Nombre</th>
+                      <th class="fw-bold" scope="col">Compras realizadas</th>
                       <th class="fw-bold" scope="col">Acciones</th>
                   </tr>
               </thead>
               <tbody>
                   <?php foreach ($usuarios as $usuario) { ?>
                   <tr>
-                      <td class="d-flex align-items-center fw-bold" w-100"><?= $usuario->getEmail() ?> </td>
+                      <td class="d-flex align-items-center fw-bold "><?= $usuario->getEmail() ?> </td>
+                      <td>
+                      <?php
+                      $items = ($miCompra)->historial($usuario->getId());
+                      foreach ($items as $item) { ?>
+                        <span id="cat-producto"><?= $item["producto"] ?> - <?= $item["talle"] ?> x <?= $item["cantidad"] ?></span>
+                      <?php } ?>
+                      </td>
                       <td>
                           <a href="index.php?sec=edit_usuario&id=<?= $usuario->getId() ?>" class="d-block btn btn-sm btn-warning mb-1">Editar</a>
                           <a href="index.php?sec=delete_usuario&id=<?= $usuario->getId() ?>" class="d-block btn btn-sm btn-danger">Eliminar</a>

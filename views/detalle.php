@@ -27,22 +27,22 @@ $talles = $producto->getTalles();
         <p id="subtitulo-producto"><?= $producto->getAlias() ?></p>
         <p id="descripcion-producto"><?= $producto->getDescripcion() ?></p>
         <p id="precio-producto">$<?= $producto->getPrecio() ?></p>
-        <form action="admin/actions/add_item_acc.php" method="get">
-            <div class="col-md-12 mb-3">
+        <form action="admin/actions/add_item_acc.php" class="d-flex flex-column gap-3" method="get">
+            <div class="col-md-12">
                 <?php foreach ($talles as $talle) {     
                 ?>
-                <input class="btn-check" name="talle" id="<?= $talle->getId() ?>" type="radio" value="<?= $talle->getNombre() ?>" required>
+                <input class="btn-check" name="talle" id="<?= $talle->getId() ?>" type="radio" value="<?= $talle->getNombre() ?>" <?= $talles[0] == $talle ? "checked" : "" ?> required>
                 <label class="btn" for="<?= $talle->getId() ?>"><?=$talle->getNombre() ?></label>
                 <?php } ?>
             </div>
             <div class="col-2">
               <input class="form-control form-control-lg" type="number" name="cantidad" id="c" value="1">
             </div>
-            <div class="col-12">
+            <div class="col-12 mt-3">
             <?php if( isset($_SESSION["login"]) ){ ?>       
-              <input id="boton-agregar" class="mt-3 boton add" type="submit" value="Agregar al carrito">
+              <input id="boton-agregar" class="boton add" type="submit" value="Agregar al carrito">
             <?php }else{ ?>
-              <a href="index.php?sec=login" class="mt-3 add boton">Agregar al carrito</a>
+              <a href="index.php?sec=login" class="add boton">Agregar al carrito</a>
             <?php } ?>
               <input type="hidden" name="id" value="<?= $producto->getId() ?>">
             </div>

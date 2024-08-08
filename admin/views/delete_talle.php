@@ -10,7 +10,7 @@ $talle = (new Talle())->catalogo_x_id($id);
         <h2 class="fs-6 text-center">Nombre de categoría</h2>
         <p class="text-center"><?= $talle->getNombre() ?></p>
         <a class="d-block btn btn-sm btn-warning mt-4" href="index.php?sec=dashboard">Cancelar</a>
-        <a class="d-block btn btn-sm btn-danger mt-4" href="actions/delete_categoria_acc.php?id=<?= $talle->getId() ?>">Eliminar</a>
+        <a class="d-block btn btn-sm btn-danger mt-4" href="actions/delete_talle_acc.php?id=<?= $talle->getId() ?>">Eliminar</a>
       </div>
     </div>
 

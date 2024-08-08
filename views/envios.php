@@ -3,10 +3,11 @@ $miCarrito = new Carrito();
 $items = ($miCarrito)->getCarrito();
 ?>
 
+<h1 class="mt-5 text-center titulo-2" id="tit-categoria">Envios</h1>
 <div class="sect-comprar">
   <?php if( count($items) ){ ?>
         <div id="formularioDatosPersonales">
-          <form class="inicio" action="index.php?sec=recibo" method=POST id="datosPersonalesForm">
+          <form class="inicio" action="admin/actions/realizar_compra_acc.php" method="post" id="datosPersonalesForm">
             <fieldset>
               <legend>Contacto</legend>
               <div class="entrada">
@@ -93,7 +94,6 @@ $items = ($miCarrito)->getCarrito();
           </section>
         </aside>
       <?php }else{ ?>
-        <h1 class="mt-5 text-center titulo-2" id="tit-categoria">Envios</h1>
         <div class="d-flex flex-column justify-content-center align-items-center gap-5">
           <p>No hay productos en el carrito</p>
           <a href="index.php?sec=home" class="boton mb-3">Volver al inicio</a>

@@ -41,13 +41,6 @@ class Carrito{
             ];
         }
     }
-
-/*     public function getCarrito(){
-        if( !empty($_SESSION["carrito"]) ){
-            return $_SESSION["carrito"];
-        }
-        return [];
-    } */
     public function getCarrito() {
       try {
           $conexion = Conexion::getConexion();
@@ -99,23 +92,6 @@ class Carrito{
             (new Alerta())->add_alerta("No se ha eliminado el producto", "danger");
         }
     }
-    /**Finalizar compra*/
-
-    public function finalizarCompra(){
-        if( isset( $_SESSION["carrito"] ) && isset($_SESSION["login"]) ){
-            foreach( $_SESSION["carrito"] as $id_producto => $producto ){
-                $this->insert($id_producto, $_SESSION["login"]["id"], $producto["cantidad"]);
-            }
-        }
-    } 
-    public function insert(int $usuarioId) {
-      $conexion = Conexion::getConexion();
-      $query = "INSERT INTO carritos VALUES (null, :usuarioId)";
-      $PDOStatement = $conexion->prepare($query);
-      $PDOStatement->execute([
-        "usuarioId" => htmlspecialchars($usuarioId)
-    ]);
-    }
     public function insert_item(int $id_usuario, int $id_producto, int $cantidad, string $talle){
         try {
             $conexion = Conexion::getConexion();
@@ -153,6 +129,7 @@ class Carrito{
             echo $e->getMessage();
         }
     }
+
     /* Getters */
     public function getId() { return $this->id; }
     public function getUserId() { return $this->usuario_id; }

@@ -117,6 +117,9 @@
   min-height: 100vh;
   justify-content: space-around;
 }
+.seccion-productos .sect-comprar {
+  min-height: auto;
+}
 .sect-comprar form {
   display: flex;
   flex-direction: column;

@@ -13,7 +13,6 @@ $productos = (new Producto())->catalogo_x_categoria($categoria);
         <figure><img src="../dropdead/img/covers/<?= $producto->getImagen() ?>"></figure>
         <h3><?= $producto->getNombre() ?></h3>
         <p><?= $producto->getAlias() ?></p>
-        <p class="price">$<?= $producto->getPrecio() ?></p>
       </a>
     </article>
 

@@ -81,14 +81,28 @@ class Usuario{
 		$PDOStatement->execute();
     // return $conexion->lastInsertId();
 	}
-  public function edit($nombre, $id){
+  public function edit($id, $email, $rol, $new_pass = null) {
     $conexion = Conexion::getConexion();
-    $query = "UPDATE usuarios SET email=:nombre WHERE id = :id";
+    
+    // Verificar si se proporcionó una nueva contraseña
+    if ($new_pass) {
+        $query = "UPDATE usuarios SET email = :email, roles = :rol, password = :new_pass WHERE id = :id";
+        $params = [
+            "email" => htmlspecialchars($email),
+            "rol" => htmlspecialchars($rol),
+            "new_pass" => password_hash(htmlspecialchars($new_pass), PASSWORD_DEFAULT),
+            "id" => htmlspecialchars($id)
+        ];
+    } else {
+        $query = "UPDATE usuarios SET email = :email, roles = :rol WHERE id = :id";
+        $params = [
+            "email" => htmlspecialchars($email),
+            "rol" => htmlspecialchars($rol),
+            "id" => htmlspecialchars($id)
+        ];
+    }
     $PDOStatement = $conexion->prepare($query);
-    $PDOStatement->execute([
-        "nombre" => htmlspecialchars($nombre),
-        "id" => htmlspecialchars($id)
-    ]);
+    $PDOStatement->execute($params);
   }
   public function delete(){
     $conexion = Conexion::getConexion();

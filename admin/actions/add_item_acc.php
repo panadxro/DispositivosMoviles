@@ -10,5 +10,4 @@ if($producto_id){
     (new Carrito())->insert_item($usuario_id ,$producto_id, $cantidad, $talle);
     (new Alerta())->add_alerta("Producto agregado al carrito", "success");
     header("Location: ../../index.php?sec=detalle&id=$producto_id");
-    // header("Location: ../../index.php?sec=carrito");
 }

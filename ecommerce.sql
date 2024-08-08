@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2024 at 10:24 AM
+-- Generation Time: Aug 08, 2024 at 09:07 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `ecommerce`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carritos_x_usuarios`
+--
+
+CREATE TABLE `carritos_x_usuarios` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `usuario_id` int(10) UNSIGNED DEFAULT NULL,
+  `producto_id` int(10) UNSIGNED DEFAULT NULL,
+  `cantidad` int(10) DEFAULT NULL,
+  `talle` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `carritos_x_usuarios`
+--
+
+INSERT INTO `carritos_x_usuarios` (`id`, `usuario_id`, `producto_id`, `cantidad`, `talle`) VALUES
+(56, 15, 10, 1, '2XL');
 
 -- --------------------------------------------------------
 
@@ -42,6 +63,30 @@ INSERT INTO `categorias` (`id`, `nombre`) VALUES
 (4, 'Camperas'),
 (3, 'Pantalones'),
 (2, 'Remeras');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `compras`
+--
+
+CREATE TABLE `compras` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `usuario_id` int(10) UNSIGNED DEFAULT NULL,
+  `producto_id` int(10) UNSIGNED DEFAULT NULL,
+  `cantidad` int(10) DEFAULT NULL,
+  `talle` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `compras`
+--
+
+INSERT INTO `compras` (`id`, `usuario_id`, `producto_id`, `cantidad`, `talle`) VALUES
+(13, 15, 8, 1, 'L'),
+(16, 15, 12, 1, 'Unico'),
+(17, 15, 8, 1, 'L'),
+(18, 15, 26, 1, 'L');
 
 -- --------------------------------------------------------
 
@@ -225,8 +270,6 @@ INSERT INTO `talles` (`id`, `nombre`) VALUES
 CREATE TABLE `usuarios` (
   `id` int(10) UNSIGNED NOT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `nombre_usuario` varchar(20) DEFAULT NULL,
-  `nombre_completo` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `roles` enum('admin','usuario') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -235,13 +278,21 @@ CREATE TABLE `usuarios` (
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `email`, `nombre_usuario`, `nombre_completo`, `password`, `roles`) VALUES
-(1, 'hola', '', '', '$2y$10$bMyOgb/aGoEW52DaB/ulTeMzfk.s59JS.cGom6tUCRHNKrZrJyJEi', 'admin'),
-(2, 'lucas', '', '', '$2y$10$T1vQcGf06QWVnUYxXGJy4ebY0UmAq2JCjzkJYPELnPScLvdSoo2hS', 'usuario');
+INSERT INTO `usuarios` (`id`, `email`, `password`, `roles`) VALUES
+(15, 'Lucas', '$2y$10$.yviisyAkNZvdc7ecVnLWudXGWGiazhloQmR1fSIRDytUiiC8oBzq', 'usuario'),
+(16, 'Administrador', '$2y$10$2kRbumh49VJAzegnE/VOn.BWMAy6/ANS1qpX/IsBdvzRwOLI9y2pe', 'admin');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `carritos_x_usuarios`
+--
+ALTER TABLE `carritos_x_usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `usuario_id` (`usuario_id`),
+  ADD KEY `producto_id` (`producto_id`);
 
 --
 -- Indexes for table `categorias`
@@ -249,6 +300,14 @@ INSERT INTO `usuarios` (`id`, `email`, `nombre_usuario`, `nombre_completo`, `pas
 ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `nombre` (`nombre`);
+
+--
+-- Indexes for table `compras`
+--
+ALTER TABLE `compras`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `usuario_id` (`usuario_id`),
+  ADD KEY `producto_id` (`producto_id`);
 
 --
 -- Indexes for table `productos`
@@ -284,38 +343,64 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT for table `carritos_x_usuarios`
+--
+ALTER TABLE `carritos_x_usuarios`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
 -- AUTO_INCREMENT for table `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `compras`
+--
+ALTER TABLE `compras`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `productos_x_talles`
 --
 ALTER TABLE `productos_x_talles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT for table `talles`
 --
 ALTER TABLE `talles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `carritos_x_usuarios`
+--
+ALTER TABLE `carritos_x_usuarios`
+  ADD CONSTRAINT `carritos_x_usuarios_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `carritos_x_usuarios_ibfk_2` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `compras`
+--
+ALTER TABLE `compras`
+  ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `productos`
