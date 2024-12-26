@@ -8,4 +8,4 @@ $usuario_id = $_SESSION['login']['id'];
 (new Carrito())->borrarCarritosAnteriores();
 
 
-header("Location: ../../index.php?sec=carrito");
+header("Location: ../../index.php?sec=home");

@@ -85,7 +85,7 @@
   <div id="productos">
   <?php foreach ($productos as $producto) { ?>
     <article class="card">
-      <a href="producto.html?id=<?=$producto->getId()?>">
+      <a href="index.php?sec=detalle&id=<?=$producto->getId()?>">
         <figure>
           <img src="../dropdead/img/covers/<?= $producto->getImagen() ?>" alt="Blade">
         </figure>
@@ -101,7 +101,7 @@
 <section class="newsletter">
   <h2 class="titulo-2">Newsletter</h2>
   <p>Suscríbase a nuestra newsletter para recibir noticias exclusivas sobre nuestra próxima colección</p>
-  <form class="form-newsletter" action="admin/actions/enviar_newsletter_acc.php" >
+  <form class="form" action="admin/actions/enviar_newsletter_acc.php" >
     <fieldset>
       <legend>Nombre formulario</legend>
       <div>

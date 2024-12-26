@@ -1,5 +1,9 @@
 <?php 
   $categorias = (new Categoria())->catalogo_completo();
+  if (isset($_SESSION['login']) || isset($_SESSION['login']['id'])) {
+    $miCarrito = new Carrito();
+    $items = ($miCarrito)->getCarrito();
+  }
 ?>
 
 <header class="navt">
@@ -51,11 +55,58 @@
       <?php } ?>                              
     </ul>
   </nav>
+
   <?php if( isset($_SESSION["login"]) ){ ?>       
-  <a class="icon a-cart" href="index.php?sec=carrito">
+  <!-- <a class="icon a-cart" href="index.php?sec=carrito"> -->
+  <button 
+    class="icon a-cart" 
+    type="button" 
+    data-bs-toggle="offcanvas" 
+    data-bs-target="#carritoDesplegable" 
+    aria-controls="carritoDesplegable"
+    >
+    <small>Carrito</small>
+  </button>
+  <aside class="offcanvas offcanvas-end carrito-section" tabindex="-1" id="carritoDesplegable" aria-labelledby="carritoDesplegable">
+    <div class="cart-head">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"><small>Cerrar carrito</small></button>
+      <h2>CARRITO</h2>
+      <form action="admin\actions\vaciar_carrito_acc.php" method="post">
+        <button id="reset" type="submit"><small class="d-lg-none">Vaciar carrito</small></button>
+      </form>
+    </div>
+    <ul id="lista-carrito">
+    <?php if( count($items) ){ ?>
+      
+      <?php foreach( $items as $key => $item ) {?>
+        <li class="item-producto">
+          <figure class="descrip-car">
+            <img class="miniportada" src="../dropdead/img/covers/<?php echo $item["imagen"]; ?>" alt="<?php echo $item["producto"]; ?>">
+            <figcaption class="titulo-car"><?php echo $item["producto"]; ?> - <?php echo $item["talle"]; ?><p> $<?php echo $item["precio"]; ?><span class="cantidad-prod">x<?php echo $item["cantidad"]; ?></span></p></figcaption>
+          </figure>
+        </li>
+        <?php } ?> 
+
+      <?php }else{ ?>
+      <li class="no-productos">No hay elementos en el carrito</li>
+    <?php } ?>     
+    </ul>
+    <article class="info">
+      <p>TOTAL:<span class="icon" id="total-carrito">$<?= $miCarrito->getTotal() ?></span></p>
+      <?php if( count($items) ){ ?>
+      <a class="boton" id="botonCompra" href="index.php?sec=carrito">Checkout</a>
+      <?php }else{ ?>
+      <a class="boton desabilitado" id="botonCompra">Comprar</a>      
+      <?php } ?> 
+    </article>
+  </aside>
   <?php }else{ ?>
   <a class="icon a-cart" href="index.php?sec=login">
-  <?php } ?>
     <small>Carrito</small>
   </a>
+  <?php } ?>
 </header>

@@ -1,20 +1,12 @@
 [
     { 
-      "nombre": "Lucas Panadero",
+      "nombre": "Panadero Lucas",
       "edad": "23",
+      "descripcion": "+2 años de experiencia como Desarrollador Front End y Diseñador UX/UI. Trayectoria en desarrollo web de alta calidad ofreciendo soluciones innovadoras enfocadas al cliente. Mentalidad emprendedora y austera respaldada por mi experiencia tanto de forma independiente como con equipos en una amplia gama de industrias.",
       "email": "lucas.panadero@davinci.edu.ar",
       "imagen": "assets/fondos/lucas.jpg",
       "linkedin": "https://www.linkedin.com/in/panadxro/",
       "github": "https://github.com/panadxro",
       "instagram": "https://www.instagram.com/panadxro/"
-    },
-    { 
-      "nombre": "Ezequiel Duce",
-      "edad": "19",
-      "email": "ezequiel.duce@davinci.edu.ar",
-      "imagen": "assets/fondos/eze.jpeg",
-      "linkedin": "https://www.linkedin.com/in/ezequiel-ignacio-duce-arroyo-b64049264",
-      "github": "https://github.com/Ezequielduce",
-      "instagram": "https://www.instagram.com/zequiduce/"
     }
 ]

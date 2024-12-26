@@ -1,6 +1,9 @@
 <?php 
     require_once "functions/autoload.php";
-    
+    if (!isset($_GET["sec"])) {
+      header("Location: index.php?sec=home");
+      exit;
+    }
     $view = isset($_GET["sec"]) ? $_GET["sec"] : "home"; 
     $vista = "404";
     $seccionesValidas = [
@@ -76,5 +79,5 @@
     <?php include_once "includes/footer.php" ?>
   </body>
   <script src="js/bootstrap.bundle.min.js"></script>
-
+  <script src="js/parcial.js"></script>
 </html>

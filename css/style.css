@@ -311,9 +311,9 @@ aside {
   height: 5em;
   aspect-ratio: 1 / 1;
 }
-#pag-comprar .del {
+/* #pag-comprar .del {
   display: none;
-}
+} */
 .del {
   font-weight: 800;
   border: none;
@@ -603,7 +603,7 @@ footer a {
   font-weight: 600;
   font-size: 1.1em;
 }
-.form-newsletter {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -611,39 +611,39 @@ footer a {
   gap: 2em;
   width: 100%;
 }
-.form-newsletter legend {
+.form legend {
   display: none;
 }
-.form-newsletter fieldset {
+.form fieldset {
   border: none;
   display: flex;
   flex-direction: column;
   gap: 2em;
   width: 100%;
 }
-.form-newsletter div {
+.form div {
   display: flex;
   flex-direction: column;
 }
 
-.form-newsletter fieldset div label {
+.form fieldset div label {
   display: none;
 }
-.form-newsletter fieldset div input {
+.form fieldset div input {
   height: 4rem;
   padding: 1em;
 }
-.form-newsletter textarea {
+.form textarea {
   padding: 1em;
   resize: none;
   height: 8rem;
 }
-.form-newsletter .boton{
+.form .boton{
   min-width: 100%;
   cursor: pointer;
   padding: 0;
 }
-.form-newsletter .boton input {
+.form .boton input {
   padding: 1.5em;
   background:none;
   color: white;
@@ -743,11 +743,13 @@ footer a {
   width: 100%;
   margin-block: 1em;
 }
-.sect-comprar form div {
+.sect-comprar form > div {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 1em;
+  flex-direction: column;
   position: relative;
+  width: inherit;
 }
 #ofertas, #credito, #debito {
   width: fit-content;
@@ -815,6 +817,9 @@ select {
 #pag-comprar .a-cart {
   cursor:default;
 }
+/* #formularioDatosPersonales, #formularioDatosPago {
+  width: inherit;
+} */
 
 /* Comprobante */
 #pag-comprobante {

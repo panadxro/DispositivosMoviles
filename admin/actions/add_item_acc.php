@@ -9,5 +9,8 @@ if($producto_id){
     (new Carrito())->add_item($producto_id, $cantidad, $talle);
     (new Carrito())->insert_item($usuario_id ,$producto_id, $cantidad, $talle);
     (new Alerta())->add_alerta("Producto agregado al carrito", "success");
-    header("Location: ../../index.php?sec=detalle&id=$producto_id");
+    // header("Location: ../../index.php?sec=detalle&id=$producto_id");
+    // Usamos Refresh con exit para evitar recargas infinitas
+    header("Refresh: 0; url=../../index.php?sec=detalle&id=$producto_id");
+    exit; // Terminamos el script para evitar ejecuciones redundantes
 }

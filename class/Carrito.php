@@ -6,6 +6,18 @@ class Carrito{
   protected $producto_id;
   protected $cantidad;
   protected $talle;
+
+  // Contructor
+/*   public function __construct() {
+    // Validar si el usuario está logueado
+    if (!isset($_SESSION['login']) || !isset($_SESSION['login']['id'])) {
+        // Redirigir si no está logueado
+        header("Location: ../../index.php?sec=home");
+        exit;
+    }
+
+    $this->usuario_id = $_SESSION['login']['id'];
+  } */
   // Metodos
   public function catalogo_completo(): array {
       $catalogo = [];

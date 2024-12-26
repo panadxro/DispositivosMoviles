@@ -30,12 +30,23 @@ class Autenticacion
         return false;
     }
 
-    public function verify()
-    {
-        if (isset($_SESSION['login'])) {
-            return true;
-        } else {
-            header('Location: ../index.php?sec=login');
-        }
-    }
+    public function verify() {
+      if (isset($_SESSION['login'])) {
+          // Actualiza la información del usuario desde la base de datos
+          $usuario = (new Usuario())->usuario_x_email($_SESSION['login']['email']);
+          if ($usuario) {
+              $_SESSION['login']['roles'] = $usuario->getRoles();
+          }
+          return true;
+      } else {
+          header('Location: ../index.php?sec=login');
+          exit;
+      }
+  }
+
+    public function isAdmin(): bool {
+      return isset($_SESSION['login']['roles']) && $_SESSION['login']['roles'] === 'admin';
+  }
+  
+  
 }

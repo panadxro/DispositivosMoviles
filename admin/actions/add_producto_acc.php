@@ -18,11 +18,11 @@ try {
       (new Producto())->add_talles($producto_id, $talle_id);
     }
     
-    // header("Location: ../index.php?sec=admin_productos");
+    header("Location: ../index.php?sec=admin_productos");
 } catch (\Exception $e) {
   echo $e->getMessage();
     die("No pude cargar el personaje :(");
   }
-echo "<pre>";
+/* echo "<pre>";
 print_r($producto_id);
-echo "</pre>";
+echo "</pre>"; */

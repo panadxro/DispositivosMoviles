@@ -3,6 +3,7 @@
 class Alumno{
     protected $nombre;  
     protected $edad;
+    protected $descripcion;
     protected $email;
     protected $imagen;
     protected $linkedin;
@@ -22,6 +23,7 @@ public function alumnos(){
         //relleno los atributos
         $alumno->nombre = $value->nombre;
         $alumno->edad = $value->edad;
+        $alumno->descripcion = $value->descripcion;
         $alumno->email = $value->email;
         $alumno->imagen = $value->imagen;
         $alumno->linkedin = $value->linkedin;
@@ -37,6 +39,9 @@ public function alumnos(){
   }
   public function getEdad(){
       return $this->edad;
+  }
+  public function getDescripcion(){
+    return $this->descripcion;
   }
   public function getEmail(){
       return $this->email;

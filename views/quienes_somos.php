@@ -1,5 +1,8 @@
 <?php
   $alumnos = ( new Alumno() )->alumnos();
+  $fecha_nacimiento = new DateTime('2000-07-15');
+  $hoy = new DateTime();
+  $edad = $hoy->diff($fecha_nacimiento)->y;
 ?>
 
 
@@ -12,7 +15,8 @@
   </div>
   <article id="infoProducto">
     <h2 id="nombre-alumno" class="titulo-2"><?= $alumno->getNombre() ?></h2>
-    <span id="cat-alumno"><?= $alumno->getEdad() ?> años</span>
+    <span id="cat-alumno"><?= $edad ?> años</span>
+    <p><?= $alumno->getDescripcion() ?></p>
     <p id="correo-alumno"><?= $alumno->getEmail() ?></p>
     <ul id="redes-sociales">
       <li><a href="<?= $alumno->getLinkedin() ?>" target="_blank" class="icon a-linkedin"><small>Linkedin</small></a></li>

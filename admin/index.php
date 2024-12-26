@@ -1,4 +1,7 @@
-<?php require_once '../functions/autoload.php';
+<?php
+require_once '../functions/autoload.php';
+
+$auth = new Autenticacion();
 
 $secciones_validas = [
     'dashboard' => [
@@ -8,63 +11,70 @@ $secciones_validas = [
         'titulo' => 'Administración de Productos',
     ],
     'add_producto' => [
-      'titulo' => 'Agregar Producto',
+        'titulo' => 'Agregar Producto',
     ],
     'edit_producto' => [
-      'titulo' => 'Editar Producto',
+        'titulo' => 'Editar Producto',
     ],
     'delete_producto' => [
-      'titulo' => 'Eliminar Producto'
+        'titulo' => 'Eliminar Producto',
     ],
     'admin_categorias' => [
         'titulo' => 'Administración de Categorías',
     ],
     'add_categoria' => [
-      'titulo' => 'Agregar Categoría',
+        'titulo' => 'Agregar Categoría',
     ],
     'edit_categoria' => [
-      'titulo' => 'Editar Categoría',
+        'titulo' => 'Editar Categoría',
     ],
     'delete_categoria' => [
-      'titulo' => 'Eliminar Categoría'
+        'titulo' => 'Eliminar Categoría',
     ],
     'admin_talles' => [
-      'titulo' => 'Administración de Talles',
+        'titulo' => 'Administración de Talles',
     ],
     'add_talle' => [
-      'titulo' => 'Agregar Talle',
+        'titulo' => 'Agregar Talle',
     ],
     'edit_talle' => [
-      'titulo' => 'Editar Talle',
+        'titulo' => 'Editar Talle',
     ],
     'delete_talle' => [
-      'titulo' => 'Eliminar Talle'
+        'titulo' => 'Eliminar Talle',
     ],
     'admin_usuarios' => [
-      'titulo' => 'Administración de Usuarios'
+        'titulo' => 'Administración de Usuarios',
     ],
     'add_usuario' => [
-      'titulo' => 'Agregar Usuario'
+        'titulo' => 'Agregar Usuario',
     ],
     'edit_usuario' => [
-      'titulo' => 'Editar Usuario'
+        'titulo' => 'Editar Usuario',
     ],
     'delete_usuario' => [
-      'titulo' => 'Eliminar Usuario'
-    ]
+        'titulo' => 'Eliminar Usuario',
+    ],
 ];
 
 $seccion = $_GET['sec'] ?? 'dashboard';
-(new Autenticacion())->verify();
 
-if (!array_key_exists($seccion, $secciones_validas)) {
+// Verificar si el usuario está autenticado
+$auth->verify();
+
+// Verificar si el usuario es administrador
+if (!$auth->isAdmin()) {
     $vista = '404';
     $titulo = '404 - Página no encontrada';
 } else {
-    $vista = $seccion;
-    $titulo = $secciones_validas[$seccion]['titulo'];
+    if (!array_key_exists($seccion, $secciones_validas)) {
+        $vista = '404';
+        $titulo = '404 - Página no encontrada';
+    } else {
+        $vista = $seccion;
+        $titulo = $secciones_validas[$seccion]['titulo'];
+    }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="es">

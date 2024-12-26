@@ -23,18 +23,20 @@ $usuario = (new Usuario())->catalogo_x_id($_SESSION["login"]["id"]);
                 <input type="hidden" name="id" value="<?= $usuario->getId() ?>">
                 <div class="d-flex align-items-center gap-3">
                     <label class="form-label">Nombre de usuario</label>
-                    <input class="form-control" type="text" name="nombre" value="<?= $usuario->getEmail() ?>" id="email" disabled required>
+                    <input class="form-control" type="text" name="nombre" value="<?= $usuario->getEmail() ?>" id="nombre" disabled required>
                     <input class="form-control" type="hidden" name="email" value="<?= $usuario->getEmail() ?>" id="email" required>
-                </div>  
-                <div class="d-flex align-items-center gap-3">
-                    <label class="form-label">Rol de usuario</label>
-                    <div class="d-inline">
-                      <input class="btn-check" type="radio" name="rol_id" id="usuario" value="usuario" <?= $usuario->getRoles() == "usuario" ? "checked" : "" ?>>
-                      <label class="btn" for="usuario">Usuario</label>
-                      <input class="btn-check" type="radio" name="rol_id" id="admin" <?= $usuario->getRoles() == "admin" ? "checked" : "" ?> <?= $usuario->getRoles() != "usuario" ? "" : "disabled" ?> value="admin">
-                      <label class="btn" for="admin">Admin</label>
-                    </div>
                 </div>
+                <?php if ($usuario->getRoles() === 'admin') { ?>
+                    <div class="d-flex align-items-center gap-3">
+                        <label class="form-label">Rol de usuario</label>
+                        <div class="d-inline">
+                            <input class="btn-check" type="radio" name="rol_id" id="usuario" value="usuario" <?= $usuario->getRoles() == "usuario" ? "checked" : "" ?>>
+                            <label class="btn" for="usuario">Usuario</label>
+                            <input class="btn-check" type="radio" name="rol_id" id="admin" value="admin" <?= $usuario->getRoles() == "admin" ? "checked" : "" ?>>
+                            <label class="btn" for="admin">Admin</label>
+                        </div>
+                    </div>
+                <?php } ?>  
                 <div class="d-flex align-items-center gap-3">
                     <label class="form-label" for="new_pass">Nueva contraseña</label>
                     <input class="form-control" type="password" name="new_pass" id="new_pass">
