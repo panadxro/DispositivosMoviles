@@ -37,27 +37,21 @@ class Imagen{
         return $nombresImagenes;
     }
 
-      
-/*         public function subirImagen($directorio, $datosImagen){
-            if( !empty($datosImagen["tmp_name"]) ){
-                $tmp_name = $datosImagen["tmp_name"];
-                $name =  uniqid()."-".$datosImagen["name"];
-                $fileUpload = move_uploaded_file($tmp_name, "$directorio/$name");
-                if(!$fileUpload){
-                    throw new Exception("No se pudo subir la imagen");
-                }else{
-                    return $name;
+    public function borrarCarpeta($rutaCarpeta) {
+        if (is_dir($rutaCarpeta)) {
+            $archivos = array_diff(scandir($rutaCarpeta), ['.', '..']);
+            foreach ($archivos as $archivo) {
+                $rutaArchivo = "$rutaCarpeta/$archivo";
+                if (is_dir($rutaArchivo)) {
+                    $this->borrarCarpeta($rutaArchivo); // Eliminar subcarpeta
+                } else {
+                    unlink($rutaArchivo); // Eliminar archivo
                 }
             }
-        } */
-        public function borrarImagen($imagen){
-            if( file_exists($imagen) ){
-                $fileDelete = unlink($imagen);
-                if( $fileDelete ){
-                    return true;
-                }else{
-                    throw new Exception("No se pudo borrar imagen");
-                }
-            }
+            rmdir($rutaCarpeta); // Eliminar carpeta
+        } else {
+            throw new Exception("La carpeta no existe: $rutaCarpeta");
         }
     }
+  
+}
