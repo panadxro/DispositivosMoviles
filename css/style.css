@@ -955,7 +955,9 @@ select {
   gap: 2em;
 }
 .portada-alumno {
-  min-width: 250px;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
 }
 #nombre-alumno {
   text-wrap: pretty;

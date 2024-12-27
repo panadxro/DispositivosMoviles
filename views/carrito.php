@@ -64,7 +64,7 @@ $items = ($miCarrito)->getCarrito();
                       <label for="postal">Código postal (opcional)</label>
                   </div>
                   <div class="entrada">
-                      <input name="telefono" placeholder="Teléfono" id="telefono" type="number" required>
+                      <input name="telefono" placeholder="Teléfono" id="telefono" type="tel" required>
                       <label for="telefono">Teléfono</label>
                   </div>
               </fieldset>
@@ -84,7 +84,7 @@ $items = ($miCarrito)->getCarrito();
                       <label for="debito">Tarjeta de débito</label>
                   </div>
                   <div class="entrada">
-                      <input name="tarjeta" placeholder="Número de tarjeta" id="tarjeta" type="number" required>
+                      <input name="tarjeta" id="tarjeta" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
                       <label for="tarjeta">Número de tarjeta</label>
                   </div>
                   <div class="entrada">

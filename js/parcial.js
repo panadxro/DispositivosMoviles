@@ -177,10 +177,7 @@ d.addEventListener('DOMContentLoaded', function() {
       // carritoDesplegable.style.filter = 'invert(0%)'
     }
   });
-
-  if (pagComprar) {
-    completarFormulario()
-  }
+  
   if (pagCategoria) {
     banner.addEventListener('click', bannerClickHandler)
     mostrarBanner()

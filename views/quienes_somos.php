@@ -9,7 +9,7 @@
 <section class="seccion-alumnos">
 <?php foreach ($alumnos as $alumno) { ?>
   <div class="portada-alumno">
-    <figure>
+    <figure class="overflow-hidden w-50">
       <img src="<?= $alumno->getImagen() ?>" alt="Foto alumno">
     </figure>
   </div>
