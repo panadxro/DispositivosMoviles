@@ -1,7 +1,0 @@
-Usuario normal
-Nombre: lucas
-Contraseña: lucas
-
-Usuario admin
-Nombre: hola
-Contraseña: hola
