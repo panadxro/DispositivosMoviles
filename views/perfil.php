@@ -50,13 +50,23 @@ $usuario = (new Usuario())->catalogo_x_id($_SESSION["login"]["id"]);
           </div>
           <?php if( $compras ){ ?>
             <aside>
-              <h2>Historial</h2>
+              <h2>Historial de compra</h2>
               <ul id="lista-carrito">
               <?php foreach($compras as $compra) {?>
                 <li class="compra-producto">
                   <figure class="descrip-car">
-                    <img class="miniportada" src="../dropdead/img/covers/<?= $compra["imagen"]; ?>" alt="<?= $compra["producto"]; ?>">
-                    <figcaption class="titulo-car"><?= $compra["producto"]; ?> - <?= $compra["talle"]; ?><p> $<?= $compra["precio"]; ?><span class="cantidad-prod">x<?= $compra["cantidad"]; ?></span></p></figcaption>
+                  <img               
+                    class="miniportada" 
+                    src="assets/products/<?= str_replace([" ", "'", "&", "#039;", "amp;"], '', $compra["producto"]) ?>/<?= $compra["imagen"] ?>"
+                    alt="<?= $compra["producto"] ?>">
+                  <figcaption 
+                    class="titulo-car"
+                    >
+                    <?= $compra["producto"]; ?> - <?= $compra["talle"]; ?>
+                    <p> $<?= $compra["precio"]; ?>
+                      <span class="cantidad-prod">x<?= $compra["cantidad"]; ?></span>
+                    </p>
+                  </figcaption>
                   </figure>
                 </li>
               <?php } ?> 

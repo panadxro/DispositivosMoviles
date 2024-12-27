@@ -119,8 +119,18 @@ $items = ($miCarrito)->getCarrito();
           <?php foreach( $items as $key => $item ) {?>
             <li class="item-producto">
               <figure class="descrip-car">
-                <img class="miniportada" src="../dropdead/img/covers/<?php echo $item["imagen"]; ?>" alt="<?php echo $item["producto"]; ?>">
-                <figcaption class="titulo-car"><?php echo $item["producto"]; ?> - <?php echo $item["talle"]; ?><p> $<?php echo $item["precio"]; ?><span class="cantidad-prod">x<?php echo $item["cantidad"]; ?></span></p></figcaption>
+                <img               
+                  class="miniportada" 
+                  src="assets/products/<?= str_replace([" ", "'", "&", "#039;", "amp;"], '', $item["producto"]) ?>/<?= $item["imagen"] ?>"
+                  alt="<?= $item["producto"] ?>">
+                <figcaption 
+                  class="titulo-car"
+                  >
+                  <?= $item["producto"]; ?> - <?= $item["talle"]; ?>
+                  <p> $<?= $item["precio"]; ?>
+                    <span class="cantidad-prod">x<?= $item["cantidad"]; ?></span>
+                  </p>
+                </figcaption>
               </figure>
               <a class="del" href="admin/actions/remove_item_acc.php?id=<?= $item["id"] ?>" >Eliminar</a>
             </li>

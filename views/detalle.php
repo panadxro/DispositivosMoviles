@@ -8,19 +8,53 @@ $producto = (new Producto())->catalogo_x_id($id);
 // $talles = (new Talle())->catalogo_completo();
 // $talle_seleccionado = $producto->getTalles();
 $talles = $producto->getTalles();
+$nombreProducto = str_replace([" ", "'", "&", "#039;", "amp;"], '', $producto->getNombre())
 ?>
 
 
 <div class="detalle-producto">
-      <div id="carouselExampleIndicators" class="carousel slide">
+  <div id="carouselExampleIndicators" class="carousel slide">
         <figure id="galeria-productos" class="carousel-inner">
-<!-- Hay que cambiar la src despues /dropdead/dropdead/ -->
+          <picture class="carousel-item active"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>1.png"
+          alt="<?= $producto->getNombre() ?>"></picture>
+          <picture class="carousel-item"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>2.png"
+          alt="<?= $producto->getNombre() ?>"></picture>
+          <picture class="carousel-item"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>3.png"
+          alt="<?= $producto->getNombre() ?>"></picture>
+          <picture class="carousel-item"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>4.png"
+          alt="<?= $producto->getNombre() ?>"></picture>
+          <picture class="carousel-item"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>5.png"
+          alt="<?= $producto->getNombre() ?>"></picture>
+        </figure>
+        <ul id="indicador-productos" class="carousel-indicators">
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>1.png"
+          alt="<?= $producto->getNombre() ?>"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>2.png"
+          alt="<?= $producto->getNombre() ?>"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>3.png"
+          alt="<?= $producto->getNombre() ?>"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>4.png"
+          alt="<?= $producto->getNombre() ?>"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"><img src="assets/products/<?= $nombreProducto ?>/<?= $nombreProducto ?>5.png"
+          alt="<?= $producto->getNombre() ?>"></li>
+        </ul>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+<!--       <div id="carouselExampleIndicators" class="carousel slide">
+        <figure id="galeria-productos" class="carousel-inner">
           <picture class="carousel-item active">
-            <source media="(max-width: 1024px)" srcset="../dropdead/img/covers/<?= $producto->getImagen() ?>">
-            <img src="../dropdead/img/covers/<?= $producto->getImagen() ?>" alt="<?= $producto->getNombre() ?>">
+            <source media="(max-width: 1024px)" srcset="../dropdead/img/covers/">
+            <img src="../dropdead/img/covers/" alt="">
           </picture>
         </figure>
-      </div>
+      </div> -->
       <article id="infoProducto">
         <h2 id="nombre-producto" class="titulo-2"><?= $producto->getNombre() ?></h2>
         <span id="cat-producto"><?= $producto->getCategoria() ?></span>

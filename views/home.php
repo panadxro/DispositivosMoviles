@@ -87,7 +87,10 @@
     <article class="card">
       <a href="index.php?sec=detalle&id=<?=$producto->getId()?>">
         <figure>
-          <img src="../dropdead/img/covers/<?= $producto->getImagen() ?>" alt="Blade">
+          <img 
+            src="assets/products/<?= str_replace([" ", "'", "&", "#039;", "amp;"], '', $producto->getNombre()) ?>/<?= $producto->getImagen() ?>"
+            alt="<?= $producto->getNombre() ?>"
+            >
         </figure>
         <h3><?= $producto->getNombre() ?></h3>
         <p><?= $producto->getAlias() ?></p>

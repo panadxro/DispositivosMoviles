@@ -25,9 +25,17 @@ $talles = (new Talle())->catalogo_completo();
                         <?php } ?>
                     </select>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label class="form-label" for="">Imagen</label>
-                    <input class="form-control" type="file" name="imagen" required>
+                <div class="col-md-6 mb-3 flex-col">
+                  <label class="form-label">Imágenes del producto (Solo formato png)</label>
+                  <div class="contenedor-imagenes">
+                      <?php for ($i = 0; $i < 5; $i++): ?>
+                          <div class="imagen-placeholder" data-index="<?= $i ?>">
+                              <img src="" alt="Preview" class="preview" style="display: none;">
+                              <span class="texto-placeholder">+</span>
+                              <input type="file" name="imagenes[]" class="input-imagen" accept="image/*">
+                          </div>
+                      <?php endfor; ?>
+                  </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label" for="">Precio</label>
@@ -57,3 +65,71 @@ $talles = (new Talle())->catalogo_completo();
         </div>
     </div>
 </div>
+
+<script>
+  document.querySelectorAll('.imagen-placeholder').forEach((placeholder) => {
+    const input = placeholder.querySelector('.input-imagen');
+    const preview = placeholder.querySelector('.preview');
+    const textoPlaceholder = placeholder.querySelector('.texto-placeholder');
+
+    // Abrir el input al hacer clic en el placeholder
+    placeholder.addEventListener('click', () => {
+        input.click();
+    });
+
+    // Previsualizar la imagen cargada
+    input.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+                textoPlaceholder.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
+</script>
+
+<style>
+  .contenedor-imagenes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.imagen-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    border: 1px dashed #ccc;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.imagen-placeholder .texto-placeholder {
+    font-size: 24px;
+    color: #aaa;
+}
+
+.imagen-placeholder img.preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imagen-placeholder input.input-imagen {
+    display: none;
+}
+
+</style>
